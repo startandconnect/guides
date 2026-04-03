@@ -41,3 +41,4 @@ Organisiere deine Kontakte in Listen:
 - **Newsletter** - Alle Newsletter-Abonnenten
 - **Kunden** - Kontakte mit mindestens einer Bestellung
 - **Leads** - Kontakte die ein Formular ausgefuellt haben
+

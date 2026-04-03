@@ -44,3 +44,4 @@ Verfuegbare Variablen haengen vom Template-Typ ab:
 {{bestellnummer}}  - Nur bei Bestellungen
 {{betrag}}         - Nur bei Bestellungen
 ```
+

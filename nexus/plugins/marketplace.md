@@ -30,3 +30,4 @@ Nach der Installation musst du das Plugin noch aktivieren. Manche Plugins haben 
 ## Plugin Updates
 
 Plugins werden automatisch aktualisiert wenn eine neue Version verfuegbar ist. Du kannst das in den Plugin-Einstellungen konfigurieren.
+

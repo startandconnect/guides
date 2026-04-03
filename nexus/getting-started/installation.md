@@ -39,3 +39,4 @@ Nexus laeuft vollstaendig in der Cloud. Alles was du brauchst:
 | Browser | Chrome, Firefox, Safari (aktuell) |
 | Internet | Stabile Verbindung |
 | Bildschirm | Min. 1024px Breite |
+
