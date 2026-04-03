@@ -80,3 +80,4 @@ Unter **Einstellungen > Integrationen > Webhooks** kannst du HTTP-Callbacks einr
 ## Rate Limits
 
 Die API hat keine harten Rate Limits, aber bitte halte dich an faire Nutzung. Bei übermäßig vielen Requests kann der Zugang temporär eingeschränkt werden.
+

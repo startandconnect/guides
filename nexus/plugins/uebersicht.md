@@ -37,3 +37,4 @@ Jedes Plugin hat eigene Einstellungen unter **Einstellungen > Plugins > [Plugin-
 - Newsletter: SMTP-Anbindung, Absender-Adresse
 - Chatbot: Wissensdatenbank, Widget-Position
 - Affiliate: Provisionsrate, Abrechnungszeitraum
+

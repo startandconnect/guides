@@ -61,3 +61,4 @@ Unter **Benutzer** verwaltest du dein Team:
 | Accountant | Nur Rechnungen und Finanzen |
 
 Für die Rolle "Member" kannst du individuelle Berechtigungen setzen (z.B. Produkte bearbeiten, aber keine Einstellungen ändern).
+

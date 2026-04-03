@@ -43,3 +43,4 @@ Jedes Template hat einen visuellen Editor mit Variablen:
 :::danger[Achtung]
 Änderungen an System-Templates (Bestellbestätigung, Passwort-Reset) werden sofort aktiv. Teste sie vorher mit der Vorschau-Funktion.
 :::
+

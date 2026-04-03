@@ -52,3 +52,4 @@ Nach dem Kauf passiert automatisch:
 - Zugang zum Kundenportal wird freigeschaltet
 - Downloads sind sofort verfügbar
 - Delivery Actions werden ausgeführt (E-Mails, Webhooks, etc.)
+

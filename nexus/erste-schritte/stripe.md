@@ -52,3 +52,4 @@ Beliebte Optionen:
 - Klarna (Rechnungskauf, Ratenzahlung)
 - PayPal
 - Apple Pay / Google Pay
+

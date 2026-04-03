@@ -43,3 +43,4 @@ Für volle Kontrolle über Header und Footer:
 3. Dein Code ersetzt den Standard-Header/-Footer komplett
 
 Du kannst separate HTML-Overrides pro Benutzertyp (Besucher, Team, Kunde) konfigurieren.
+

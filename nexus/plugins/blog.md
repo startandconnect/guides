@@ -48,3 +48,4 @@ Jeder Artikel hat eigene SEO-Felder:
 ## RSS-Feed
 
 Dein Blog hat automatisch einen RSS-Feed unter `/blog/rss.xml`. Deine Leser können ihn mit jedem RSS-Reader abonnieren.
+

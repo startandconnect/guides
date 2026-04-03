@@ -57,3 +57,4 @@ Unter **Formulare > [Formular] > Einsendungen** siehst du alle eingegangenen Dat
 - Filterbar nach Status (Neu, Gelesen, Archiviert)
 - Exportierbar als CSV
 - Einzelansicht mit allen Feldern
+

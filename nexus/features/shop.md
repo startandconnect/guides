@@ -55,3 +55,4 @@ Für wiederkehrende Produkte (Memberships, SaaS):
 - Kostenlose Testphase konfigurierbar (z.B. 14 Tage)
 - Setup-Gebühr optional (einmalig beim Start)
 - Kunden können im Kundenportal selbst kündigen
+

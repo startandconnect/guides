@@ -75,3 +75,4 @@ var post = await nx.blog.get('artikel-slug')
 :::info[Nur in HTML-Override]
 Die `window.nx` API ist nur verfügbar wenn deine Seite als HTML-Override in Nexus läuft. Auf externen Websites nutze stattdessen die REST-API mit API Key.
 :::
+

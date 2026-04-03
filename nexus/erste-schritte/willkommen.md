@@ -38,3 +38,4 @@ Nach dem Login landest du auf dem Dashboard. Von hier aus erreichst du alle Bere
 - **Kunden** - Kontakte und Kundenportal
 - **Seiten** - Website und Landing Pages
 - **Einstellungen** - Branding, Zahlungen, Plugins
+

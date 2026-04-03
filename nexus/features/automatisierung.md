@@ -55,3 +55,4 @@ Für den E-Mail-Versand brauchst du einen SMTP-Anbieter (z.B. Brevo oder Mailgun
 ## Retry-Logik
 
 Falls eine Action fehlschlägt (z.B. Webhook-Timeout), versucht Nexus es automatisch erneut. Du siehst den Status jeder Action in der Bestellübersicht.
+

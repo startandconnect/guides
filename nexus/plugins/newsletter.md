@@ -63,3 +63,4 @@ Für jede Kampagne siehst du:
 - Öffnungsrate
 - Klickrate
 - Abmeldungen
+

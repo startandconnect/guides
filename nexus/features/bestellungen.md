@@ -40,3 +40,4 @@ Unter **Abonnements** siehst du alle aktiven Abos:
 :::tip[Stripe Dashboard]
 Für detaillierte Zahlungsinformationen, Erstattungen und Disputes nutze direkt das Stripe Dashboard. Nexus synchronisiert alle Änderungen automatisch.
 :::
+

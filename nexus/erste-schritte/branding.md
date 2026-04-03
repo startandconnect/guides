@@ -41,3 +41,4 @@ Unter **Einstellungen > Branding > Domain** kannst du deine eigene Domain verbin
 :::tip[Subdomain empfohlen]
 Wir empfehlen eine Subdomain wie `portal.deinefirma.de` statt der Hauptdomain. So bleibt deine Marketing-Website unabhängig.
 :::
+

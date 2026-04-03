@@ -45,3 +45,4 @@ Nexus schickt automatisch Erinnerungen an Teilnehmer:
 :::tip[Kostenlose Events]
 Auch kostenlose Events können eine Anmeldung erfordern. So weißt du wer kommt und kannst Erinnerungen versenden.
 :::
+

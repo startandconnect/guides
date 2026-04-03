@@ -59,3 +59,4 @@ Jede Seite hat eigene SEO-Einstellungen:
 - **Canonical URL** - Für Duplicate Content
 - **noIndex** - Seite von Suchmaschinen ausschließen
 - **OG-Image** - Vorschaubild für Social Media
+

@@ -30,3 +30,4 @@ Nach der Registrierung landest du direkt auf dem Dashboard. Deine Instanz ist so
 :::warning[Passwort-Reset]
 Ein Passwort-Reset beendet alle aktiven Sessions auf allen Geräten. Du musst dich danach überall neu anmelden.
 :::
+
