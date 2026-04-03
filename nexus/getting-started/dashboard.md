@@ -8,36 +8,36 @@ excerpt: Das Nexus Dashboard verstehen und nutzen
 
 Das Dashboard ist deine Zentrale in Nexus. Hier siehst du auf einen Blick, was in deinem Portal passiert.
 
-## Ueberblick
+## Überblick
 
 Das Dashboard zeigt dir:
 
 - **Besucher** - Wie viele Besucher dein Portal hatte
 - **Bestellungen** - Aktuelle Bestellungen und Umsatz
 - **Kontakte** - Neue Kontakte und Newsletter-Abonnenten
-- **Aktivitaet** - Letzte Aenderungen und Ereignisse
+- **Aktivität** - Letzte Änderungen und Ereignisse
 
 ## Navigation
 
-Die Sidebar links fuehrt dich zu allen Bereichen:
+Die Sidebar links führt dich zu allen Bereichen:
 
-- **Seiten** - Page Builder fuer deine Website
+- **Seiten** - Page Builder für deine Website
 - **Blog** - Artikel erstellen und verwalten
 - **Produkte** - Shop und Produkte verwalten
 - **Kunden** - Kundenverwaltung
 - **Einstellungen** - Portal konfigurieren
 
 :::warning[Berechtigungen]
-Je nach deiner Rolle siehst du unterschiedliche Menuepunkte. Als Admin hast du Zugriff auf alles.
+Je nach deiner Rolle siehst du unterschiedliche Menüpunkte. Als Admin hast du Zugriff auf alles.
 :::
 
-## Tastenkuerzel
+## Tastenkürzel
 
-| Kuerzel | Aktion |
+| Kürzel | Aktion |
 |---------|--------|
-| `Ctrl+K` | Schnellsuche oeffnen |
+| `Ctrl+K` | Schnellsuche öffnen |
 | `Ctrl+N` | Neuen Inhalt erstellen |
-| `Ctrl+S` | Aenderungen speichern |
+| `Ctrl+S` | Änderungen speichern |
 
 ::youtube[Dashboard Tour]{id=dQw4w9WgXcQ}
 

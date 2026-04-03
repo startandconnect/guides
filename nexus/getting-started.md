@@ -11,10 +11,10 @@ Willkommen bei Nexus! Hier findest du alles, was du brauchst, um dein Portal ein
 
 ## Was ist Nexus?
 
-Nexus ist eine All-in-One Plattform fuer dein digitales Business. Von der Website ueber den Blog bis hin zum Online-Shop - alles aus einer Hand.
+Nexus ist eine All-in-One Plattform für dein digitales Business. Von der Website über den Blog bis hin zum Online-Shop - alles aus einer Hand.
 
 :::info[Gut zu wissen]
-Nexus wird staendig weiterentwickelt. Neue Features und Verbesserungen werden regelmaessig ausgerollt.
+Nexus wird ständig weiterentwickelt. Neue Features und Verbesserungen werden regelmäßig ausgerollt.
 :::
 
 ## Schnellstart
@@ -24,8 +24,8 @@ Nexus wird staendig weiterentwickelt. Neue Features und Verbesserungen werden re
 3. **Plugins aktivieren** - Blog, Newsletter und mehr aktivieren
 4. **Domain verbinden** - Deine eigene Domain einrichten
 
-## Naechste Schritte
+## Nächste Schritte
 
-Schau dir die Unterseiten an fuer detaillierte Anleitungen zu jedem Thema.
+Schau dir die Unterseiten an für detaillierte Anleitungen zu jedem Thema.
 
 

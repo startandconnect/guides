@@ -13,7 +13,7 @@ Nexus wird als Managed Service bereitgestellt. Du brauchst nichts lokal zu insta
 1. Gehe zu deiner Nexus-URL (z.B. `portal.deinefirma.de`)
 2. Klicke auf "Registrieren"
 3. Fulle das Formular aus
-4. Bestaetige deine E-Mail-Adresse
+4. Bestätige deine E-Mail-Adresse
 
 :::tip[Tipp]
 Falls du eine Einladung per E-Mail erhalten hast, klicke einfach auf den Link in der Mail. Dein Account wird automatisch erstellt.
@@ -21,10 +21,10 @@ Falls du eine Einladung per E-Mail erhalten hast, klicke einfach auf den Link in
 
 ## Erste Anmeldung
 
-Nach der Registrierung kannst du dich sofort anmelden. Du landest auf dem Dashboard, wo du einen Ueberblick ueber dein Portal hast.
+Nach der Registrierung kannst du dich sofort anmelden. Du landest auf dem Dashboard, wo du einen Überblick über dein Portal hast.
 
 ```bash
-# Falls du die API nutzen moechtest:
+# Falls du die API nutzen möchtest:
 curl -X POST https://portal.deinefirma.de/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email": "deine@email.de", "password": "dein-passwort"}'
@@ -32,7 +32,7 @@ curl -X POST https://portal.deinefirma.de/api/auth/login \
 
 ## System-Anforderungen
 
-Nexus laeuft vollstaendig in der Cloud. Alles was du brauchst:
+Nexus läuft vollständig in der Cloud. Alles was du brauchst:
 
 | Anforderung | Minimum |
 |-------------|---------|

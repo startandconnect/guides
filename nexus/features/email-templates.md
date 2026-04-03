@@ -6,38 +6,38 @@ excerpt: E-Mail Templates erstellen und verwalten
 
 # E-Mail Templates
 
-Nexus bietet ein visuelles Template-System fuer alle E-Mails die dein Portal versendet.
+Nexus bietet ein visuelles Template-System für alle E-Mails die dein Portal versendet.
 
 ## Template-Typen
 
 | Typ | Beschreibung |
 |-----|-------------|
-| Bestellbestaetigung | Wird nach einer Bestellung versendet |
-| Willkommens-E-Mail | Fuer neue Benutzer/Kunden |
-| Passwort-Reset | Link zum Zuruecksetzen des Passworts |
-| Newsletter | Fuer Newsletter-Kampagnen |
-| Formular-Bestaetigung | Nach Formular-Einsendung |
+| Bestellbestätigung | Wird nach einer Bestellung versendet |
+| Willkommens-E-Mail | Für neue Benutzer/Kunden |
+| Passwort-Reset | Link zum Zurücksetzen des Passworts |
+| Newsletter | Für Newsletter-Kampagnen |
+| Formular-Bestätigung | Nach Formular-Einsendung |
 
 ## Template bearbeiten
 
 Templates werden mit einem visuellen Editor bearbeitet. Du kannst:
 
 - **Texte** anpassen
-- **Bilder** einfuegen
+- **Bilder** einfügen
 - **Variablen** nutzen (z.B. `{{name}}`, `{{bestellnummer}}`)
 - **Farben** an dein Branding anpassen
 
 :::danger[Achtung]
-Aenderungen an System-Templates (Bestellbestaetigung, Passwort-Reset) werden sofort aktiv. Teste sie vorher mit der Vorschau-Funktion.
+Änderungen an System-Templates (Bestellbestätigung, Passwort-Reset) werden sofort aktiv. Teste sie vorher mit der Vorschau-Funktion.
 :::
 
 ## Variablen
 
-Verfuegbare Variablen haengen vom Template-Typ ab:
+Verfügbare Variablen hängen vom Template-Typ ab:
 
 ```
-{{vorname}}        - Vorname des Empfaengers
-{{nachname}}       - Nachname des Empfaengers
+{{vorname}}        - Vorname des Empfängers
+{{nachname}}       - Nachname des Empfängers
 {{email}}          - E-Mail-Adresse
 {{portal_name}}    - Name deines Portals
 {{portal_url}}     - URL deines Portals
