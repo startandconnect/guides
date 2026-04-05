@@ -59,6 +59,41 @@ Deine Kunden bekommen einen eigenen Bereich auf deiner Domain. Nach dem Login se
 Das Kundenportal läuft auf deiner eigenen Domain und übernimmt automatisch dein Branding. Deine Kunden sehen dein Logo und deine Farben.
 :::
 
+## Kundenportal im Detail
+
+Das Kundenportal ist der Self-Service-Bereich für deine Kunden. Nach dem Login auf deiner Domain sehen sie folgende Bereiche:
+
+### Käufe und Downloads
+
+- **Bestellübersicht** - alle bisherigen Bestellungen mit Datum, Betrag und Status
+- **Rechnungen** - jede Rechnung als PDF zum Download. Praktisch für die Buchhaltung deiner Kunden
+- **Digitale Downloads** - alle gekauften Dateien stehen hier zum Herunterladen bereit. Neue Dateien, die du nachträglich zum Produkt hinzufügst, erscheinen automatisch
+
+### Abonnements verwalten
+
+- **Aktive Abos** - der Kunde sieht alle laufenden Abonnements mit nächstem Zahlungsdatum und Betrag
+- **Abo kündigen** - Kunden können ihre Abos selbst kündigen, ohne dich kontaktieren zu müssen. Das Abo läuft bis zum Ende der bezahlten Periode weiter
+- **Zahlungsmethode ändern** - über den Stripe-Kundenportal-Link kann der Kunde seine Kreditkarte oder Zahlungsmethode aktualisieren
+
+### Event-Registrierungen
+
+- **Gebuchte Events** - alle Veranstaltungen, für die der Kunde registriert ist
+- **Tickets und Details** - Datum, Uhrzeit, Ort und weitere Informationen zum Event
+
+### Kommunikation
+
+- **Nachrichten** - der Kunde kann direkt Nachrichten an dein Support-Team senden. Du siehst und beantwortest diese unter Kunden > Nachrichten in deinem Nexus-Backend
+
+### Profil und Einstellungen
+
+- **Profil bearbeiten** - Name, E-Mail-Adresse und Passwort ändern
+- **Rechnungsadresse** - Adresse und ggf. Firmenname für Rechnungen hinterlegen oder ändern
+- **Newsletter-Status** - der Kunde kann sich selbst vom Newsletter an- oder abmelden
+
+:::tip[Tipp]
+Weise deine Kunden aktiv auf das Kundenportal hin, z.B. in der Kaufbestätigungs-E-Mail. Je mehr Kunden ihre Abos und Downloads selbst verwalten, desto weniger Support-Anfragen bekommst du.
+:::
+
 ## Team-Rollen
 
 Nexus bietet verschiedene Rollen für dein Team: Owner, Admin, Member, Support, Seller und Accountant. Jede Rolle hat eigene Berechtigungen. Details findest du unter [Rollen & Berechtigungen](/team/rollen).

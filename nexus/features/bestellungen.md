@@ -59,6 +59,27 @@ Die Erstattung wird über Stripe abgewickelt. Der Bestellstatus wechselt automat
 Bei Teilerstattungen gibst du den Betrag manuell ein. Das ist praktisch, wenn du z.B. nur ein Produkt aus einer Bestellung erstatten möchtest.
 :::
 
+## Rückerstattung durchführen
+
+So erstattst du eine Bestellung Schritt für Schritt:
+
+1. **Bestellung öffnen** - navigiere zu **Bestellungen** und klicke auf die betreffende Bestellung
+2. Klicke auf **Rückerstattung**
+3. **Art der Erstattung wählen:**
+   - *Vollständige Rückerstattung* - der gesamte Betrag wird zurückerstattet. Der Bestellstatus wechselt auf **REFUNDED**
+   - *Teilrückerstattung* - gib den gewünschten Betrag manuell ein. Der Bestellstatus wechselt auf **PARTIALLY_REFUNDED**
+4. **Bestätigen** - Nexus leitet die Erstattung automatisch an Stripe weiter. Der Kunde erhält das Geld je nach Zahlungsmethode innerhalb von 5-10 Werktagen zurück
+
+Nach der Erstattung passiert Folgendes:
+
+- **Stripe** verarbeitet die Rückzahlung automatisch, du musst nichts manuell im Stripe-Dashboard tun
+- **Delivery Actions** mit dem Trigger "Bei Rückerstattung" werden ausgelöst. Hast du z.B. eine Deprovision-Action eingerichtet, wird die Instanz automatisch abgeschaltet
+- **Rechnungskorrektur** wird automatisch erstellt und ist im Kundenportal sowie in den Bestelldetails abrufbar
+
+:::warning[Wichtig]
+Eine Erstattung kann nicht rückgängig gemacht werden. Prüfe Betrag und Bestellung sorgfältig, bevor du bestätigst.
+:::
+
 ## Technische Details
 
 Jede Bestellung hat eine eindeutige **Bestell-ID** und eine lesbare **Bestellnummer**. Für API-Integrationen und Webhooks nutzt du die Bestell-ID. Die Bestellnummer eignet sich für die Kundenkommunikation.

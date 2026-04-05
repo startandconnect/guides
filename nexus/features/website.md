@@ -74,6 +74,55 @@ Setze für jede wichtige Seite einen individuellen Meta Title und eine Descripti
 
 Nexus generiert automatisch Open-Graph-Bilder für Social Media Previews. Der OG Image Generator v3 ist pro Seite anpassbar - du bestimmst Titel, Beschreibung und Design. So sehen deine Links auf LinkedIn, X und Facebook professionell aus.
 
+## Erfolgsseite nach dem Checkout
+
+Nach einem erfolgreichen Kauf wird der Kunde automatisch auf die Erfolgsseite weitergeleitet.
+
+- **Standard-Erfolgsseite** - Nexus zeigt automatisch eine Bestätigungsseite mit Bestellnummer und den nächsten Schritten an
+- **Individuelle Erfolgsnachrichten** - pro Produkt konfigurierbar unter Produkt > After-Sales. So bekommt jeder Käufer eine passende Nachricht
+- **HTML Override** - für volle Kontrolle schreibst du dein eigenes HTML. Aktiviere den Override in den Seiteneinstellungen der Erfolgsseite
+
+### Verfügbare Variablen
+
+In der Erfolgsnachricht und im HTML Override stehen dir diese Variablen zur Verfügung:
+
+| Variable | Beschreibung |
+|----------|-------------|
+| `{{kundenname}}` | Vor- und Nachname des Kunden |
+| `{{produktname}}` | Name des gekauften Produkts |
+| `{{bestellnummer}}` | Eindeutige Bestellnummer |
+| `{{betrag}}` | Bezahlter Betrag |
+| `{{portal_url}}` | Link zum Kundenportal |
+
+### Beispiel: Custom Erfolgsseite
+
+```html
+<div style="text-align: center; padding: 40px;">
+  <h1>Vielen Dank, {{kundenname}}!</h1>
+  <p>Deine Bestellung <strong>#{{bestellnummer}}</strong> war erfolgreich.</p>
+  <p>Du hast <strong>{{produktname}}</strong> gekauft.</p>
+  <a href="{{portal_url}}" style="
+    display: inline-block;
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+  ">Zum Kundenportal</a>
+</div>
+```
+
+## Abbruchseite
+
+Wenn der Kunde den Checkout abbricht, wird er auf die Abbruchseite weitergeleitet.
+
+- **Standard-Abbruchseite** - Nexus zeigt eine einfache Seite mit der Möglichkeit, zurück zum Shop zu gehen
+- **HTML Override** - du kannst die Seite komplett anpassen, um den Kunden zurückzugewinnen
+
+:::tip[Tipp]
+Nutze die Abbruchseite aktiv: Baue einen CTA-Button zurück zum Produkt ein, zeige nochmal die wichtigsten Vorteile oder biete einen Rabattcode an. So holst du abgebrochene Käufe zurück.
+:::
+
 ## Eigene Domain und SSL
 
 Unter **Einstellungen > Domain** verbindest du deine eigene Domain. SSL-Zertifikate werden automatisch erstellt und erneuert. Deine gesamte Website, der Checkout und das Kundenportal laufen auf deiner Domain.

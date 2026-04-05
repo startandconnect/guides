@@ -64,6 +64,60 @@ Dein Checkout läuft auf deiner eigenen Domain - kein Redirect zu externen Platt
 Nexus erhebt **0% Transaktionsgebühren**. Du zahlst nur die regulären Stripe-Gebühren. Das Geld geht direkt auf dein Konto.
 :::
 
+## Produkt anlegen - Schritt für Schritt
+
+So legst du ein neues Produkt in Nexus an:
+
+1. **Navigiere zu Manage > Produkte** und klicke auf **Neues Produkt**
+2. **Titel und Beschreibung** eingeben - der Titel erscheint im Shop, im Checkout und auf Rechnungen. Die Beschreibung wird auf der Produktseite und im Checkout angezeigt
+3. **SKU vergeben** (optional) - eine interne Artikelnummer für deine Verwaltung
+4. **Produkttyp wählen** - PRODUCT, EVENT, BUNDLE oder HOSTING (siehe Produkttypen oben). Der Typ bestimmt, welche Optionen dir danach zur Verfügung stehen
+5. **Produktbilder hochladen** - das Featured Image wird als Hauptbild im Shop und Checkout verwendet. Zusätzlich kannst du eine Galerie mit mehreren Bildern anlegen
+6. **Preis hinzufügen** - wähle zwischen Einmalkauf oder Abo. Bei Abos legst du das Intervall fest (WEEKLY, MONTHLY, HALF_YEARLY, YEARLY). Du kannst mehrere Preise pro Produkt anlegen
+7. **Trial Days setzen** (optional) - gib die Anzahl der kostenlosen Testtage ein, falls du eine Testphase anbietest
+8. **Kategorie zuweisen** - damit erscheint das Produkt im richtigen Filter im Product-Grid auf deiner Website
+9. **Status auf ACTIVE setzen** - erst dann ist das Produkt im Shop sichtbar. Lass es auf DRAFT, solange du noch daran arbeitest
+10. **Speichern** - dein Produkt ist jetzt live
+
+:::tip[Tipp]
+Bereite alle Produktbilder im Voraus vor. Empfohlen: quadratisches Featured Image (mindestens 800x800 px) und Galerie-Bilder im gleichen Seitenverhältnis.
+:::
+
+## Erfolgsseite und Abbruchseite
+
+### Erfolgsseite
+
+Nach einem erfolgreichen Kauf wird der Kunde automatisch auf die Erfolgsseite weitergeleitet. Diese Seite bestätigt den Kauf und gibt dem Kunden die nächsten Schritte.
+
+- **Individuelle Erfolgsnachrichten** kannst du pro Produkt konfigurieren. Gehe dazu auf das Produkt und öffne den Bereich **After-Sales**
+- **Template-Variablen** stehen dir in der Erfolgsnachricht zur Verfügung, z.B. Kundenname, Produktname und Bestellnummer. So personalisierst du die Nachricht
+- **HTML Override** - für eine komplett eigene Erfolgsseite kannst du eigenes HTML schreiben und das Standard-Layout überschreiben
+
+### Abbruchseite
+
+Wenn der Kunde den Checkout abbricht (z.B. den Browser schließt oder auf "Abbrechen" klickt), wird er auf die Abbruchseite geleitet.
+
+- Auch diese Seite lässt sich über **HTML Override** anpassen
+- Baue einen klaren Call-to-Action ein, der den Kunden zurück zum Produkt führt
+
+:::tip[Tipp]
+Nutze die Abbruchseite als Chance: Biete einen Rabattcode an oder erkläre nochmal die wichtigsten Vorteile deines Produkts.
+:::
+
+## Produkt-Landing-Page
+
+Jedes Produkt kann eine eigene Landing Page haben, die du unabhängig von deiner Shop-Übersicht gestaltest.
+
+- **Konfiguration:** Öffne das Produkt und wechsle zum Bereich **Landing Page**
+- **Hero Section** - großer Header mit Titel, Untertitel und Hintergrundbild
+- **Feature-Abschnitte** - stelle die wichtigsten Vorteile und Funktionen deines Produkts dar
+- **CTA Buttons** - Buttons, die direkt zum Checkout führen
+- **Eigener Slug** - jede Produkt-Landing-Page bekommt eine eigene URL (z.B. `/produkte/mein-kurs`), die du frei wählen kannst
+
+:::info[Hinweis]
+Die Produkt-Landing-Page ist ideal für Ads und Social-Media-Kampagnen. Teile den direkten Link zur Landing Page, statt auf die allgemeine Shop-Übersicht zu verlinken.
+:::
+
 ## Stripe-Verbindung
 
 Nexus nutzt Stripe als Zahlungsanbieter. Unter **Einstellungen > Zahlungen** verbindest du deinen Stripe-Account. Danach werden alle Zahlungen, Abos und Erstattungen automatisch synchronisiert.
