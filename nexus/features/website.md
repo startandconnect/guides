@@ -1,62 +1,79 @@
 ---
 title: Website & Seiten
 order: 2
-excerpt: Deine Website direkt in Nexus bauen
+excerpt: Page Builder, HTML Override, SEO und eigene Domain
 ---
 
 # Website & Seiten
 
-Baue deine Website direkt in Nexus. Page Builder für schnelle Layouts, HTML-Editor für volle Kontrolle. Alles auf deiner eigenen Domain.
+Baue deine komplette Website in Nexus. Der Page Builder reicht für die meisten Seiten - für volle Kontrolle nutzt du den HTML Override mit der `window.nx` API. Alles auf deiner eigenen Domain mit SSL.
 
 ## Seiten erstellen
 
-Gehe zu **Seiten** im Seitenmenü:
+Unter **Seiten** verwaltest du alle Seiten deiner Website:
 
 1. Klicke auf **Neue Seite**
-2. Wähle einen Titel und Slug (URL-Pfad)
-3. Füge Sektionen hinzu oder nutze den HTML-Editor
+2. Wähle Titel und Slug (URL-Pfad, z.B. `/ueber-uns`)
+3. Füge Sections hinzu oder aktiviere den HTML Override
+
+Jede Seite kann als Startseite festgelegt werden. Du kannst beliebig viele Seiten anlegen.
 
 ## Page Builder
 
-Der Page Builder bietet verschiedene Sektionen die du per Drag & Drop anordnen kannst:
+Der Page Builder arbeitet mit Sections, die du per Drag & Drop anordnest:
 
-- **Hero** - Großer Header mit Titel, Text und CTA-Button
-- **Text** - Einfacher Textblock mit Formatierung
-- **Bild** - Einzelbild oder Galerie
-- **Produkt-Grid** - Automatisch aus deinen Produkten
-- **Blog-Grid** - Aktuelle Blog-Artikel
-- **FAQ** - Akkordeon mit Fragen und Antworten
-- **Pricing** - Preistabelle
-- Und viele mehr
+| Section | Funktion |
+|---------|----------|
+| **Hero** | Großer Header mit Titel, Untertitel und CTA-Button |
+| **Text** | Formatierter Textblock |
+| **Image** | Einzelbild oder Bildergalerie |
+| **Product-Grid** | Zeigt deine Produkte automatisch an, filterbar nach Kategorie |
+| **Blog-Grid** | Listet aktuelle Blog-Artikel auf |
+| **FAQ** | Akkordeon mit Fragen und Antworten |
+| **Pricing** | Preistabelle mit Vergleichsfunktion |
 
-## HTML-Override
+Jede Section hat eigene Einstellungen für Layout, Farben, Abstände und Hintergründe. So baust du ohne Code professionelle Landingpages zusammen.
 
-Für volle Kontrolle kannst du den HTML-Override nutzen:
+## HTML Override System v2
 
-1. Aktiviere **HTML-Override** in den Seiteneinstellungen
-2. Schreibe dein eigenes HTML, CSS und JavaScript
-3. Dein Code wird direkt gerendert, der Page Builder wird ignoriert
+Wenn der Page Builder nicht reicht, aktivierst du den HTML Override:
 
-:::info[Eigenes Design]
-Mit HTML-Override kannst du komplett eigene Designs umsetzen. Zugriff auf alle Nexus-Features über die `window.nx` API (Produkte, Checkout, Theme, Blog, etc.).
+1. Öffne die Seite > **Einstellungen**
+2. Aktiviere **HTML Override**
+3. Schreibe dein eigenes HTML, CSS und JavaScript
+
+:::info[Hinweis]
+Das HTML Override System v2 arbeitet mit **globalem Scope** - kein IIFE nötig. Dein Code wird direkt ausgeführt, Variablen und Funktionen sind global verfügbar.
 :::
 
-## Navigation & Footer
+### window.nx API
 
-Unter **Einstellungen > Navigation** konfigurierst du Header und Footer:
+Im HTML Override hast du Zugriff auf die `window.nx` API. Damit steuerst du Nexus-Features direkt aus deinem Code:
 
-- Menüpunkte und Links
-- CTA-Button Text und Link
-- Separate Menüs für eingeloggte und nicht-eingeloggte Besucher
-- HTML-Override für eigene Navigationen
+- **Produkte laden** - Produktdaten dynamisch abfragen
+- **Checkout öffnen** - Checkout programmatisch starten
+- **Theme auslesen** - Aktuelles Farbschema und Branding nutzen
+- **Blog-Daten** - Blog-Artikel laden und darstellen
+
+So baust du komplett eigene Designs, die trotzdem nahtlos mit dem Nexus-Backend arbeiten.
 
 ## SEO
 
 Jede Seite hat eigene SEO-Einstellungen:
 
-- **Meta-Titel** - Titel in Suchergebnissen
-- **Meta-Beschreibung** - Beschreibung in Suchergebnissen
-- **Canonical URL** - Für Duplicate Content
-- **noIndex** - Seite von Suchmaschinen ausschließen
-- **OG-Image** - Vorschaubild für Social Media
+- **Meta Title** - Titel in Suchergebnissen (max. 60 Zeichen empfohlen)
+- **Meta Description** - Beschreibung unter dem Titel (max. 155 Zeichen)
+- **Canonical URL** - Vermeidet Duplicate Content bei mehreren URLs
+- **noIndex** - Seite komplett von Suchmaschinen ausschließen
 
+:::tip[Tipp]
+Setze für jede wichtige Seite einen individuellen Meta Title und eine Description. Das verbessert deine Klickrate in den Suchergebnissen deutlich.
+:::
+
+## OG Image Generator v3
+
+Nexus generiert automatisch Open-Graph-Bilder für Social Media Previews. Der OG Image Generator v3 ist pro Seite anpassbar - du bestimmst Titel, Beschreibung und Design. So sehen deine Links auf LinkedIn, X und Facebook professionell aus.
+
+## Eigene Domain und SSL
+
+Unter **Einstellungen > Domain** verbindest du deine eigene Domain. SSL-Zertifikate werden automatisch erstellt und erneuert. Deine gesamte Website, der Checkout und das Kundenportal laufen auf deiner Domain.

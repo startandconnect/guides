@@ -1,4 +1,5 @@
 {
   "title": "Nexus Guide",
-  "icon": "BookOpen"
+  "icon": "BookOpen",
+  "order": 1
 }

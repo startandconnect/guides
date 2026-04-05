@@ -1,64 +1,64 @@
 ---
 title: Kunden & CRM
 order: 3
-excerpt: Kontakte verwalten und mit Kunden kommunizieren
+excerpt: Kontakte verwalten, Kundenportal und Segmentierung
 ---
 
 # Kunden & CRM
 
-Alle deine Kontakte an einem Ort. Kundenübersicht, Kaufhistorie, Nachrichten und Kundenportal.
+Nexus ist gleichzeitig dein CRM. Alle Kontakte, Kaufhistorien, Tags und Notizen an einem Ort. Dazu ein Kundenportal, in dem deine Kunden selbstständig ihre Käufe, Abos und Downloads verwalten.
 
-## Kontaktübersicht
+## Lead-Status
 
-Unter **Kunden** siehst du alle Kontakte mit:
+Jeder Kontakt hat einen Status, der seinen Lifecycle abbildet:
 
-- Name, E-Mail, Registrierungsdatum
-- Kaufhistorie und Bestellungen
-- Aktive Abos und Downloads
-- Notizen und Tags
+| Status | Bedeutung |
+|--------|-----------|
+| **LEAD** | Neuer Kontakt, noch kein Kauf |
+| **PROSPECT** | Zeigt Interesse, z.B. Newsletter-Anmeldung |
+| **CUSTOMER** | Hat mindestens einmal gekauft |
+| **VIP** | Wertvoller Stammkunde |
+| **INACTIVE** | Kein Engagement mehr |
 
-## Kontakte anlegen
+Den Status kannst du manuell setzen oder als Kriterium für Segmente und Automatisierungen nutzen.
 
-Kontakte werden automatisch erstellt bei:
+## Kontakte verwalten
 
-- **Kauf** - Jeder Käufer wird automatisch als Kontakt angelegt
-- **Registrierung** - Wenn sich jemand registriert
-- **Newsletter** - Bei Newsletter-Anmeldung
-- **Formular** - Bei Formular-Einsendungen
+Unter **Kunden** siehst du alle Kontakte mit Suchfunktion und Filtern. Pro Kontakt stehen dir zur Verfügung:
 
-Du kannst Kontakte auch manuell anlegen oder per CSV importieren.
+- **Custom Fields** - Eigene Felder für beliebige Daten (z.B. Firma, Branche, Telefon)
+- **Tags** - Frei definierbare Labels zum Kategorisieren (z.B. "B2B", "Webinar-Teilnehmer")
+- **Notizen** - Interne Notizen, die nur dein Team sieht
+- **Kundenhistorie** - Alle Bestellungen, Abos, Downloads und Nachrichten chronologisch
+
+Kontakte entstehen automatisch bei Kauf, Registrierung, Newsletter-Anmeldung oder Formular-Einsendung. Du kannst sie auch manuell anlegen oder per CSV importieren.
+
+## Kontaktlisten und Segmente
+
+Erstelle Listen und Segmente, um deine Kontakte zu gruppieren:
+
+- **Statische Listen** - Manuell zusammengestellte Kontaktgruppen
+- **Dynamische Segmente** - Automatisch basierend auf Kriterien wie Lead-Status, Tags, Kaufverhalten oder Custom Fields
+
+:::tip[Tipp]
+Nutze Segmente für gezielte Newsletter-Kampagnen. Zum Beispiel: Alle Kunden, die Produkt A gekauft haben, aber nicht Produkt B - perfekt für Cross-Selling.
+:::
 
 ## Kundenportal
 
-Deine Kunden bekommen einen eigenen Bereich auf deiner Plattform:
+Deine Kunden bekommen einen eigenen Bereich auf deiner Domain. Nach dem Login sehen sie:
 
-- **Käufe** - Übersicht über alle Bestellungen
-- **Downloads** - Gekaufte Dateien herunterladen
-- **Abos** - Aktive Abonnements verwalten und kündigen
-- **Events** - Gebuchte Veranstaltungen
-- **Nachrichten** - Direkter Kontakt mit deinem Team
-- **Account** - Profil und Passwort ändern
+- **Käufe** - Alle Bestellungen mit Rechnungen zum Download
+- **Downloads** - Gekaufte digitale Dateien herunterladen
+- **Abos** - Aktive Abonnements einsehen und selbst kündigen
+- **Events** - Gebuchte Veranstaltungen mit Details
+- **Nachrichten** - Direkter Kontakt mit deinem Support-Team
+- **Account** - Profil bearbeiten, Passwort ändern, E-Mail aktualisieren
 
-## Nachrichten
+:::info[Hinweis]
+Das Kundenportal läuft auf deiner eigenen Domain und übernimmt automatisch dein Branding. Deine Kunden sehen dein Logo und deine Farben.
+:::
 
-Kommuniziere direkt mit deinen Kunden über das interne Nachrichtensystem:
+## Team-Rollen
 
-- Verschlüsselte Nachrichten zwischen Team und Kunden
-- Kunden können über das Kundenportal antworten
-- Alle Nachrichten zu einem Kontakt auf einen Blick
-
-## Rollen & Berechtigungen
-
-Unter **Benutzer** verwaltest du dein Team:
-
-| Rolle | Beschreibung |
-|-------|-------------|
-| Owner | Vollzugriff auf alles |
-| Admin | Vollzugriff (wie Owner) |
-| Member | Eingeschränkter Zugriff, konfigurierbar |
-| Support | Nur Kundenbetreuung |
-| Seller | Nur eigene Produkte und Provisionen |
-| Accountant | Nur Rechnungen und Finanzen |
-
-Für die Rolle "Member" kannst du individuelle Berechtigungen setzen (z.B. Produkte bearbeiten, aber keine Einstellungen ändern).
-
+Nexus bietet verschiedene Rollen für dein Team: Owner, Admin, Member, Support, Seller und Accountant. Jede Rolle hat eigene Berechtigungen. Details findest du unter [Rollen & Berechtigungen](/team/rollen).
