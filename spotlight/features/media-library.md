@@ -6,17 +6,17 @@ excerpt: Bilder, Videos und Downloads verwalten
 
 # Media Library
 
-In der Media Library verwaltest du alle Dateien deiner Website — Bilder, Videos, PDFs, Downloads.
+In der Media Library verwaltest du alle Dateien deiner Website - Bilder, Videos, PDFs, Downloads.
 
 ## Dateien hochladen
 
 1. Gehe zu **Media** im Seitenmenü
-2. Dateien per Drag & Drop in das Upload-Feld ziehen — oder auf **Hochladen** klicken
+2. Dateien per Drag & Drop in das Upload-Feld ziehen - oder auf **Hochladen** klicken
 3. Alle gängigen Formate werden unterstützt:
-   - **Bilder** — JPG, PNG, WebP, GIF, SVG
-   - **Videos** — MP4, WebM
-   - **Dokumente** — PDF, DOCX, XLSX
-   - **Archive** — ZIP
+   - **Bilder** - JPG, PNG, WebP, GIF, SVG
+   - **Videos** - MP4, WebM
+   - **Dokumente** - PDF, DOCX, XLSX
+   - **Archive** - ZIP
 
 ## In HTML verwenden
 
@@ -36,9 +36,9 @@ Oder mit der Media-ID:
 
 ## Organisieren
 
-- **Ordner** — Erstelle Ordner zur Gruppierung (z.B. `hero`, `produkte`, `blog`)
-- **Tags** — Mehrere Tags pro Datei für bessere Suche
-- **Suche** — Nach Dateiname oder Tag
+- **Ordner** - Erstelle Ordner zur Gruppierung (z.B. `hero`, `produkte`, `blog`)
+- **Tags** - Mehrere Tags pro Datei für bessere Suche
+- **Suche** - Nach Dateiname oder Tag
 
 ## Bild-Optimierung
 
@@ -59,7 +59,7 @@ Spotlight liefert Bilder automatisch optimiert aus:
 
 ## Storage-Limits
 
-- **Einzelne Datei** — max. 50 MB
-- **Gesamt** — unbegrenzt (fair use)
+- **Einzelne Datei** - max. 50 MB
+- **Gesamt** - unbegrenzt (fair use)
 
 Für Videos über 50 MB empfehlen wir externe Hosting-Dienste wie Vimeo oder YouTube.

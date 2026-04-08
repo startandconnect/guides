@@ -31,7 +31,7 @@ docs/
     konfiguration.md
   plugins/
     _meta.json
-    uebersicht.md
+    übersicht.md
     blog.md
 ```
 

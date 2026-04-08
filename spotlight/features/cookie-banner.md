@@ -21,9 +21,9 @@ Der Banner erscheint automatisch bei jedem neuen Besucher.
 
 Der Banner unterstützt drei Kategorien:
 
-- **Notwendig** — Immer aktiv, kann nicht deaktiviert werden (Session-Cookies etc.)
-- **Statistik** — Opt-in für Analytics (z.B. Plausible, Umami)
-- **Marketing** — Opt-in für Tracking-Pixel (z.B. Facebook, Google Ads)
+- **Notwendig** - Immer aktiv, kann nicht deaktiviert werden (Session-Cookies etc.)
+- **Statistik** - Opt-in für Analytics (z.B. Plausible, Umami)
+- **Marketing** - Opt-in für Tracking-Pixel (z.B. Facebook, Google Ads)
 
 Nutzer können pro Kategorie entscheiden.
 
@@ -62,7 +62,7 @@ window.addEventListener('spotlight-consent-change', (e) => {
 
 ## Consent zurücksetzen
 
-Der Nutzer kann seine Entscheidung jederzeit ändern — füge einen Link ins Footer ein:
+Der Nutzer kann seine Entscheidung jederzeit ändern - füge einen Link ins Footer ein:
 
 ```html
 <a href="#" onclick="window.spotlightConsent.open(); return false;">
@@ -74,4 +74,4 @@ Das öffnet den Banner erneut.
 
 ## Impressum & Datenschutz
 
-Der Banner verlinkt automatisch auf deine **Impressum** und **Datenschutzerklärung** Seiten (siehe [Rechtliches](/spotlight/guide/rechtliches/impressum)). Die beiden Seiten musst du aber selbst befüllen — Spotlight kann das nicht für dich.
+Der Banner verlinkt automatisch auf deine **Impressum** und **Datenschutzerklärung** Seiten (siehe [Rechtliches](/spotlight/guide/rechtliches/impressum)). Die beiden Seiten musst du aber selbst befüllen - Spotlight kann das nicht für dich.

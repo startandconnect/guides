@@ -10,13 +10,13 @@ Jede Website in der EU braucht eine Datenschutzerklärung (DSGVO Art. 13). Spotl
 
 ## Was in die Datenschutzerklärung gehört
 
-- **Verantwortlicher** — Name und Kontakt (gleicher wie im Impressum)
-- **Welche Daten erhoben werden** — Server-Logs, Cookies, Kontaktformular
-- **Zweck der Verarbeitung** — Warum diese Daten?
-- **Rechtsgrundlage** — Welcher DSGVO-Artikel?
-- **Speicherdauer** — Wie lange werden Daten aufbewahrt?
-- **Rechte der Betroffenen** — Auskunft, Löschung, Widerspruch
-- **Drittanbieter** — Alle externen Dienste (Google Analytics, Brevo, Cloudflare etc.)
+- **Verantwortlicher** - Name und Kontakt (gleicher wie im Impressum)
+- **Welche Daten erhoben werden** - Server-Logs, Cookies, Kontaktformular
+- **Zweck der Verarbeitung** - Warum diese Daten?
+- **Rechtsgrundlage** - Welcher DSGVO-Artikel?
+- **Speicherdauer** - Wie lange werden Daten aufbewahrt?
+- **Rechte der Betroffenen** - Auskunft, Löschung, Widerspruch
+- **Drittanbieter** - Alle externen Dienste (Google Analytics, Brevo, Cloudflare etc.)
 
 ## Datenschutz-Seite anlegen
 
@@ -28,7 +28,7 @@ Jede Website in der EU braucht eine Datenschutzerklärung (DSGVO Art. 13). Spotl
 
 ## Was bei Spotlight automatisch passiert
 
-Die folgenden Punkte gelten für jede Spotlight-Website — übernimm sie in deine Datenschutzerklärung:
+Die folgenden Punkte gelten für jede Spotlight-Website - übernimm sie in deine Datenschutzerklärung:
 
 ### Hosting bei Hetzner (Deutschland)
 
@@ -69,4 +69,4 @@ Nach dem Generieren:
 
 ## Auftragsverarbeitungsvertrag (AVV)
 
-Falls du Spotlight gewerblich nutzt, schließen wir auf Anfrage einen AVV mit dir ab. Schreib eine Mail an [support@startandconnect.com](mailto:support@startandconnect.com) — du bekommst den AVV innerhalb eines Werktags zur Unterschrift.
+Falls du Spotlight gewerblich nutzt, schließen wir auf Anfrage einen AVV mit dir ab. Schreib eine Mail an [support@startandconnect.com](mailto:support@startandconnect.com) - du bekommst den AVV innerhalb eines Werktags zur Unterschrift.

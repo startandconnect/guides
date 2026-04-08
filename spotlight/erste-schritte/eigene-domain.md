@@ -11,7 +11,7 @@ Deine Spotlight-Instanz läuft standardmäßig unter `dein-slug.s2.sac.run`. Fü
 ## 1. Domain im Admin hinterlegen
 
 1. Gehe zu **Einstellungen > Domain**
-2. Gib deine Domain ein — z.B. `meine-website.de`
+2. Gib deine Domain ein - z.B. `meine-website.de`
 3. Klick auf **Speichern**
 
 Spotlight zeigt dir jetzt die benötigten DNS-Einträge.
@@ -46,8 +46,8 @@ Beide Varianten funktionieren mit SSL.
 
 ## Häufige Probleme
 
-**DNS-Check schlägt fehl** — Warte 10-30 Minuten, teste dann nochmal. Manche Provider brauchen länger.
+**DNS-Check schlägt fehl** - Warte 10-30 Minuten, teste dann nochmal. Manche Provider brauchen länger.
 
-**SSL-Zertifikat wird nicht erstellt** — Stell sicher dass DNS bereits funktioniert und Cloudflare auf `DNS only` steht (nicht `Proxied`).
+**SSL-Zertifikat wird nicht erstellt** - Stell sicher dass DNS bereits funktioniert und Cloudflare auf `DNS only` steht (nicht `Proxied`).
 
-**Website zeigt "404" nach Domain-Setup** — Die Default-Page muss gesetzt sein. Gehe zu **Seiten**, öffne deine Startseite und markier sie als `Default Page`.
+**Website zeigt "404" nach Domain-Setup** - Die Default-Page muss gesetzt sein. Gehe zu **Seiten**, öffne deine Startseite und markier sie als `Default Page`.

@@ -6,13 +6,13 @@ excerpt: API-Keys sicher ablegen und in Frontend-Code nutzen
 
 # Credentials & API-Keys
 
-Wenn deine Website externe Dienste nutzt (OpenAI, Brevo, Google Maps, Airtable) brauchst du API-Keys. Die dürfen NIE direkt ins Frontend — sonst kann sie jeder in den DevTools auslesen. Spotlight löst das mit dem Credential-System.
+Wenn deine Website externe Dienste nutzt (OpenAI, Brevo, Google Maps, Airtable) brauchst du API-Keys. Die dürfen NIE direkt ins Frontend - sonst kann sie jeder in den DevTools auslesen. Spotlight löst das mit dem Credential-System.
 
 ## So funktioniert's
 
 1. Du legst einen Credential im Admin an (`Einstellungen > Credentials`)
 2. Spotlight stellt unter `/api/proxy/<name>` einen Proxy-Endpoint bereit
-3. Du rufst den Proxy von deinem JavaScript auf — Spotlight fügt den API-Key serverseitig hinzu
+3. Du rufst den Proxy von deinem JavaScript auf - Spotlight fügt den API-Key serverseitig hinzu
 
 Der Key ist damit nur auf dem Server sichtbar, nie im Browser.
 
@@ -21,12 +21,12 @@ Der Key ist damit nur auf dem Server sichtbar, nie im Browser.
 1. Gehe zu **Einstellungen > Credentials**
 2. **Neuer Credential**
 3. Eintragen:
-   - **Name** — z.B. `brevo`, `openai`, `airtable`
-   - **Service** — Wähle aus der Liste (oder `Custom` für eigene Dienste)
-   - **API-Key** — Dein Key vom Dienst
-   - **Base URL** — API-Endpoint (z.B. `https://api.brevo.com/v3`)
-   - **Header-Name** — z.B. `api-key` oder `Authorization`
-   - **Header-Prefix** — z.B. `Bearer ` (leer lassen wenn nicht nötig)
+   - **Name** - z.B. `brevo`, `openai`, `airtable`
+   - **Service** - Wähle aus der Liste (oder `Custom` für eigene Dienste)
+   - **API-Key** - Dein Key vom Dienst
+   - **Base URL** - API-Endpoint (z.B. `https://api.brevo.com/v3`)
+   - **Header-Name** - z.B. `api-key` oder `Authorization`
+   - **Header-Prefix** - z.B. `Bearer ` (leer lassen wenn nicht nötig)
 4. **Speichern**
 
 ## Im JavaScript nutzen
@@ -98,7 +98,7 @@ const res = await fetch('/api/proxy/airtable/MyBase/Leads', {
 
 ### Google Maps (Geocoding)
 
-Für Geocoding brauchst du keinen Browser-Key mehr — der Server-Proxy übernimmt es:
+Für Geocoding brauchst du keinen Browser-Key mehr - der Server-Proxy übernimmt es:
 
 ```js
 const res = await fetch(

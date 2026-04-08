@@ -30,20 +30,20 @@ Gehe zu **Einstellungen > SMTP** und trage ein:
 
 ## Empfohlene Provider
 
-- **IONOS** — smtp.ionos.de:587 (TLS)
-- **Strato** — smtp.strato.de:587 (TLS)
-- **Gmail** — smtp.gmail.com:587 (App-Passwort nötig)
-- **SendGrid / Brevo / Postmark** — für höheres Mail-Volumen
+- **IONOS** - smtp.ionos.de:587 (TLS)
+- **Strato** - smtp.strato.de:587 (TLS)
+- **Gmail** - smtp.gmail.com:587 (App-Passwort nötig)
+- **SendGrid / Brevo / Postmark** - für höheres Mail-Volumen
 
-> Brevo gibt es auch kostenlos mit 300 Mails/Tag — reicht für die meisten Websites.
+> Brevo gibt es auch kostenlos mit 300 Mails/Tag - reicht für die meisten Websites.
 
 ## Testen
 
 Klick nach dem Speichern auf **Test-E-Mail senden**. Du bekommst eine Test-Mail an die hinterlegte Adresse. Falls der Test fehlschlägt:
 
-- **Authentifizierung fehlgeschlagen** — Passwort oder Benutzername falsch
-- **Connection timeout** — Port oder Host falsch
-- **TLS/SSL Fehler** — Secure-Modus prüfen (587=TLS, 465=SSL)
+- **Authentifizierung fehlgeschlagen** - Passwort oder Benutzername falsch
+- **Connection timeout** - Port oder Host falsch
+- **TLS/SSL Fehler** - Secure-Modus prüfen (587=TLS, 465=SSL)
 
 ## Kontaktformular
 

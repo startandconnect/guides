@@ -1,12 +1,12 @@
 ---
 title: Impressum
 order: 1
-excerpt: Pflichtangaben fuer deine Website einrichten
+excerpt: Pflichtangaben für deine Website einrichten
 ---
 
 # Impressum
 
-Jede gewerbliche Website in Deutschland braucht ein Impressum (§5 TMG). Spotlight stellt dir eine Vorlage bereit — du musst sie nur befüllen.
+Jede gewerbliche Website in Deutschland braucht ein Impressum (§5 TMG). Spotlight stellt dir eine Vorlage bereit - du musst sie nur befüllen.
 
 ## Impressum-Seite anlegen
 
@@ -49,13 +49,13 @@ Jede gewerbliche Website in Deutschland braucht ein Impressum (§5 TMG). Spotlig
 
 ## Pflichtangaben-Checkliste
 
-- [x] **Name & Anschrift** — Vollständig, ladungsfähig (keine Postfächer)
-- [x] **Kontakt** — E-Mail Pflicht, Telefon empfohlen
-- [x] **Vertretungsberechtigte** — Bei GmbH, UG, AG etc.
-- [x] **Handelsregister** — Registergericht + Registernummer bei HR-Eintrag
-- [x] **USt-IdNr** — Falls vorhanden (nicht jeder hat eine)
-- [x] **Aufsichtsbehörde** — Bei bestimmten Berufen (Ärzte, Anwälte, Makler)
-- [x] **Berufsbezeichnung & Kammer** — Bei verkammerten Berufen
+- [x] **Name & Anschrift** - Vollständig, ladungsfähig (keine Postfächer)
+- [x] **Kontakt** - E-Mail Pflicht, Telefon empfohlen
+- [x] **Vertretungsberechtigte** - Bei GmbH, UG, AG etc.
+- [x] **Handelsregister** - Registergericht + Registernummer bei HR-Eintrag
+- [x] **USt-IdNr** - Falls vorhanden (nicht jeder hat eine)
+- [x] **Aufsichtsbehörde** - Bei bestimmten Berufen (Ärzte, Anwälte, Makler)
+- [x] **Berufsbezeichnung & Kammer** - Bei verkammerten Berufen
 
 ## Im Footer verlinken
 

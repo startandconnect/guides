@@ -80,9 +80,9 @@ Spotlight hat einen eingebauten **Honeypot**:
 <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none">
 ```
 
-Füge das versteckte Feld `website` hinzu — wenn es befüllt ist, geht die Nachricht nicht raus (Bot erkannt).
+Füge das versteckte Feld `website` hinzu - wenn es befüllt ist, geht die Nachricht nicht raus (Bot erkannt).
 
-Für höheren Schutz kannst du zusätzlich **Cloudflare Turnstile** oder **hCaptcha** integrieren — die Challenge wird serverseitig validiert.
+Für höheren Schutz kannst du zusätzlich **Cloudflare Turnstile** oder **hCaptcha** integrieren - die Challenge wird serverseitig validiert.
 
 ## Dateianhänge
 

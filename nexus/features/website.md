@@ -13,7 +13,7 @@ Baue deine komplette Website in Nexus. Der Page Builder reicht für die meisten 
 Unter **Seiten** verwaltest du alle Seiten deiner Website:
 
 1. Klicke auf **Neue Seite**
-2. Wähle Titel und Slug (URL-Pfad, z.B. `/ueber-uns`)
+2. Wähle Titel und Slug (URL-Pfad, z.B. `/über-uns`)
 3. Füge Sections hinzu oder aktiviere den HTML Override
 
 Jede Seite kann als Startseite festgelegt werden. Du kannst beliebig viele Seiten anlegen.
