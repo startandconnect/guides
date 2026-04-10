@@ -1,152 +1,164 @@
 ---
 title: E-Mail Template-Variablen
 order: 1
-excerpt: Alle verfügbaren Variablen für E-Mail Templates - gruppiert nach Kontext mit Beispielwerten
+excerpt: Alle verfuegbaren Variablen fuer E-Mail Templates - gruppiert nach Kontext mit Beispielwerten
 ---
 
 # E-Mail Template-Variablen
 
-Nexus nutzt Handlebars als Template-Engine für E-Mails. Du kannst Variablen mit doppelten geschweiften Klammern einsetzen: `{{variablenname}}`. Hier findest du alle verfügbaren Variablen, gruppiert nach Kontext.
+In E-Mail Templates kannst du Variablen einsetzen, die beim Versand automatisch durch echte Werte ersetzt werden.
 
-## Allgemeine Variablen
+## Syntax
 
-Diese Variablen stehen in jedem E-Mail Template zur Verfügung:
+Variablen werden mit **einfachen geschweiften Klammern** und Punkt-Notation geschrieben:
 
-| Variable | Beschreibung | Beispielwert |
+```
+{customer.firstName}
+{order.number}
+{portal.name}
+```
+
+:::warning[Wichtig]
+Verwende **einfache** Klammern `{variable}`, nicht doppelte `{{variable}}`. Doppelte Klammern sind fuer interne Systemzwecke reserviert.
+:::
+
+Im Template-Editor werden verfuegbare Variablen automatisch vorgeschlagen. Du kannst sie per Klick einfuegen.
+
+## Kunde
+
+In jedem Template verfuegbar:
+
+| Variable | Beschreibung | Beispiel |
 |---|---|---|
-| `{{vorname}}` | Vorname des Empfängers | Max |
-| `{{nachname}}` | Nachname des Empfängers | Mustermann |
-| `{{email}}` | E-Mail-Adresse des Empfängers | max@beispiel.de |
-| `{{portal_name}}` | Name deines Portals | Mein Portal |
-| `{{portal_url}}` | URL deines Portals | https://meinportal.de |
+| `{customer.firstName}` | Vorname | Max |
+| `{customer.lastName}` | Nachname | Mustermann |
+| `{customer.fullName}` | Voller Name | Max Mustermann |
+| `{customer.email}` | E-Mail-Adresse | max@beispiel.de |
 
-## Bestellungen
+## Portal
 
-Verfügbar in Bestellbestätigungen, Rechnungs-Mails und Zahlungserinnerungen:
+In jedem Template verfuegbar:
 
-| Variable | Beschreibung | Beispielwert |
+| Variable | Beschreibung | Beispiel |
 |---|---|---|
-| `{{bestellnummer}}` | Eindeutige Bestellnummer | ORD-2024-001 |
-| `{{betrag}}` | Gesamtbetrag der Bestellung (formatiert) | 49,99 EUR |
-| `{{produkt_name}}` | Name des bestellten Produkts | Online-Kurs SEO Basics |
-| `{{datum}}` | Bestelldatum | 15.03.2024 |
+| `{portal.name}` | Name deines Portals | Mein Portal |
+| `{portal.url}` | URL deines Portals | https://meinportal.de |
 
-## Abonnements
+## Bestellung
 
-Verfügbar in Abo-Bestätigungen, Verlängerungen und Kündigungen:
+Verfuegbar in Bestellbestaetigungen, Erstattungen und Zahlungs-E-Mails:
 
-| Variable | Beschreibung | Beispielwert |
+| Variable | Beschreibung | Beispiel |
 |---|---|---|
-| `{{abo_intervall}}` | Abrechnungsintervall | monatlich |
-| `{{naechste_abrechnung}}` | Datum der nächsten Zahlung | 15.04.2024 |
-| `{{bisher_gezahlt}}` | Gesamtbetrag bisheriger Zahlungen | 149,97 EUR |
+| `{order.number}` | Bestellnummer | ORD-2026-001234 |
+| `{order.total}` | Gesamtbetrag | 49,00 EUR |
+| `{order.subtotal}` | Zwischensumme (netto) | 41,18 EUR |
+| `{order.tax}` | MwSt-Betrag | 7,82 EUR |
+| `{order.date}` | Bestelldatum | 15.03.2026 |
+| `{order.id}` | Bestell-ID (fuer Links) | cmn... |
 
-## Events
+## Erstattung
 
-Verfügbar in Event-Bestätigungen und Erinnerungen:
+Verfuegbar im Template "Erstattung bestaetigt":
 
-| Variable | Beschreibung | Beispielwert |
+| Variable | Beschreibung | Beispiel |
 |---|---|---|
-| `{{event.name}}` | Name des Events | Workshop: Content Marketing |
-| `{{event.date}}` | Datum des Events | 20.04.2024 |
-| `{{event.location}}` | Veranstaltungsort | Online via Zoom |
-| `{{event.startTime}}` | Startzeit | 10:00 |
-| `{{event.endTime}}` | Endzeit | 12:00 |
-| `{{attendanceType}}` | Teilnahmeart (online/vor Ort) | online |
+| `{refund.amount}` | Erstattungsbetrag | 49,00 EUR |
+| `{refund.type}` | Art der Erstattung | full / partial |
+
+## Fehlgeschlagene Zahlung
+
+Verfuegbar in "Zahlung fehlgeschlagen (Admin)" und "Zahlung fehlgeschlagen (Kunde)":
+
+| Variable | Beschreibung | Beispiel |
+|---|---|---|
+| `{payment.method}` | Zahlungsart | card / sepa_debit |
+| `{payment.failureCode}` | Fehlercode von Stripe | card_declined |
+| `{payment.failureMessage}` | Fehlerbeschreibung | Your card was declined. |
+| `{support.email}` | Support-E-Mail des Portals | support@beispiel.de |
+
+## Rechnung
+
+Verfuegbar in Rechnungs-E-Mails:
+
+| Variable | Beschreibung | Beispiel |
+|---|---|---|
+| `{invoice.url}` | Link zur Rechnung | https://... |
+| `{invoice.number}` | Rechnungsnummer | INV-2026-001 |
+
+## Abonnement
+
+Verfuegbar in Abo-Bestaetigungen, Verlaengerungen und Kuendigungen:
+
+| Variable | Beschreibung | Beispiel |
+|---|---|---|
+| `{subscription.productName}` | Produktname | Jahres-Mitgliedschaft |
+| `{subscription.amount}` | Betrag | 99,00 EUR |
+| `{subscription.nextBillingDate}` | Naechste Abrechnung | 15.04.2026 |
+| `{subscription.endDate}` | Enddatum (bei Kuendigung) | 15.03.2027 |
+
+## Event
+
+Verfuegbar in Event-Bestaetigungen und Erinnerungen:
+
+| Variable | Beschreibung | Beispiel |
+|---|---|---|
+| `{event.name}` | Name des Events | Workshop: Content Marketing |
+| `{event.date}` | Datum | 20.04.2026 |
+| `{event.time}` | Startzeit | 10:00 |
+| `{event.location}` | Veranstaltungsort | Online via Zoom |
+| `{participant.firstName}` | Vorname des Teilnehmers | Max |
+| `{participant.lastName}` | Nachname des Teilnehmers | Mustermann |
+| `{ticketCount}` | Anzahl Tickets | 2 |
+| `{joinUrl}` | Link zum Beitreten (Online) | https://... |
+| `{calendarUrl}` | Kalender-Download | https://... |
+| `{manageTicketsUrl}` | Link zur Ticketverwaltung | https://... |
+
+## Circle Community
+
+Verfuegbar in Circle-Integration-E-Mails:
+
+| Variable | Beschreibung | Beispiel |
+|---|---|---|
+| `{circle.communityName}` | Community-Name | Premium Community |
+| `{circle.communityUrl}` | Community-URL | https://community.beispiel.de |
+| `{circle.signupUrl}` | Registrierungs-Link | https://community.beispiel.de/sign_up |
+| `{circle.accessGroups}` | Freigeschaltete Gruppen | Premium Members |
 
 ## Hosting
 
-Verfügbar in Hosting-bezogenen Benachrichtigungen:
+Verfuegbar in Hosting-Benachrichtigungen:
 
-| Variable | Beschreibung | Beispielwert |
+| Variable | Beschreibung | Beispiel |
 |---|---|---|
-| `{{hosting.url}}` | URL der Hosting-Instanz | https://app.beispiel.de |
-| `{{hosting.domain}}` | Domain der Instanz | app.beispiel.de |
-| `{{hosting.status}}` | Aktueller Status | active |
+| `{hosting.url}` | URL der Instanz | https://app.beispiel.de |
+| `{hosting.domain}` | Domain | app.beispiel.de |
+| `{hosting.status}` | Status | running |
 
-## Konditionale Blöcke
+## Bedingte Bloecke
 
-Mit konditionalen Blöcken kannst du Inhalte nur anzeigen, wenn eine bestimmte Bedingung erfüllt ist. Nexus unterstützt dafür eine eigene Syntax:
+Du kannst Inhalte nur anzeigen wenn eine Variable einen Wert hat:
 
 ```
 {variable:show}
-Dieser Text wird nur angezeigt, wenn die Variable einen Wert hat.
+Dieser Text wird nur angezeigt wenn die Variable gesetzt ist.
 {/variable:show}
 ```
 
-### Beispiel: Online-Teilnehmer
+### Beispiel: Online vs. Vor-Ort
 
 ```
 {isOnlineParticipant:show}
-Dein Zoom-Link: https://zoom.us/j/123456789
+Dein Zoom-Link: {joinUrl}
 Bitte logge dich 5 Minuten vor Beginn ein.
 {/isOnlineParticipant:show}
-```
 
-### Beispiel: Vor-Ort-Teilnehmer
-
-```
 {isOnsiteParticipant:show}
-Adresse: Musterstraße 1, 12345 Berlin
+Adresse: Musterstrasse 1, 12345 Berlin
 Bitte sei 15 Minuten vor Beginn da.
 {/isOnsiteParticipant:show}
 ```
 
-## Handlebars-Syntax
-
-Nexus verwendet Handlebars als Template-Engine. Neben einfachen Variablen stehen dir diese Konstrukte zur Verfügung:
-
-### Bedingte Ausgabe
-
-```handlebars
-{{#if variable}}
-Dieser Text wird angezeigt, wenn die Variable existiert und nicht leer ist.
-{{/if}}
-```
-
-```handlebars
-{{#if variable}}
-Text wenn vorhanden
-{{else}}
-Fallback-Text
-{{/if}}
-```
-
-### Schleifen
-
-```handlebars
-{{#each items}}
-- {{this.name}}: {{this.preis}}
-{{/each}}
-```
-
 :::tip[Tipp]
-Du kannst Handlebars und konditionale Blöcke kombinieren. Handlebars eignet sich besonders gut für Listen (z.B. Bestellpositionen), während konditionale Blöcke ideal für einfache Ja/Nein-Entscheidungen sind.
-:::
-
-### Beispiel: Komplettes Template
-
-```handlebars
-Hallo {{vorname}},
-
-vielen Dank für deine Bestellung ({{bestellnummer}}).
-
-Bestellte Produkte:
-{{#each items}}
-- {{this.name}} - {{this.preis}}
-{{/each}}
-
-Gesamtbetrag: {{betrag}}
-
-{isDigitalProduct:show}
-Du findest deine Downloads in deinem Kundenportal unter:
-{{portal_url}}/downloads
-{/isDigitalProduct:show}
-
-Viele Grüße,
-{{portal_name}}
-```
-
-:::info[Hinweis]
-Template-Variablen werden beim Versand automatisch ersetzt. In der Vorschau im Dashboard siehst du Beispielwerte, damit du das Layout prüfen kannst.
+Im Template-Editor siehst du alle verfuegbaren Variablen fuer das jeweilige Template. In der Vorschau werden Beispielwerte eingesetzt, damit du das Layout pruefen kannst.
 :::
