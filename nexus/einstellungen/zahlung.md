@@ -25,11 +25,17 @@ Veröffentliche niemals deinen Secret Key. Er gehört nur in die Nexus-Einstellu
 
 ### Webhook-Konfiguration
 
-Nexus benötigt einen Stripe Webhook, um Zahlungsstatus-Updates zu erhalten:
+Nexus benötigt einen Stripe Webhook, um Zahlungsstatus-Updates zu erhalten. Am einfachsten:
+
+1. Gehe in Nexus zu **Einstellungen > Zahlung > Stripe**
+2. Klicke auf **Webhook erstellen** - Nexus legt den Webhook automatisch an mit allen 20 benötigten Events
+3. Trage den angezeigten **Signing Secret** ein und speichere
+
+Falls du den Webhook manuell in Stripe anlegen möchtest:
 
 1. Erstelle in Stripe unter **Developers > Webhooks** einen neuen Endpoint
 2. URL: `https://deinportal.de/api/webhooks/stripe`
-3. Events: `checkout.session.completed`, `payment_intent.succeeded`, `invoice.paid`
+3. Wähle alle relevanten Events (Nexus benötigt 20 Events inkl. `checkout.session.completed`, `charge.failed`, `charge.refunded`, `invoice.paid` und weitere)
 4. Kopiere den **Signing Secret** und trage ihn in Nexus ein
 
 ### 3D Secure
@@ -61,6 +67,19 @@ Aktiviere die gewünschten Methoden in deinem Stripe Dashboard unter **Settings 
 :::tip[Tipp]
 Wähle einen Prefix, der zu deinem Unternehmen passt. Der Nummernkreis zählt automatisch hoch und kann nicht zurückgesetzt werden.
 :::
+
+## Fehlgeschlagene Zahlungen
+
+Nexus kann dich und deine Kunden automatisch per E-Mail benachrichtigen, wenn eine Zahlung fehlschlägt - z.B. bei einer SEPA-Rückbuchung oder abgelehnten Kreditkarte.
+
+Konfiguriere die Benachrichtigungen unter **Einstellungen > Zahlung > Stripe** im Abschnitt **Fehlgeschlagene Zahlungen**:
+
+- **Admin benachrichtigen** - Du bekommst eine E-Mail mit allen Details (Bestellnummer, Kunde, Fehlercode, Betrag). Optional kannst du eine eigene E-Mail-Adresse eintragen, sonst wird die Support-E-Mail deines Portals verwendet.
+- **Kunden benachrichtigen** - Der Kunde bekommt eine informative E-Mail mit dem Hinweis, sich bei dir zu melden.
+
+Beide Optionen sind standardmässig deaktiviert. Die E-Mail-Inhalte kannst du unter **E-Mails** anpassen (Templates: "Zahlung fehlgeschlagen (Admin)" und "Zahlung fehlgeschlagen (Kunde)").
+
+Nexus erkennt automatisch fehlgeschlagene Zahlungen, auch wenn sie erst Tage später scheitern (z.B. SEPA-Lastschriften die von der Bank zurückgebucht werden). Bestellungen werden in diesem Fall automatisch auf den Status **FAILED** gesetzt.
 
 ## Refund-Policy
 
