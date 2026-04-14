@@ -1,7 +1,7 @@
 ---
 title: Wiki und CLAUDE.md
 order: 5
-excerpt: Die wichtigste Angewohnheit - Kontext permanent verfuegbar machen
+excerpt: Die wichtigste Angewohnheit - Kontext permanent verfügbar machen
 ---
 
 # Wiki und CLAUDE.md
@@ -14,10 +14,10 @@ Eine Markdown-Datei die Claude Code automatisch liest, wenn du es in einem Verze
 
 TODO: Minimalbeispiel und Maximalbeispiel, beides kommentiert.
 
-## Was gehoert rein
+## Was gehört rein
 
 - **Wer du bist** - Rolle, Kontext, wichtige Details
-- **Was der Ordner ist** - Projekt, Produkt, persoenliches Wiki
+- **Was der Ordner ist** - Projekt, Produkt, persönliches Wiki
 - **Regeln** - Konventionen, Sprache, was vermieden werden soll
 - **Pointer** - welche anderen Dateien wichtig sind
 
@@ -25,9 +25,9 @@ TODO: Strukturvorschlag, Reihenfolge der Abschnitte.
 
 ## Globale CLAUDE.md
 
-Neben der projekt-spezifischen gibt es eine globale Version unter `~/.claude/CLAUDE.md`. Dort kommt rein, was fuer alle Projekte gilt.
+Neben der projekt-spezifischen gibt es eine globale Version unter `~/.claude/CLAUDE.md`. Dort kommt rein, was für alle Projekte gilt.
 
-TODO: Was global hingehoert vs was projekt-lokal bleibt.
+TODO: Was global hingehört vs was projekt-lokal bleibt.
 
 ## Wiki
 
@@ -37,8 +37,8 @@ TODO: Beispiel-Wiki-Struktur, wann ein Wiki sinnvoll ist, wann eine einzelne Dat
 
 ## Der Effekt
 
-Ohne CLAUDE.md: Claude raet bei jeder Frage.
-Mit CLAUDE.md: Claude weiss sofort Kontext und kann fokussiert antworten.
+Ohne CLAUDE.md: Claude rät bei jeder Frage.
+Mit CLAUDE.md: Claude weiß sofort Kontext und kann fokussiert antworten.
 Mit Wiki: Claude kann dir zu jedem Thema Zugriff geben, ohne dass du alles in den Prompt schreibst.
 
 TODO: Vorher-Nachher-Vergleich an konkretem Beispiel.

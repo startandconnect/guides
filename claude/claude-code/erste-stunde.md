@@ -18,7 +18,7 @@ TODO: Screenshots, typische Reaktionen.
 
 ## Minute 15-30: Erste echte Aufgabe
 
-Waehle etwas echtes aber kleines. Beispiele:
+Wähle etwas echtes aber kleines. Beispiele:
 
 - "Bau mir eine Markdown-Datei mit meinem Wochenplan. Hier sind meine Termine: ..."
 - "Lies meine notes.md und fasse sie in 5 Stichpunkten zusammen."
@@ -28,11 +28,11 @@ TODO: Konkrete Beispiele durchspielen, erwartete Zwischenschritte zeigen.
 
 ## Minute 30-45: Iterieren
 
-Die erste Antwort ist selten final. Ueb dich in kurzen Folgeanweisungen:
+Die erste Antwort ist selten final. Üb dich in kurzen Folgeanweisungen:
 
-- "Mach das kuerzer."
+- "Mach das kürzer."
 - "Fehler: es passiert X statt Y."
-- "Fuege zusaetzlich Z hinzu."
+- "Füge zusätzlich Z hinzu."
 
 TODO: Wie man produktiv iteriert ohne in Endlosschleifen zu landen.
 
@@ -40,4 +40,4 @@ TODO: Wie man produktiv iteriert ohne in Endlosschleifen zu landen.
 
 Im aktuellen Ordner eine Datei `CLAUDE.md` erstellen. Reinschreiben: wer du bist, woran du arbeitest, welche Regeln gelten. Dann nochmal eine Frage stellen. Sieh wie viel besser die Antwort wird.
 
-TODO: Mini-Vorlage fuer CLAUDE.md, Erklaerung welche Rolle die Datei spielt.
+TODO: Mini-Vorlage für CLAUDE.md, Erklärung welche Rolle die Datei spielt.

@@ -6,13 +6,13 @@ excerpt: Einstieg in die Anthropic API - Auth, erste Requests, wichtige Endpunkt
 
 # API Grundlagen
 
-Fuer Developer, die Claude in eigene Apps einbauen wollen.
+Für Developer, die Claude in eigene Apps einbauen wollen.
 
 ## Auth
 
 Anthropic API nutzt API Keys. Keys erstellst du im Anthropic Console.
 
-TODO: Schritt fuer Schritt Key anlegen, sichere Ablage.
+TODO: Schritt für Schritt Key anlegen, sichere Ablage.
 
 ## Erster Request
 
@@ -28,15 +28,15 @@ curl https://api.anthropic.com/v1/messages \
   }'
 ```
 
-TODO: Request-Aufbau genau erklaeren, aktuelle Modell-IDs verifizieren.
+TODO: Request-Aufbau genau erklären, aktuelle Modell-IDs verifizieren.
 
 ## Wichtige Endpunkte
 
-- `/v1/messages` - Hauptendpunkt fuer Chat
-- `/v1/messages/count_tokens` - Tokens zaehlen vor dem Send
+- `/v1/messages` - Hauptendpunkt für Chat
+- `/v1/messages/count_tokens` - Tokens zählen vor dem Send
 - Weitere: Files, Batches, Models
 
-TODO: Komplette Liste mit kurzer Erklaerung.
+TODO: Komplette Liste mit kurzer Erklärung.
 
 ## Rate Limits
 
@@ -45,6 +45,6 @@ TODO: Aktuelle Limits, wie man sie erweitert, was bei 429 tun.
 ## Cost-Optimierung
 
 - **Prompt Caching:** wiederkehrende Teile cachen und sparen
-- **Batch API:** asynchrone Jobs fuer 50 Prozent Rabatt
+- **Batch API:** asynchrone Jobs für 50 Prozent Rabatt
 
 TODO: Beide Features mit Beispiel.

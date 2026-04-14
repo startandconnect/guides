@@ -6,23 +6,23 @@ excerpt: Echte Workflows - nicht Hello World, sondern wie man es wirklich nutzt
 
 # Workflow-Beispiele
 
-Keine abstrakten Beispiele. Echte Workflows, die Nutzer taeglich fahren.
+Keine abstrakten Beispiele. Echte Workflows, die Nutzer täglich fahren.
 
 ## Workflow 1: Morgen-Routine
 
-Claude Code startet, liest Wiki und Kalender, schlaegt Priorisierung fuer den Tag vor.
+Claude Code startet, liest Wiki und Kalender, schlägt Priorisierung für den Tag vor.
 
-TODO: Konkreter Ablauf Schritt fuer Schritt.
+TODO: Konkreter Ablauf Schritt für Schritt.
 
 ## Workflow 2: Bugfix mit Kontext
 
-Claude Code liest Issue-Text, pruft relevante Dateien, schlaegt Loesung vor, testet, committet.
+Claude Code liest Issue-Text, prüft relevante Dateien, schlägt Lösung vor, testet, committet.
 
 TODO: Konkreter Ablauf mit Beispiel-Bug.
 
 ## Workflow 3: Wochen-Zusammenfassung
 
-Git-Log plus Wiki-Session-Notes, Claude macht daraus einen Wochen-Bericht fuer Kunden oder Team.
+Git-Log plus Wiki-Session-Notes, Claude macht daraus einen Wochen-Bericht für Kunden oder Team.
 
 TODO: Konkreter Ablauf.
 
@@ -32,7 +32,7 @@ Briefing im Wiki, Claude Code baut HTML-Seite, nutzt bestehende Komponenten, dep
 
 TODO: Konkreter Ablauf.
 
-## Workflow 5: Customer Support aufraeumen
+## Workflow 5: Customer Support aufräumen
 
 Support-Mails zusammenfassen, kategorisieren, Pattern erkennen.
 
@@ -42,7 +42,7 @@ TODO: Konkreter Ablauf.
 
 - Kontext liegt im Wiki
 - Claude bekommt klaren Startpunkt und klares Ziel
-- Zwischenergebnisse werden gepruft
-- Wichtige Teile landen zurueck im Wiki
+- Zwischenergebnisse werden geprüft
+- Wichtige Teile landen zurück im Wiki
 
 TODO: Mehr Meta-Prinzipien aus den Beispielen ableiten.

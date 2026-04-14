@@ -6,7 +6,7 @@ excerpt: Warum Claude Code bei vielen scheitert - und wie man es vermeidet
 
 # Das "Alles oder Nichts" Problem
 
-Die groesste Beobachtung nach einem Jahr intensiver Claude-Code-Nutzung: Menschen spalten sich in zwei Lager. Entweder sie bauen damit Dinge, die sie sonst nie gebaut haetten, oder sie geben nach drei Versuchen frustriert auf.
+Die größte Beobachtung nach einem Jahr intensiver Claude-Code-Nutzung: Menschen spalten sich in zwei Lager. Entweder sie bauen damit Dinge, die sie sonst nie gebaut hätten, oder sie geben nach drei Versuchen frustriert auf.
 
 ## Warum die meisten scheitern
 
@@ -15,13 +15,13 @@ Die groesste Beobachtung nach einem Jahr intensiver Claude-Code-Nutzung: Mensche
 - Sie akzeptieren die erste Antwort, auch wenn sie schlecht ist
 - Sie probieren es nicht oft genug
 
-TODO: Jeden Grund mit einem Erfahrungsbericht unterfuettern.
+TODO: Jeden Grund mit einem Erfahrungsbericht unterfüttern.
 
 ## Warum andere Erfolg haben
 
 - Sie haben einen sauberen Arbeitsplatz (Wiki, CLAUDE.md)
-- Sie zerlegen grosse Aufgaben in kleine Schritte
-- Sie iterieren schnell und brechen frueh ab wenn es nicht funktioniert
+- Sie zerlegen große Aufgaben in kleine Schritte
+- Sie iterieren schnell und brechen früh ab wenn es nicht funktioniert
 - Sie haben realistische Erwartungen
 
 TODO: Profile erfolgreicher Nutzer, Gewohnheiten.
@@ -31,7 +31,7 @@ TODO: Profile erfolgreicher Nutzer, Gewohnheiten.
 1. **Ein Wiki starten** (auch klein)
 2. **CLAUDE.md anlegen** (auch leer)
 3. **Jede Woche einen neuen Workflow testen**
-4. **Fehlschlaege dokumentieren** (im Wiki, damit Claude sie kennt)
+4. **Fehlschläge dokumentieren** (im Wiki, damit Claude sie kennt)
 
 TODO: Konkreter 30-Tage-Plan.
 

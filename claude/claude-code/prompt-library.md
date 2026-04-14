@@ -1,7 +1,7 @@
 ---
 title: Prompt Library
 order: 6
-excerpt: Konkrete Prompts fuer typische Situationen - copy, paste, anpassen
+excerpt: Konkrete Prompts für typische Situationen - copy, paste, anpassen
 ---
 
 # Prompt Library
@@ -10,7 +10,7 @@ Keine Theorie, nur Prompts die funktionieren. Jeder Prompt hat: **Wann benutzen*
 
 ## 1. Neues Wiki aufsetzen
 
-**Wann benutzen:** Du willst ein persoenliches Wiki anlegen, weisst aber nicht wo anfangen.
+**Wann benutzen:** Du willst ein persönliches Wiki anlegen, weißt aber nicht wo anfangen.
 
 **Was anpassen:** Deine Rolle, deine Projekte, deine Interessen.
 
@@ -24,11 +24,11 @@ TODO: Prompt-Block fertig schreiben und testen.
 
 ## 3. Tagesstart
 
-**Wann benutzen:** Morgens vor der Arbeit, um Prioritaeten zu sortieren.
+**Wann benutzen:** Morgens vor der Arbeit, um Prioritäten zu sortieren.
 
 TODO: Prompt-Block fertig schreiben und testen.
 
-## 4. Idee zu Scope schaerfen
+## 4. Idee zu Scope schärfen
 
 **Wann benutzen:** Du hast eine vage Projektidee und willst Klarheit.
 
@@ -58,21 +58,21 @@ TODO: Prompt-Block fertig schreiben und testen.
 
 TODO: Prompt-Block fertig schreiben und testen.
 
-## 9. Wochenrueckblick
+## 9. Wochenrückblick
 
-**Wann benutzen:** Freitag nachmittags, Rueckblick auf die Woche.
+**Wann benutzen:** Freitag nachmittags, Rückblick auf die Woche.
 
 TODO: Prompt-Block fertig schreiben und testen.
 
 ## 10. Debugging-Partner
 
-**Wann benutzen:** Fehler, den du nicht loesen kannst.
+**Wann benutzen:** Fehler, den du nicht lösen kannst.
 
 TODO: Prompt-Block fertig schreiben und testen.
 
 ## 11. Prompt-Verbesserer
 
-**Wann benutzen:** Dein Prompt liefert schlechte Ergebnisse, du weisst nicht warum.
+**Wann benutzen:** Dein Prompt liefert schlechte Ergebnisse, du weißt nicht warum.
 
 TODO: Prompt-Block fertig schreiben und testen.
 

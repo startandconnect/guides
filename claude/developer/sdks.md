@@ -1,14 +1,14 @@
 ---
 title: SDKs und Agent SDK
 order: 2
-excerpt: Offizielle Anthropic SDKs und das Agent SDK fuer komplexe Workflows
+excerpt: Offizielle Anthropic SDKs und das Agent SDK für komplexe Workflows
 ---
 
 # SDKs und Agent SDK
 
 ## Offizielle SDKs
 
-Anthropic pflegt SDKs fuer die gaengigen Sprachen:
+Anthropic pflegt SDKs für die gängigen Sprachen:
 
 - **TypeScript:** `@anthropic-ai/sdk`
 - **Python:** `anthropic`
@@ -32,11 +32,11 @@ const response = await client.messages.create({
 console.log(response.content);
 ```
 
-TODO: Beispiele fuer streaming, tool use, structured output.
+TODO: Beispiele für streaming, tool use, structured output.
 
 ## Python Beispiel
 
-TODO: Analog fuer Python.
+TODO: Analog für Python.
 
 ## Agent SDK
 
@@ -53,5 +53,5 @@ TODO: Wann Agent SDK lohnt, Einstiegsbeispiel.
 TODO: Entscheidungsbaum.
 
 :::tip[Aktuelle Docs]
-Die SDKs werden regelmaessig erweitert. Immer die offiziellen Anthropic Docs als primaere Quelle nutzen, nicht alte Tutorials.
+Die SDKs werden regelmäßig erweitert. Immer die offiziellen Anthropic Docs als primäre Quelle nutzen, nicht alte Tutorials.
 :::

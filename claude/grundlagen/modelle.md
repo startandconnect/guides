@@ -1,30 +1,30 @@
 ---
-title: Die Modelle im Ueberblick
+title: Die Modelle im Überblick
 order: 3
 excerpt: Opus, Sonnet, Haiku - wann du welches Modell nimmst
 ---
 
-# Die Modelle im Ueberblick
+# Die Modelle im Überblick
 
-Claude gibt es in drei Grossen. Die Wahl haengt von Aufgabe, Budget und Geschwindigkeit ab.
+Claude gibt es in drei Größen. Die Wahl hängt von Aufgabe, Budget und Geschwindigkeit ab.
 
-TODO: Tabelle mit aktuellen Modellnamen, Staerken, Kosten, Einsatzgebiet.
+TODO: Tabelle mit aktuellen Modellnamen, Stärken, Kosten, Einsatzgebiet.
 
 ## Opus
 
-Das staerkste Modell. Fuer schwere Aufgaben: komplexe Codebases, tiefe Analysen, mehrstufige Agents.
+Das stärkste Modell. Für schwere Aufgaben: komplexe Codebases, tiefe Analysen, mehrstufige Agents.
 
 TODO: Wann konkret Opus nehmen.
 
 ## Sonnet
 
-Der Allrounder. 90 Prozent der Faelle. Schnell genug, schlau genug, bezahlbar.
+Der Allrounder. 90 Prozent der Fälle. Schnell genug, schlau genug, bezahlbar.
 
 TODO: Typische Einsatzgebiete.
 
 ## Haiku
 
-Das kleine Modell. Fuer einfache Aufgaben, hohe Volumen, niedrige Latenz.
+Das kleine Modell. Für einfache Aufgaben, hohe Volumen, niedrige Latenz.
 
 TODO: Wann Haiku reicht und wann nicht.
 

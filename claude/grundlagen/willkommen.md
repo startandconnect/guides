@@ -14,11 +14,11 @@ Dieser Guide bringt dich von Null zu produktiv. Kein Marketingmaterial, keine Gr
 
 - **Grundlagen** - was Claude ist, welche Modelle es gibt, wann du welches nimmst
 - **Claude im Alltag** - wie du mit dem Web-Chat produktiv wirst
-- **Claude Code** - der groesste Teil, weil hier die meiste Hebelwirkung steckt
-- **Fuer Developer** - API und SDKs im Ueberblick
+- **Claude Code** - der größte Teil, weil hier die meiste Hebelwirkung steckt
+- **Für Developer** - API und SDKs im Überblick
 - **Fallstricke und Ausblick** - was oft schiefgeht und warum
 
-## Fuer wen dieser Guide ist
+## Für wen dieser Guide ist
 
 - Du hast Claude schon mal benutzt oder willst endlich anfangen
 - Du willst nicht nur Chatten, sondern KI als Werkzeug einsetzen
@@ -26,7 +26,7 @@ Dieser Guide bringt dich von Null zu produktiv. Kein Marketingmaterial, keine Gr
 
 ## Wie du den Guide liest
 
-Linear funktioniert. Die meisten lesen aber nach Bedarf: Installation bei Claude Code, spaeter Prompt Library, dann Sicherheit. Das ist okay, jede Seite steht fuer sich.
+Linear funktioniert. Die meisten lesen aber nach Bedarf: Installation bei Claude Code, später Prompt Library, dann Sicherheit. Das ist okay, jede Seite steht für sich.
 
 :::tip[Aus der Praxis]
 Dieser Guide entstand parallel zu einer Weiterbildung mit Open Campus. Die Inhalte kommen aus echten Teilnehmer-Fragen, nicht aus Marketingtexten.

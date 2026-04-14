@@ -18,11 +18,11 @@ TODO: Version-Anforderungen aktualisieren, Links zu Downloads.
 
 ## Mac
 
-TODO: Schritt fuer Schritt, inklusive Homebrew-Alternative.
+TODO: Schritt für Schritt, inklusive Homebrew-Alternative.
 
 ## Linux
 
-TODO: Schritt fuer Schritt fuer Ubuntu, Debian, Arch.
+TODO: Schritt für Schritt für Ubuntu, Debian, Arch.
 
 ## Windows (mit WSL)
 
@@ -30,7 +30,7 @@ TODO: WSL aktivieren, Ubuntu installieren, Claude Code im WSL installieren.
 
 ## Erster Login
 
-Nach der Installation einmal `claude` starten. Es oeffnet ein Browser-Fenster zum Login.
+Nach der Installation einmal `claude` starten. Es öffnet ein Browser-Fenster zum Login.
 
 TODO: Screenshots, was bei Problemen tun.
 
@@ -44,6 +44,6 @@ npm install -g @anthropic-ai/claude-code
 
 TODO: Befehl aktuell halten, Release-Notes verlinken.
 
-:::tip[Haeufige Probleme]
+:::tip[Häufige Probleme]
 Wenn `claude` nicht gefunden wird, ist meist der PATH nicht gesetzt. Siehe Troubleshooting-Abschnitt.
 :::
