@@ -10,57 +10,127 @@ Die CLAUDE.md ist das erste was Claude Code liest wenn du den Ordner öffnest. A
 
 ## Die drei Ebenen
 
-Claude Code liest CLAUDE.md auf drei Ebenen (von unten nach oben):
+Claude Code liest CLAUDE.md auf drei Ebenen:
 
 1. **Projekt-lokal:** `./CLAUDE.md` im aktuellen Ordner
-2. **User-übergreifend:** `~/.claude/CLAUDE.md` für alle Projekte auf diesem Rechner
-3. **Enterprise:** (falls dein Team eine gemeinsame Policy hat)
+2. **User-übergreifend:** `~/.claude/CLAUDE.md` für alle Projekte auf deinem Rechner
+3. **Enterprise:** falls dein Team eine gemeinsame Policy hat (für die meisten irrelevant)
 
 Alle drei werden gelesen und zusammengefügt. Global steht was allgemein gilt, lokal was projektspezifisch ist.
 
-TODO: Beispiele für global vs lokal.
+### Was global gehört (`~/.claude/CLAUDE.md`)
+
+- Wer du bist (Name, Rolle, Firma)
+- Welche Sprache du nutzt (Deutsch, du-Form)
+- Stil-Konventionen (Umlaute, keine Dashes, kurze Antworten)
+- Generelle Regeln die für alles gelten
+
+### Was lokal gehört (Wiki-Ordner `CLAUDE.md`)
+
+- Was dieses spezifische Wiki ist
+- Struktur des Wikis (welche Ordner gibt es, was steht wo)
+- Wiki-spezifische Regeln (Session-Logs anlegen, context.md aktualisieren)
+- Pointer auf wichtige Dateien
+
+So vermeidest du Wiederholung. Globale Sachen einmal, lokale Sachen pro Wiki.
 
 ## Was gehört in die lokale CLAUDE.md
 
-- **Wer du bist** (Rolle, Firma, Kontext)
+- **Wer du bist** (Rolle, Firma, Kontext) - falls nicht in global
 - **Was dieses Wiki ist** (Second Brain? Projekt-Wiki? Firmen-Wiki?)
-- **Sprache und Stil** (Deutsch/Englisch, du/Sie, Umlaute, keine Dashes)
+- **Sprache und Stil** (Deutsch/Englisch, du/Sie, Umlauten-Regel, keine Dashes)
 - **Wichtige Regeln** (was nie tun, was immer tun)
 - **Pointer** (welche anderen Dateien sollte Claude bei Bedarf lesen)
 
-## Aufbau einer guten CLAUDE.md
+## Aufbau einer guten CLAUDE.md - kurzes Beispiel
 
 ```markdown
 # Wer ich bin
 
-[Name], [Rolle]. Ich arbeite an [Hauptprojekt].
+Ben Scheurer, Gründer von Start & Connect (SaaS-Agentur).
+Hauptthemen: Nexus (eigenes SaaS), Kundenprojekte, YouTube.
 
 # Was dieses Wiki ist
 
-Mein persönliches Second Brain. Hier leben Projekte, Referenzen, Notizen.
+Mein persönliches Second Brain. Alle Projekte, Referenzen,
+Entscheidungen leben hier.
 
 # Sprache und Stil
 
-- Deutsch, außer technische Begriffe
-- Echte Umlaute (ä, ö, ü, ß) in Texten
-- Dateinamen auf Englisch mit Bindestrichen
-- Keine Dashes (– oder —), nur normale Bindestriche
+- Deutsch, technische Begriffe und Code auf Englisch
+- Echte Umlaute (ä, ö, ü, ß), nie ae/oe/ue
+- Du-Form, kein "Sie"
+- Keine Dashes (en/em dash), nur normale Bindestriche
 
 # Regeln
 
 - Erledigte Aufgaben sofort als [x] markieren
-- Nach jeder Arbeitssession: context.md updaten
+- Nach jeder Arbeitssession: betroffene context.md updaten
 - Niemals API Keys oder Kundendaten in Dateien
+- Bei wichtigen Entscheidungen: in decisions.md eintragen
 
 # Struktur
 
-- projects/ - pro Projekt ein Ordner mit context.md
+- projects/ - aktive Projekte, eines pro Ordner mit context.md
 - daily/ - Tagesnotizen (YYYY-MM-DD.md)
-- reference/ - Nachschlagewerk
-- inbox.md - für alles was schnell rein muss
+- reference/ - Nachschlagewerk (APIs, Prozesse)
+- meetings/ - Meeting-Notes (YYYY-MM-DD-thema.md)
+- inbox.md - Quick Capture, später einsortieren
 ```
 
-TODO: Vollständiges Beispiel in Langversion.
+Das sind 30 Zeilen. Mehr brauchst du am Anfang nicht.
+
+## Aufbau einer guten CLAUDE.md - ausführliches Beispiel
+
+Wenn dein Wiki komplexer wird (mehrere Produkte, Kunden, Workflows):
+
+```markdown
+# Wer ich bin
+
+Ben Scheurer, Gründer von Start & Connect.
+
+Wir bauen SaaS-Produkte (Nexus, Spotlight) und betreuen Kunden mit
+individuellen Lösungen.
+
+# Kontext-Hierarchie
+
+Lies Dateien in dieser Reihenfolge, je nach Aufgabe:
+
+1. CLAUDE.md (diese Datei) + planning/TODAY.md (aktuelle Aufgaben)
+2. Pro Produkt: products/<name>/context.md
+3. Pro Kundenprojekt: projects/<name>/context.md
+4. Bei Bedarf: reference/, runbooks/
+
+Nicht alles auf einmal lesen. Nur was relevant ist.
+
+# Sprache
+
+Deutsch als Standardsprache. Technische Begriffe und Code auf Englisch.
+Echte Umlaute (ä, ö, ü, ß) - niemals ae, oe, ue, ss als Ersatz.
+Keine Dashes (- oder -), nur normale Bindestriche.
+
+# Regeln
+
+1. context.md ist die wichtigste Datei pro Projekt
+2. Aufgaben immer als Checkboxen ([- ] und [x])
+3. Erledigte Aufgaben sofort abhaken, nicht auf Aufforderung warten
+4. Session-Log: eine Datei pro Tag in sessions/, nie überschreiben
+5. Nach jeder Session: context.md, decisions.md, CHANGELOG.md updaten
+
+# Tools
+
+Alle Tools per direkter API ansprechen, nicht per MCP suchen.
+API-Keys liegen in ~/.env.sac.
+
+# Effizienz
+
+- Grep vor Read - bei großen Dateien gezielt suchen
+- Tool-Calls parallelisieren wenn unabhängig
+- Keine Datei zweimal lesen
+- Hintergrund-Agenten nutzen für unabhängige Arbeit
+```
+
+Das ist ein produktives Beispiel. Du kannst erkennen wie spezifisch die Regeln sind - keine Floskeln, jede Zeile bringt Wert.
 
 ## Was NICHT reingehört
 
@@ -73,18 +143,32 @@ TODO: Vollständiges Beispiel in Langversion.
 ## Typische Fehler
 
 ### Fehler 1: Zu lang
-CLAUDE.md wird bei jeder Frage mitgeladen. Zu lang = Token-Verschwendung und Rauschen.
+
+CLAUDE.md wird bei jeder Frage mitgeladen. Zu lang heißt Token-Verschwendung und Rauschen.
+
+**Schlecht:** 200 Zeilen mit jeder denkbaren Regel.
+**Gut:** 30 bis 60 Zeilen mit den wichtigsten Regeln. Spezifischeres in dedizierte Dateien.
 
 ### Fehler 2: Zu vage
-"Arbeite sorgfältig" ist wertlos. "Sprache: Deutsch, du-Form, keine Dashes" ist konkret.
+
+"Arbeite sorgfältig" ist wertlos. Was heißt sorgfältig?
+
+**Schlecht:** "Schreib gute Texte."
+**Gut:** "Texte: Deutsch, du-Form, kurze Sätze, keine Marketing-Floskeln. Beispiele für gute Tonalität: README.md im Repo."
 
 ### Fehler 3: Widersprüche
-Wenn CLAUDE.md "sei kurz" sagt und du gleichzeitig lange Essays erwartest, wird Claude verwirrt.
+
+Wenn CLAUDE.md "sei kurz" sagt und du gleichzeitig lange Essays erwartest, wird Claude verwirrt. Eine Anweisung gewinnt, die andere verliert - du weißt nicht welche.
+
+**Schlecht:** "Sei kurz und prägnant" + "Erkläre alles ausführlich"
+**Gut:** "Antworten kurz und konkret. Wenn ich explizit Tiefe will, sage ich das."
 
 ### Fehler 4: Copy-Paste von fremden Templates
-Eine CLAUDE.md die nicht zu dir passt ist schlechter als gar keine. Bau sie selbst.
 
-TODO: Jeden Fehler mit Gegenbeispiel.
+Eine CLAUDE.md die nicht zu dir passt ist schlechter als gar keine. Du bekommst Antworten die zu jemand anderem passen, nicht zu dir.
+
+**Schlecht:** Bens CLAUDE.md komplett kopieren weil sie gut aussieht.
+**Gut:** Bens CLAUDE.md als Inspiration nehmen, eigene Version schreiben mit deinen Regeln.
 
 ## Pflege
 
@@ -92,7 +176,15 @@ Die CLAUDE.md ist kein Denkmal. Sie lebt:
 
 - **Jedes Mal wenn du Claude dreimal dasselbe erklärt hast:** rein in die CLAUDE.md.
 - **Jedes Mal wenn Claude was macht was du nicht wolltest:** Regel formulieren, rein in die CLAUDE.md.
-- **Jedes Quartal:** überfliegen, veraltetes raus.
+- **Jedes Quartal:** überfliegen, veraltetes raus, sich wiederholendes konsolidieren.
+
+## Test: ist meine CLAUDE.md gut
+
+Stelle Claude eine Frage die nur mit Wiki-Kontext gut zu beantworten ist. Beispiel: "Was sind meine drei wichtigsten offenen Aufgaben?"
+
+- Kommt eine spezifische, brauchbare Antwort: gut.
+- Kommt eine generische "kommt darauf an" Antwort: CLAUDE.md ist zu vage oder Wiki ist zu leer.
+- Fragt Claude erst zurück nach Kontext: CLAUDE.md hat Lücken.
 
 :::tip[Beobachtung]
 Eine gute CLAUDE.md wirkt wie ein Onboarding-Dokument für einen neuen Mitarbeiter. Wenn du es einem Menschen geben würdest und er könnte danach arbeiten - dann ist es gut.

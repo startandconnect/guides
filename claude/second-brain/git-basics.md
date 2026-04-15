@@ -27,8 +27,6 @@ Eine grafische App. Du klickst auf Buttons, Git macht den Rest.
 - Funktioniert auch ohne Terminal-Erfahrung
 - Reicht für 95 Prozent aller Wiki-Aufgaben
 
-TODO: Screenshots von GitHub Desktop mit Wiki-Workflow.
-
 ### Weg B: Terminal
 
 Direkter, mächtiger, schneller wenn man es kann. Wenn du Claude Code sowieso im Terminal nutzt, wirst du das früher oder später wollen.
@@ -49,35 +47,50 @@ Das reicht. Alles andere lernst du später wenn du es brauchst.
 
 ```bash
 # Einmalig: das Template clonen
-git clone https://github.com/startandconnect/sac-brain-template mein-wiki
-cd mein-wiki
+git clone https://github.com/startandconnect/sac-brain-template mein-brain
+cd mein-brain
+```
 
+`git clone <url> <ordner>` lädt das Template runter und legt es in einen lokalen Ordner. Du brauchst das nur einmal pro Repo.
+
+```bash
 # Was hat sich geändert?
 git status
+```
 
+`git status` zeigt dir welche Dateien neu oder geändert sind. Sicher und unschädlich - du kannst es so oft ausführen wie du willst.
+
+```bash
 # Neue oder geänderte Dateien vormerken
 git add .
+```
 
+`git add .` markiert alle Änderungen für den nächsten Commit. Der Punkt heißt "alles im aktuellen Ordner". Statt `.` kannst du auch konkrete Dateinamen angeben.
+
+```bash
 # Commit mit Nachricht
 git commit -m "Projekt XYZ angelegt"
+```
 
+`git commit` packt die markierten Änderungen in einen Versionsstand. Die Nachricht in `-m "..."` beschreibt was du gemacht hast - dein zukünftiges Ich wird sich freuen.
+
+```bash
 # Auf GitHub hochladen
 git push
 ```
 
-TODO: Jeden Befehl mit Erklärung was er tut, was vorher gelaufen sein muss.
+`git push` schiebt deine Commits zu GitHub. Damit ist dein Stand gesichert und auf anderen Geräten verfügbar.
 
 ## GitHub Desktop Workflow (die gleichen Schritte)
 
-1. **File → Clone Repository** → Template-URL rein → Lokaler Ordner wählen
+1. **File → Clone Repository** → Template-URL eingeben → lokalen Ordner wählen → Clone klicken
 2. Im Wiki Dateien ändern (mit Claude Code oder deinem Editor)
-3. GitHub Desktop öffnet sich, zeigt Änderungen
-4. Summary (kurze Beschreibung) eintippen → "Commit to main"
-5. "Push origin" klicken
+3. GitHub Desktop wechselt automatisch in den "Changes"-Tab und zeigt was sich geändert hat
+4. Im Feld "Summary" eine kurze Beschreibung tippen (z.B. "Tagesnotiz angelegt")
+5. **"Commit to main"** klicken (unten links)
+6. **"Push origin"** klicken (oben rechts) - Änderungen sind jetzt auf GitHub
 
-Fertig.
-
-TODO: Screenshots Schritt für Schritt.
+Fertig. Diese sechs Schritte deckst du täglich ab.
 
 ## Was du NICHT brauchst
 
@@ -89,15 +102,34 @@ TODO: Screenshots Schritt für Schritt.
 ## Typische Probleme
 
 ### "Your branch is ahead of origin/main by X commits"
-Du hast committet aber nicht gepusht. Einfach `git push` oder "Push origin" in GitHub Desktop.
+
+Du hast committet aber nicht gepusht. Einfach `git push` oder "Push origin" in GitHub Desktop. Kein Drama.
 
 ### "Your branch is behind origin/main"
-Auf GitHub gibt es Änderungen die du noch nicht hast. `git pull` oder "Pull origin".
+
+Auf GitHub gibt es Änderungen die du noch nicht hast. `git pull` oder "Pull origin". Passiert wenn du an mehreren Geräten arbeitest.
+
+### "Your branch and origin/main have diverged"
+
+Du hast lokal commits, auf GitHub gibt es auch neue commits, die zueinander passen müssen. `git pull --rebase` löst das in 90 Prozent der Fälle. In GitHub Desktop: "Pull" klicken, App fragt dich was sie tun soll.
 
 ### Ich habe was versehentlich gelöscht
-Solange du nicht committet hast: `git checkout Dateiname` holt es zurück. In GitHub Desktop: Rechtsklick auf die Datei → "Discard changes".
 
-TODO: Mehr typische Situationen.
+Solange du nicht committet hast: `git checkout -- Dateiname` holt es zurück. In GitHub Desktop: Rechtsklick auf die Datei → "Discard changes". Falls du schon committet hast: `git revert HEAD` macht den letzten Commit rückgängig (ohne Datenverlust).
+
+### "Permission denied (publickey)"
+
+Dein GitHub-Zugang ist nicht eingerichtet. Lösung: GitHub Desktop installieren und einmalig damit einloggen, dann nutzt auch das Terminal die Credentials. Oder SSH-Key bei GitHub hinterlegen (offizielle Anleitung im GitHub-Help).
+
+### Mein Push wird abgewiesen
+
+Meist weil jemand (oder du an einem anderen Gerät) etwas anderes gepusht hat. Erst `git pull` oder `git pull --rebase`, dann nochmal `git push`.
+
+## Sicherheits-Basics
+
+- **Niemals API Keys oder Passwörter committen.** Falls passiert: Key sofort rotieren, History bereinigen.
+- **`.gitignore` nutzen.** Datei im Repo-Root die festlegt was Git ignorieren soll. Im Template ist eine vorbereitete Version drin.
+- **Repo auf Private setzen.** Wikis sind persönlich, niemand soll sie sehen.
 
 ## Weiterführend
 
