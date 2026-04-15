@@ -136,7 +136,7 @@ SaaS für X. Zielgruppe Y. Differenzierung Z.
 **Typ:** Lernprojekt
 
 ## Ziel
-In drei Monaten ein kleines CLI-Tool in Rust bauen.
+In drei Monaten ein kleines Tool in Rust bauen.
 
 ## Stand
 - Basics durch (Rustlings 50 Prozent)

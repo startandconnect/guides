@@ -14,7 +14,7 @@ Manche Inhalte hier sind technischer und richten sich an erfahrene Nutzer. Wenn 
 
 Wenn du an mehreren Rechnern arbeitest (Laptop, Desktop), willst du nicht manuell pullen und pushen.
 
-### Option A: Obsidian Git Plugin (am einfachsten, ohne Programmieren)
+### Option A: Obsidian Git Plugin (am einfachsten)
 
 Wenn du Obsidian als zusätzlichen Editor nutzt:
 
@@ -22,7 +22,7 @@ Wenn du Obsidian als zusätzlichen Editor nutzt:
 2. Plugin-Einstellungen: Auto-Pull alle 5 Minuten, Auto-Commit alle 10 Minuten, Auto-Push nach Commit
 3. Funktioniert auch auf Mobile mit Obsidian Mobile
 
-Diese Option braucht keine Kommandozeile und ist die empfohlene Variante für die meisten.
+Diese Option ist die empfohlene Variante für die meisten.
 
 ### Option B: GitHub Desktop manuell, aber öfter
 
@@ -33,18 +33,6 @@ Wenn du nur einen Rechner hast oder bewusst Kontrolle willst:
 - Auf dem anderen Gerät: erst pullen, dann arbeiten
 
 Funktioniert, ist aber Disziplin-Sache.
-
-### Option C: Auto-Sync Script (für Tech-affine)
-
-Ein Hintergrund-Script auf deinem Rechner pullt und pusht alle paar Minuten automatisch. Setup ist technisch (launchd auf Mac, systemd auf Linux, Task Scheduler auf Windows). Wenn du das willst und Hilfe brauchst: in der Claude App fragen, sie führt dich durch das Setup.
-
-Beispiel-Frage in der Claude App:
-
-> Ich will ein launchd Job auf meinem Mac einrichten, der alle 5 Minuten
-> mein Wiki-Repo pullt und pusht. Pfad ist ~/Documents/mein-brain. Hilf
-> mir das einzurichten Schritt fuer Schritt.
-
-Claude führt dich durch die Datei-Erstellung und Aktivierung.
 
 ## Skills für wiederkehrende Aufgaben
 

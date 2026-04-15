@@ -6,7 +6,7 @@ excerpt: Von Null zum fertigen Second Brain - mit Claude App und GitHub Desktop
 
 # Setup in 30 Minuten
 
-Du brauchst zwei Apps: die Claude App und GitHub Desktop. Beide kostenlos, beide grafisch, kein Terminal.
+Du brauchst zwei Apps: die Claude App und GitHub Desktop. Beide kostenlos, beide grafisch.
 
 ## Voraussetzungen
 

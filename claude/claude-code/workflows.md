@@ -6,7 +6,7 @@ excerpt: Echte Workflows - nicht Hello World, sondern wie man es wirklich nutzt
 
 # Workflow-Beispiele
 
-Keine abstrakten Beispiele. Echte Workflows die in der Praxis täglich laufen, alle in der Claude App, ohne Terminal.
+Keine abstrakten Beispiele. Echte Workflows die in der Praxis täglich laufen, alle in der Claude App.
 
 ## Workflow 1: Morgen-Routine
 
@@ -132,7 +132,7 @@ Keine abstrakten Beispiele. Echte Workflows die in der Praxis täglich laufen, a
 - Wiki mit zumindest Basis-Struktur
 - Bereitschaft zu iterieren
 
-Mehr nicht. Insbesondere: **kein Coding-Wissen, keine Kommandozeile**.
+Mehr nicht. Insbesondere: **kein Coding-Wissen nötig**.
 
 :::tip[Eigene Workflows finden]
 Schau dir an wo du jeden Tag manuell zwischen Apps wechselst und kopierst. Das ist ein Workflow-Kandidat. Wenn du nicht weißt wo anfangen: nimm Workflow 1 (Morgen-Routine) und mach das eine Woche täglich.

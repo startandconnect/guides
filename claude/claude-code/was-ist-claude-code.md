@@ -18,9 +18,8 @@ Konkret: du installierst die Claude Desktop App, verbindest sie mit einem Ordner
 | Was sieht es | nur was du reinklebst | dein verbundener Ordner komplett |
 | Was kann es | Text erzeugen | Text erzeugen, Dateien lesen und schreiben, Aufgaben durchfuehren |
 | Typischer Einsatz | Fragen, Texte, Brainstorming | Wiki pflegen, Software bauen, Workflows automatisieren |
-| Kommandozeile noetig | Nein | Nein |
 
-Wichtig: du brauchst kein Terminal, kein Coding-Wissen, keine Kommandozeile. Du nutzt eine App mit grafischer Oberfläche, ähnlich wie du Slack oder Notion benutzt.
+Wichtig: du brauchst kein Coding-Wissen. Du nutzt eine App mit grafischer Oberfläche, ähnlich wie du Slack oder Notion benutzt.
 
 ## Warum das so viel mehr ist
 
@@ -62,10 +61,6 @@ Du musst kein Entwickler sein. Wenn du eine App bedienen kannst, kannst du Claud
 
 ## Was Claude Code NICHT ist
 
-- **Kein Terminal-Tool** - du brauchst keine Kommandozeile
 - **Kein Code-Editor** - du schreibst keinen Code, du beauftragst Claude
 - **Kein Cloud-Service** - die App läuft auf deinem Rechner, deine Dateien bleiben bei dir
-
-:::tip[Begriff klären]
-"Claude Code" gibt es technisch in zwei Varianten: als App (was die meisten benutzen, was wir hier zeigen) und als Terminal-Tool für Profis. Wenn wir hier "Claude Code" sagen, meinen wir die App.
-:::
+- **Kein Ersatz für dein Denken** - Claude hilft beim Umsetzen, Entscheidungen triffst du

@@ -22,7 +22,7 @@ Aktuelle Preise auf claude.ai/upgrade.
 
 Die Claude Desktop App im Code-Modus. Du verbindest einen Ordner auf deinem Rechner, Claude liest und schreibt darin Dateien, führt Aufgaben aus.
 
-Kein Terminal nötig, kein Coding-Wissen. Einfach App installieren, Workspace verbinden, loslegen. Der größte Hebel für alle die regelmäßig mit Notizen, Wikis oder Projekten arbeiten.
+Kein Coding-Wissen nötig. Einfach App installieren, Workspace verbinden, loslegen. Der größte Hebel für alle die regelmäßig mit Notizen, Wikis oder Projekten arbeiten.
 
 Details: [[../claude-code/was-ist-claude-code|Was ist Claude Code]].
 

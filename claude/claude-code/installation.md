@@ -14,7 +14,7 @@ Du installierst die Claude Desktop App. Eine App, ein Download, ein Doppelklick.
 - Ein Anthropic Account (kostenlos auf claude.ai erstellbar)
 - Internetverbindung
 
-Mehr nicht. Kein Terminal, keine Programmiersprache, keine Vorkenntnisse.
+Mehr nicht. Keine Programmiersprache, keine Vorkenntnisse nötig.
 
 ## Mac
 
@@ -84,12 +84,6 @@ Passwort zurücksetzen über claude.ai. Die App erkennt das neue Passwort sofort
 ### "Subscription benötigt"
 
 Du brauchst entweder ein Pro-Abo (für intensivere Nutzung) oder kannst die Free-Variante mit Limits nutzen. Mehr dazu unter [[kosten|Kosten im Griff halten]].
-
-## Für Profis: Terminal-Variante
-
-Es gibt Claude Code auch als reines Terminal-Tool für Entwickler. Das ist mächtiger und integriert besser mit Entwicklungs-Workflows, braucht aber Kommandozeile-Wissen. Für 95 Prozent der Anwendungsfälle reicht die App.
-
-Falls du dich rantraust: `npm install -g @anthropic-ai/claude-code` installiert die CLI-Version. Dokumentation auf docs.anthropic.com.
 
 :::tip[Häufiges Problem]
 Wenn die App nicht startet (Mac): Rechtsklick auf das App-Symbol → "Öffnen". Mac fragt einmalig nach Bestätigung weil die App aus dem Internet kommt.

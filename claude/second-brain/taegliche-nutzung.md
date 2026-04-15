@@ -6,7 +6,7 @@ excerpt: Wie dein Second Brain im Alltag läuft - Routinen die funktionieren
 
 # Tägliche Nutzung
 
-Ein Second Brain das du nicht nutzt ist wertlos. Ein Second Brain das du täglich pflegst ist unbezahlbar. Hier kommen Routinen die sich in der Praxis bewährt haben - alle in der Claude App, ohne Terminal.
+Ein Second Brain das du nicht nutzt ist wertlos. Ein Second Brain das du täglich pflegst ist unbezahlbar. Hier kommen Routinen die sich in der Praxis bewährt haben - alle in der Claude App.
 
 ## Der 5-Minuten-Morning-Check
 

@@ -1,12 +1,12 @@
 ---
 title: Git Grundlagen
 order: 3
-excerpt: Das Minimum an Git das du für dein Wiki brauchst - mit GitHub Desktop, kein Terminal nötig
+excerpt: Das Minimum an Git das du für dein Wiki brauchst - mit GitHub Desktop, alles grafisch
 ---
 
 # Git Grundlagen
 
-Dieser Abschnitt richtet sich an alle die mit Git noch nie gearbeitet haben. Du lernst hier nicht Git für Entwickler, sondern genau die 20 Prozent die du für dein Wiki brauchst - und zwar ohne Kommandozeile.
+Dieser Abschnitt richtet sich an alle die mit Git noch nie gearbeitet haben. Du lernst hier nicht Git für Entwickler, sondern genau die 20 Prozent die du für dein Wiki brauchst.
 
 ## Was ist Git in drei Sätzen
 
@@ -20,10 +20,9 @@ GitHub Desktop ist eine grafische App. Du klickst auf Buttons, Git macht den Res
 
 - Download: github.com/desktop
 - Mac, Windows, Linux
-- Funktioniert auch ohne Terminal-Erfahrung
 - Reicht für 100 Prozent aller Wiki-Aufgaben
 
-Das ist alles was du brauchst. Kein Terminal, keine Kommandozeile, keine Programmiersprache.
+Das ist alles was du brauchst. Keine Programmiersprache, keine Vorkenntnisse.
 
 ## Die Begriffe die du kennen musst
 
@@ -139,21 +138,6 @@ Wenn du an mehreren Geräten arbeitest oder Auto-Sync aktiv ist (siehe [[advance
 - **Niemals API Keys oder Passwörter committen.** Falls passiert: Key sofort rotieren.
 - **Repo auf Private setzen.** Wikis sind persönlich, niemand soll sie sehen.
 - **Vor jedem Commit kurz prüfen** was sich geändert hat (siehst du in GitHub Desktop)
-
-## Für Profis: Terminal-Befehle
-
-Falls du irgendwann doch das Terminal nutzen willst: die gleichen Aktionen funktionieren auch dort.
-
-```bash
-git clone <url>            # Repo runterladen
-git status                  # was hat sich geändert
-git add .                   # Änderungen vormerken
-git commit -m "Nachricht"   # committen
-git push                    # auf GitHub hochladen
-git pull                    # Änderungen runterladen
-```
-
-Aber: kein Druck. GitHub Desktop reicht für alles was du im Wiki brauchst.
 
 :::tip[Ehrlich]
 Git ist initial verwirrend. Nach einer Woche täglicher Nutzung mit GitHub Desktop geht es automatisch. Nicht von schlechten ersten Tagen abschrecken lassen.
