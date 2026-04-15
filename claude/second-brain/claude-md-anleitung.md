@@ -10,20 +10,21 @@ Die CLAUDE.md ist das erste was Claude Code liest wenn du den Ordner öffnest. A
 
 ## Die drei Ebenen
 
-Claude Code liest CLAUDE.md auf drei Ebenen:
+Claude Code liest Kontext auf zwei Ebenen:
 
-1. **Projekt-lokal:** `./CLAUDE.md` im aktuellen Ordner
-2. **User-übergreifend:** `~/.claude/CLAUDE.md` für alle Projekte auf deinem Rechner
-3. **Enterprise:** falls dein Team eine gemeinsame Policy hat (für die meisten irrelevant)
+1. **Workspace-lokal:** `CLAUDE.md` im verbundenen Ordner
+2. **App-global:** "Persönliche Anweisungen" in den App-Einstellungen, gelten für alle Workspaces
 
-Alle drei werden gelesen und zusammengefügt. Global steht was allgemein gilt, lokal was projektspezifisch ist.
+Beides wird kombiniert. Global steht was allgemein gilt, lokal was workspace-spezifisch ist.
 
-### Was global gehört (`~/.claude/CLAUDE.md`)
+### Was global gehört (App-Einstellungen)
 
 - Wer du bist (Name, Rolle, Firma)
 - Welche Sprache du nutzt (Deutsch, du-Form)
 - Stil-Konventionen (Umlaute, keine Dashes, kurze Antworten)
 - Generelle Regeln die für alles gelten
+
+Diese Inhalte hinterlegst du einmal in den App-Einstellungen unter "Persönliche Anweisungen" (Name kann je nach App-Version leicht abweichen). Claude liest sie bei jedem Chat in jedem Workspace mit.
 
 ### Was lokal gehört (Wiki-Ordner `CLAUDE.md`)
 
@@ -32,7 +33,7 @@ Alle drei werden gelesen und zusammengefügt. Global steht was allgemein gilt, l
 - Wiki-spezifische Regeln (Session-Logs anlegen, context.md aktualisieren)
 - Pointer auf wichtige Dateien
 
-So vermeidest du Wiederholung. Globale Sachen einmal, lokale Sachen pro Wiki.
+So vermeidest du Wiederholung. Globale Sachen einmal in den App-Einstellungen, lokale Sachen pro Wiki in der CLAUDE.md.
 
 ## Was gehört in die lokale CLAUDE.md
 

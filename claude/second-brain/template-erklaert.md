@@ -132,23 +132,20 @@ Machst du in den ersten 15 Minuten. Platzhalter raus, deine echten Informationen
 
 ### 2. Beispiel-Projekt löschen
 
-Wenn du keinen Platzhalter willst:
+Wenn du keinen Platzhalter willst, sag in der Claude App:
 
-```bash
-rm -rf projects/beispiel-projekt
-git add -A
-git commit -m "Beispiel-Projekt entfernt"
-```
+> Loesche den Ordner projects/beispiel-projekt komplett.
+
+Claude löscht ihn, du committest die Änderung in GitHub Desktop.
 
 ### 3. Ordner umbenennen
 
 `projects/` heißen für manche lieber `kunden/` oder `baustellen/`. Mach was zu dir passt:
 
-```bash
-git mv projects kunden
-```
+> Benenne den Ordner projects/ in kunden/ um. Pass die CLAUDE.md
+> entsprechend an.
 
-CLAUDE.md anpassen, dass die Struktur stimmt.
+Claude macht beides in einem Schritt.
 
 ### 4. Eigene Ordner hinzufügen
 
@@ -204,34 +201,22 @@ Das Template ist jetzt ihr System.
 
 Wenn wir das Template updaten (neue Best Practices, neue Beispiele), kannst du die Änderungen zu dir ziehen.
 
-### Einmaliges Setup (einmal pro Wiki)
+Der einfachste Weg: in der Claude App fragen.
 
-```bash
-git remote add template https://github.com/startandconnect/sac-brain-template.git
-git fetch template
-```
+> Schau ins Template-Repo unter github.com/startandconnect/sac-brain-template.
+> Welche Dateien wurden seit meinem letzten Update geaendert?
+> Schlage mir vor was ich uebernehmen sollte und was nicht (weil ich
+> es bewusst angepasst habe).
 
-Damit hast du das Template als zusätzliche "Quelle" registriert.
+Claude vergleicht, schlägt vor, du entscheidest, Claude wendet an.
 
-### Updates ziehen
+Anschließend in GitHub Desktop committen und pushen.
 
-```bash
-git fetch template
-git merge template/main --allow-unrelated-histories
-```
+### Wenn du es manuell machen willst
 
-Git merged die Änderungen aus dem Template in dein Repo. Bei Konflikten musst du entscheiden was bleibt - meist deine Version, weil sie spezifischer ist.
+GitHub Desktop kann das Template auch als zweites "Remote" einbinden. In den Repository-Einstellungen ("Repository Settings → Remotes") ein zusätzliches Remote namens "template" mit der Template-URL hinzufügen. Dann kannst du Updates fetchen und mergen.
 
-### Konflikt-Handling
-
-Wenn beim Merge Konflikte auftauchen (z.B. weil du CLAUDE.md angepasst hast und das Template auch):
-
-1. Git zeigt dir die Konflikte in den betroffenen Dateien (mit `<<<<<<<` Markern)
-2. Öffne die Datei, entscheide was bleibt
-3. Marker entfernen
-4. `git add Dateiname` und `git commit`
-
-In GitHub Desktop geht das auch, ist aber etwas mehr Klickarbeit. Im Notfall: Claude Code öffnen und sagen "Löse die Merge-Konflikte in Datei X. Behalte meine Anpassungen wo möglich, übernimm Template-Änderungen wo neutral."
+Bei Konflikten: Claude App fragen "Löse die Merge-Konflikte in Datei X. Behalte meine Anpassungen wo möglich, übernimm Template-Änderungen wo neutral."
 
 ## Was du nicht ändern solltest
 

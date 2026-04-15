@@ -1,127 +1,68 @@
 ---
 title: Advanced
 order: 8
-excerpt: Wenn die Basis sitzt - Auto-Sync, Skills, externe Integrationen, Multi-Device
+excerpt: Wenn die Basis sitzt - Auto-Sync, Skills, Connectors, Multi-Device
 ---
 
 # Advanced
 
 Dieser Abschnitt ist erst relevant wenn dein Second Brain seit mindestens 4 Wochen läuft. Vorher nicht reinschauen - du wirst nur kompliziert wo einfach reicht.
 
+Manche Inhalte hier sind technischer und richten sich an erfahrene Nutzer. Wenn etwas zu tief geht, überspring es einfach.
+
 ## Auto-Sync zwischen Geräten
 
-Wenn du an mehreren Rechnern arbeitest (Laptop, Desktop, Arbeit, privat), willst du nicht manuell pullen und pushen.
+Wenn du an mehreren Rechnern arbeitest (Laptop, Desktop), willst du nicht manuell pullen und pushen.
 
-### Option A: Launchd (Mac)
+### Option A: Obsidian Git Plugin (am einfachsten, ohne Programmieren)
 
-Ein Job der alle 5 Minuten automatisch pullt und pusht.
-
-Erstelle eine Datei `~/Library/LaunchAgents/com.user.brain-sync.plist`:
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>Label</key>
-    <string>com.user.brain-sync</string>
-    <key>ProgramArguments</key>
-    <array>
-        <string>/bin/bash</string>
-        <string>-c</string>
-        <string>cd ~/Documents/mein-brain && git pull --rebase --autostash && git add -A && git diff --cached --quiet || (git commit -m "Auto-sync $(date +%Y-%m-%d_%H:%M)" && git push)</string>
-    </array>
-    <key>StartInterval</key>
-    <integer>300</integer>
-    <key>StandardOutPath</key>
-    <string>/tmp/brain-sync.log</string>
-    <key>StandardErrorPath</key>
-    <string>/tmp/brain-sync.log</string>
-</dict>
-</plist>
-```
-
-Aktivieren:
-
-```bash
-launchctl load ~/Library/LaunchAgents/com.user.brain-sync.plist
-```
-
-Logs prüfen wenn was schiefläuft: `tail -f /tmp/brain-sync.log`.
-
-### Option B: systemd Timer (Linux)
-
-Datei `~/.config/systemd/user/brain-sync.service`:
-
-```ini
-[Unit]
-Description=Brain Auto-Sync
-
-[Service]
-Type=oneshot
-WorkingDirectory=%h/Documents/mein-brain
-ExecStart=/bin/bash -c 'git pull --rebase --autostash && git add -A && (git diff --cached --quiet || (git commit -m "Auto-sync $(date +%%Y-%%m-%%d_%%H:%%M)" && git push))'
-```
-
-Datei `~/.config/systemd/user/brain-sync.timer`:
-
-```ini
-[Unit]
-Description=Brain Auto-Sync alle 5 Minuten
-
-[Timer]
-OnBootSec=2min
-OnUnitActiveSec=5min
-
-[Install]
-WantedBy=timers.target
-```
-
-Aktivieren:
-
-```bash
-systemctl --user enable brain-sync.timer
-systemctl --user start brain-sync.timer
-```
-
-### Option C: Obsidian Git Plugin
-
-Wenn du Obsidian als Editor nutzt, ist das Git-Plugin der einfachste Weg:
+Wenn du Obsidian als zusätzlichen Editor nutzt:
 
 1. Obsidian → Settings → Community Plugins → "Obsidian Git" installieren
-2. Plugin-Einstellungen: Auto-Pull alle 5 min, Auto-Commit alle 10 min, Auto-Push nach Commit
+2. Plugin-Einstellungen: Auto-Pull alle 5 Minuten, Auto-Commit alle 10 Minuten, Auto-Push nach Commit
 3. Funktioniert auch auf Mobile mit Obsidian Mobile
 
-### Option D: GitHub Actions
+Diese Option braucht keine Kommandozeile und ist die empfohlene Variante für die meisten.
 
-Wenn du spezielle Checks willst (Linter, Spell-Check, Link-Checker), kannst du GitHub Actions nutzen. Aber: meistens overkill für ein Wiki. Erst wenn du echte Probleme hast.
+### Option B: GitHub Desktop manuell, aber öfter
 
-### Welche Option
+Wenn du nur einen Rechner hast oder bewusst Kontrolle willst:
 
-- **Mac Solo-Nutzer:** Launchd
-- **Linux Solo-Nutzer:** systemd Timer
-- **Du willst mobile dabei haben:** Obsidian Git Plugin
-- **Du arbeitest im Team:** GitHub Actions für CI
+- Nach jeder Session: GitHub Desktop öffnen, committen, pushen (Routine)
+- Vor dem Wechsel auf ein anderes Gerät: pushen
+- Auf dem anderen Gerät: erst pullen, dann arbeiten
 
-## Skills für Wiederkehrendes
+Funktioniert, ist aber Disziplin-Sache.
 
-Claude Code Skills automatisieren Routine-Aufgaben im Wiki. Beispiele:
+### Option C: Auto-Sync Script (für Tech-affine)
 
-### Skill: /tagesstart
+Ein Hintergrund-Script auf deinem Rechner pullt und pusht alle paar Minuten automatisch. Setup ist technisch (launchd auf Mac, systemd auf Linux, Task Scheduler auf Windows). Wenn du das willst und Hilfe brauchst: in der Claude App fragen, sie führt dich durch das Setup.
 
-Erstellt automatisch das Daily-File und gibt Briefing.
+Beispiel-Frage in der Claude App:
 
-`~/.claude/skills/tagesstart/SKILL.md`:
+> Ich will ein launchd Job auf meinem Mac einrichten, der alle 5 Minuten
+> mein Wiki-Repo pullt und pusht. Pfad ist ~/Documents/mein-brain. Hilf
+> mir das einzurichten Schritt fuer Schritt.
 
-```markdown
----
-description: Tagesstart - liest Wiki, legt daily-Datei an, gibt Briefing
----
+Claude führt dich durch die Datei-Erstellung und Aktivierung.
 
+## Skills für wiederkehrende Aufgaben
+
+Skills automatisieren Routinen in der Claude App. Statt jedes Mal denselben Prompt zu tippen, definierst du den Skill einmal und rufst ihn ab.
+
+### Skill: Tagesstart
+
+In der Claude App unter Einstellungen einen Skill anlegen:
+
+- Name: `tagesstart`
+- Trigger: wenn du `/tagesstart` schreibst
+- Anweisung:
+
+```
 Fuehre folgende Schritte aus:
 
-1. Pruefe ob daily/$(date +%Y-%m-%d).md schon existiert.
-   - Wenn ja: oeffne sie, zeige aktuellen Inhalt
+1. Pruefe ob daily/[heutiges Datum].md schon existiert.
+   - Wenn ja: oeffne sie, zeige aktuellen Inhalt.
    - Wenn nein: lege sie an mit dem Template aus daily/_template.md
 
 2. Lies CLAUDE.md und scanne projects/*/context.md.
@@ -135,45 +76,39 @@ Fuehre folgende Schritte aus:
    uebernehmen will. Wenn ja: schreibe sie rein.
 ```
 
-Aufruf in Claude Code: `/tagesstart`
+Aufruf in der App: `/tagesstart` - fertig.
 
-### Skill: /projekt-init
+### Skill: Projekt-Init
 
-Legt neuen Projektordner mit context.md-Template an.
+Legt automatisch einen neuen Projektordner an.
 
-`~/.claude/skills/projekt-init/SKILL.md`:
+- Name: `projekt-init`
+- Anweisung:
 
-```markdown
----
-description: Legt neuen Projekt-Ordner mit context.md an
-arguments:
-  name: Projekt-Name (slug, mit Bindestrichen)
-  typ: kunde, eigenes-projekt, lernprojekt
----
+```
+1. Frag mich nach Projekt-Name (slug, mit Bindestrichen) und Typ
+   (Kunde / Eigenes Projekt / Lernprojekt).
 
-1. Lege Ordner projects/{{name}}/ an.
+2. Lege Ordner projects/[name]/ an.
 
-2. Kopiere projects/_template/context.md nach projects/{{name}}/context.md.
+3. Kopiere projects/_template/context.md nach projects/[name]/context.md.
 
-3. Frage mich nach: kurzer Beschreibung, Status, Hauptziel, drei
+4. Frage mich nach: kurzer Beschreibung, Status, Hauptziel, drei
    ersten offenen Aufgaben.
 
-4. Fuelle die context.md mit den Antworten aus.
+5. Fuelle die context.md mit den Antworten aus.
 
-5. Zeige mir das Ergebnis und frage ob ich committen will.
+6. Zeige mir das Ergebnis und frage ob ich es so passt.
 ```
 
-Aufruf: `/projekt-init mein-neues-projekt eigenes-projekt`
-
-### Skill: /wochenabschluss
+### Skill: Wochenabschluss
 
 Konsolidiert die Woche.
 
-```markdown
----
-description: Freitag-Rueckblick - Woche zusammenfassen, in Projekte uebertragen
----
+- Name: `wochenabschluss`
+- Anweisung:
 
+```
 1. Lies alle daily-Dateien dieser Woche (Montag bis Freitag).
 
 2. Pro betroffenes Projekt:
@@ -188,133 +123,90 @@ description: Freitag-Rueckblick - Woche zusammenfassen, in Projekte uebertragen
 5. Pruefe inbox.md und schlage Einsortierung vor.
 ```
 
-Details zum Bau eigener Skills: [[../claude-code/skills-hooks-subagents|Skills, Hooks und Subagents]].
+Mehr zu Skills im Detail: [[../claude-code/skills-hooks-subagents|Skills, Hooks und Subagents]].
 
-## Hooks für Disziplin
+## Connectors für externe Tools
 
-Ein Hook der bei jedem Session-Ende eine Erinnerung gibt:
+Wenn dein Second Brain mit anderen Tools spricht, sparst du dir noch mehr manuelle Arbeit.
 
-`~/.claude/settings.json`:
+### Notion-Connector
 
-```json
-{
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Bash",
-        "command": "echo 'Erinnerung: context.md aktuell halten' && grep -l 'TODO' projects/*/context.md 2>/dev/null | head -3"
-      }
-    ]
-  }
-}
-```
+Wenn du parallel Notion nutzt (z.B. für Team-Wissen während Wiki dein persönliches Brain ist):
 
-Einer der vor jedem Push prüft ob CLAUDE.md aktuell ist (Beispiel als Pre-Push-Hook im Repo `.git/hooks/pre-push`):
+> Suche in meinem Notion nach Notizen zum Thema X und ergaenze die
+> wichtigsten Erkenntnisse in reference/x.md im Wiki.
 
-```bash
-#!/bin/bash
-last_modified=$(git log -1 --format=%ct CLAUDE.md)
-now=$(date +%s)
-days=$(( (now - last_modified) / 86400 ))
-if [ $days -gt 90 ]; then
-    echo "Warnung: CLAUDE.md wurde seit $days Tagen nicht angepasst."
-    echo "Schau ob alles noch aktuell ist."
-fi
-```
+### Kalender-Connector
 
-## MCP Server für Wiki-Integration
+Für Morning Routine mit Terminen:
 
-Wenn du einen MCP Server baust der dein Wiki versteht (Suche, Tags, Graph), bekommt Claude Code einen strukturierten Zugang zu deinem Wissen - nicht nur "lies Datei X" sondern "finde alle Notizen zu Thema Y".
+> Hole heutige Kalender-Termine. Lege daily/[heutiges Datum].md an
+> mit den Terminen plus drei Prioritaeten aus dem Wiki.
 
-Konkrete Use-Cases:
+### Email-Drafts mit Wiki-Kontext
 
-- **Volltextsuche:** "finde alle Stellen wo ich Stripe erwähnt habe" - schneller als grep
-- **Tag-System:** Notizen mit `#topic` taggen und MCP gibt Liste pro Tag
-- **Graph-Abfragen:** "welche Projekte hängen mit Kunde X zusammen"
-- **Auto-Linking:** Wikilinks (`[[name]]`) automatisch auflösen
+> Schau in projects/kunde-x/context.md was wir besprochen haben und
+> in den letzten daily-Dateien was sich getan hat.
+>
+> Schreibe einen Status-Update als E-Mail an Max Mustermann.
+> Tonalitaet: freundlich, professionell, konkret. Keine Floskeln.
+> Ende mit naechster sinnvoller Frage an ihn.
 
-Warnung: eher ein Wochenende-Projekt, kein Must-Have. Für 99 Prozent der Fälle reicht Claude Code mit normaler Datei-Lese-Fähigkeit.
+Mehr zu Connectors: [[../claude-code/mcp-server|MCP Server und Connectors]].
 
-Wer sich rantraut: Anthropic MCP Spec lesen (modelcontextprotocol.io), TypeScript- oder Python-SDK nutzen.
+## Newsletter / Blog aus dem Wiki
 
-## Externe Integrationen
+Inhalte aus reference/ oder projects/ als Quellmaterial für Blog-Posts nutzen.
 
-### Notion / Obsidian als zusätzlicher Viewer
+Konkreter Workflow in der Claude App:
 
-Wenn du visuell lesen willst, kannst du deinen Wiki-Ordner als Notion-Import nutzen oder in Obsidian öffnen. Die Markdown-Dateien funktionieren in beiden. Obsidian ist stärker weil es direkt mit dem Ordner arbeitet, ohne Import.
+> Ich will einen Blogartikel schreiben zum Thema [THEMA].
+> Schau in reference/ und in den letzten 2 Wochen daily/ ob ich
+> dazu Material habe.
+>
+> Wenn ja: mach daraus einen Artikel-Entwurf in unserem Stil.
+> Beispiele für Stil: blog/2026-04-01.md, blog/2026-03-15.md.
+> Speichere als content/draft-[heute].md.
 
-Setup Obsidian:
-
-1. Obsidian installieren
-2. "Open folder as vault" → deinen Wiki-Ordner wählen
-3. Fertig - du kannst jetzt parallel mit Claude Code (im Terminal) und Obsidian (visuell) arbeiten
-
-### Kalender-Anbindung
-
-Für Morning Routine: Calendar-API fragen, Termine in daily-Datei einfügen. Als Skill oder Shortcut.
-
-Beispiel-Skill `/morning-with-calendar`:
-
-```markdown
----
-description: Morning-Briefing inkl. Kalender-Termine
----
-
-1. Hole heutige Kalender-Termine via gcal CLI:
-   `gcal --start-date today --end-date today`
-
-2. Lies CLAUDE.md und Projekt-contexts.
-
-3. Erstelle daily-Datei mit:
-   - Terminen aus Kalender
-   - Drei Prios basierend auf Projekten
-   - Geblockte Zeiten ausweisen
-
-4. Wenn ein Termin fuer ein bestimmtes Projekt ist: erwaehne den
-   Stand des Projekts (aus context.md).
-```
-
-### Newsletter / Blog aus dem Wiki speisen
-
-Inhalte aus reference/ oder projects/ als Quellmaterial für Blog-Posts nutzen. Claude Code liest Wiki, schreibt Entwurf, du finalisierst.
-
-Konkreter Workflow:
-
-1. Im Wiki: alle Sessions/Notes der letzten zwei Wochen zu einem Thema durchschauen
-2. Claude bitten: "Mach daraus einen Blogartikel-Entwurf in unserem Stil. Beispiele für Stil: blog/2026-04-01.md, blog/2026-03-15.md."
-3. Entwurf in `content/draft-YYYY-MM-DD.md` ablegen
-4. Manuelles Editing, finalisieren
-5. Veröffentlichen, in `content/published/` verschieben
+Du finalisierst manuell, veröffentlichst, verschiebst nach `content/published/`.
 
 Spart Stunden bei jedem Artikel.
-
-### Email-Drafts aus Wiki
-
-Beispiel: Mail an Kunden zum Projektstand.
-
-```
-Schau in projects/kunde-xyz/context.md, was wir besprochen haben
-und in den letzten daily-Dateien, was sich getan hat.
-
-Schreibe einen Status-Update als E-Mail an Max Mustermann.
-Tonalitaet: freundlich, professionell, konkret. Keine Floskeln.
-Ende mit nachster sinnvoller Frage an ihn.
-```
 
 ## Multi-User Wikis (Teams)
 
 Möglich, aber mit Fallstricken:
 
 - Pro Person eigener Branch? Meist zu viel Overhead.
-- Einfacher: ein gemeinsames main, klarer Ownership pro Ordner/Datei.
+- Einfacher: ein gemeinsames `main`, klarer Ownership pro Ordner/Datei.
 - Konventionen müssen glasklar sein, sonst entsteht Chaos (zwei Leute legen unabhängig `kunde-x/` an mit verschiedener Schreibweise).
 - Sensibles ist im Team-Wiki schwierig (private Notizen, Halb-Gedanken).
 
 Für Teams ab 3 Personen würde ich ein dediziertes Wiki-Tool (Outline, BookStack, Confluence) in Betracht ziehen statt Markdown-Repo. Das Team-Wiki dort, persönliches Second Brain trotzdem als eigenes Markdown-Repo.
 
+## Mobile-Setup ausbauen
+
+Für ernsthafte Mobile-Nutzung:
+
+### iOS
+
+- **Working Copy** (kostenpflichtig, aber sehr gut) als Git-Client
+- **1Writer** oder **iA Writer** als Markdown-Editor
+- Beide sind in Working Copy integrierbar
+- Dadurch: lesen, schreiben, committen, pushen auf dem iPhone/iPad
+
+### Android
+
+- **Markor** (kostenlos) als Editor mit Git-Support
+- Oder **Obsidian Mobile** mit Git-Plugin
+- Funktioniert ähnlich gut wie Desktop
+
+### Allgemein
+
+GitHub Web-UI funktioniert auch auf dem Handy gut für Quick-Edits an `inbox.md`. Reicht für die meisten Mobile-Use-Cases.
+
 ## Was du dir nicht antun solltest
 
-- **Zu viele Plugins installieren.** Je mehr Tooling, desto mehr Wartung.
+- **Zu viele Plugins und Skills installieren.** Je mehr Tooling, desto mehr Wartung.
 - **Perfekte Strukturen in der Theorie entwerfen.** Aus Use-Cases wachsen, nicht aus Diagrammen.
 - **Dein Wiki als Content-Maschine missbrauchen.** Es ist Second Brain, nicht Blogsoftware.
 - **Multi-User-Setups erzwingen.** Wenn dein Team kein Markdown-Repo will, kann nur dein eigenes Brain Markdown sein.

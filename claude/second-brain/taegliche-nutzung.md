@@ -6,22 +6,23 @@ excerpt: Wie dein Second Brain im Alltag läuft - Routinen die funktionieren
 
 # Tägliche Nutzung
 
-Ein Second Brain das du nicht nutzt ist wertlos. Ein Second Brain das du täglich pflegst ist unbezahlbar. Hier kommen Routinen die sich in der Praxis bewährt haben.
+Ein Second Brain das du nicht nutzt ist wertlos. Ein Second Brain das du täglich pflegst ist unbezahlbar. Hier kommen Routinen die sich in der Praxis bewährt haben - alle in der Claude App, ohne Terminal.
 
 ## Der 5-Minuten-Morning-Check
 
 Jeden Arbeitstag, am Anfang:
 
-1. `inbox.md` durchgehen - Ideen von gestern einsortieren
-2. `daily/YYYY-MM-DD.md` anlegen (Datum als Dateiname)
-3. Claude Code fragen: "Was sollte ich heute priorisieren?"
-4. Die Antwort kurz prüfen, drei Top-Aufgaben ins Tagesfile
+1. Claude App öffnen, Wiki-Workspace aktiv
+2. `inbox.md` durchgehen oder Claude fragen "Was steht in meiner Inbox, schlage Einsortierung vor"
+3. Tagesfile anlegen lassen: "Lege daily/[heutiges Datum].md an mit der Vorlage"
+4. Claude fragen: "Was sollte ich heute priorisieren?"
+5. Drei Top-Aufgaben in das Tagesfile übernehmen lassen
 
 ### Beispiel-Prompt für Morning-Check
 
 ```
-Lies CLAUDE.md, scanne die context.md aller aktiven Projekte
-unter projects/ und gib mir einen knappen Lagebericht plus drei
+Lies CLAUDE.md, scanne die context.md aller aktiven Projekte unter
+projects/ und gib mir einen knappen Lagebericht plus drei
 Prioritaeten fuer heute.
 
 Beruecksichtige Deadlines aus den context-Dateien.
@@ -43,6 +44,8 @@ Drei Prioritaeten heute:
 1. Nexus Stripe-Webhook fixen (kritisch, blockiert Kundenkaeufe)
 2. Open Campus Termin 1 Konzept finalisieren (Deadline morgen 17:00)
 3. Provider-Deploy nach Bugfix-Verifikation
+
+Soll ich diese drei Punkte in die heutige Tagesnotiz uebernehmen?
 ```
 
 Das ist ein produktiver Start. 5 Minuten Investment, Kopf ist sortiert.
@@ -52,36 +55,44 @@ Das ist ein produktiver Start. 5 Minuten Investment, Kopf ist sortiert.
 - **Alles was länger als 5 Minuten Aufmerksamkeit braucht** landet in seiner Projekt-context.md
 - **Alles was schnell raus muss** kommt in `inbox.md` (einsortieren später)
 - **Entscheidungen** bekommen einen Eintrag in der `decisions.md` (Datum + Warum)
-- **Meetings** landen in `meetings/YYYY-MM-DD-thema.md`
+- **Meetings** landen in `meetings/[Datum]-[thema].md`
+
+Du musst die Dateien nicht selbst öffnen oder bearbeiten. Sag Claude was passieren soll:
+
+> Trag in projects/nexus/context.md unter Offene Themen ein: Webhook timeout debuggen, Priority hoch.
+
+> Schreib einen kurzen Eintrag in decisions.md von heute: Wir nehmen Stripe statt Lemon Squeezy. Begruendung: bessere DACH-Abdeckung.
+
+> Lege meetings/[heutiges Datum]-kunde-x.md an, Vorlage anwenden.
 
 ### Beispiel: ein Vormittag
 
 09:00 - Morning-Check, Tagesfile angelegt, drei Prios festgelegt.
-09:15 - Stripe-Webhook-Bug. In `projects/nexus/context.md` Bug-Beschreibung notieren, in Code reinspringen.
-10:30 - Bug gefixt, Test geschrieben. context.md updaten ("Bug XYZ behoben, deployed auf dev"), Commit, Push.
-10:45 - Mail vom Kunden mit neuer Anforderung. Notiz nach `projects/kunde-x/context.md` unter "Offene Themen" hinzu, sofort als unbearbeitet markieren.
-11:00 - Idee für YouTube-Video während Kaffeekochen. Nicht jetzt verfolgen - rein in `inbox.md` mit zwei Sätzen.
-11:15 - Open Campus Konzept weiter. Konkrete Änderungen direkt in `projects/opencampus-kurs/termin-01-konzept.md`.
+09:15 - Stripe-Webhook-Bug. Claude fragen: "Trage in projects/nexus/context.md den Bug ein und schau dir webhook-handler.ts an."
+10:30 - Bug gefixt. Claude fragen: "Aktualisiere context.md - Bug behoben, deployed auf dev."
+10:45 - Mail vom Kunden mit neuer Anforderung. Claude: "Trag das in projects/kunde-x/context.md unter Offene Themen ein."
+11:00 - Idee für YouTube-Video während Kaffeekochen. Selbst kurz in `inbox.md` notieren oder per App: "Notiere in inbox.md: Idee für Video XYZ - Aufhänger ist..."
+11:15 - Open Campus Konzept weiter. Direkt in der App das Dokument bearbeiten lassen.
 
-Wichtig: Wiki-Pflege ist nicht "extra Arbeit" - es ist die Arbeit. Du dokumentierst was du sowieso machst.
+Wichtig: Wiki-Pflege ist nicht "extra Arbeit" - es ist die Arbeit. Du dokumentierst während du arbeitest.
 
-## Claude Code als Tagesbegleiter
+## Claude als Tagesbegleiter
 
 Muster die funktionieren:
 
 ### Briefing am Morgen
 
 ```
-Lies meine context.md aller aktiven Projekte und gib mir einen Lagebericht.
-Sortiere nach Dringlichkeit. Ich habe heute 6 Stunden Zeit.
+Lies meine context.md aller aktiven Projekte und gib mir einen
+Lagebericht. Sortiere nach Dringlichkeit. Ich habe heute 6 Stunden Zeit.
 ```
 
 ### Problem-Besprechung
 
 ```
-Das Projekt XYZ haengt an Thema ABC.
-Was ist das Problem aus meiner context.md ersichtlich?
-Liste mir drei moegliche Wege vor mit Pro und Contra.
+Das Projekt XYZ haengt an Thema ABC. Was ist das Problem aus meiner
+context.md ersichtlich? Liste mir drei moegliche Wege vor mit Pro
+und Contra.
 ```
 
 ### Schreibhilfe mit Kontext
@@ -108,21 +119,37 @@ Erwaehnungen und fasse zusammen was wir bisher dazu wissen.
 
 ## Der Freitag-Rückblick
 
-Einmal pro Woche, 15 Minuten:
-
-1. `daily/` der Woche durchschauen
-2. Was ist passiert - in die jeweiligen project/context.md übertragen
-3. Erledigte Todos abhaken
-4. Neue Erkenntnisse in `reference/` ablegen falls wiederverwendbar
-5. `inbox.md` leerziehen
-
-Claude Code hilft:
+Einmal pro Woche, 15 Minuten in der Claude App:
 
 ```
-Lies alle daily-Dateien dieser Woche (daily/2026-04-XX.md) und
-ziehe Erkenntnisse pro Projekt raus. Schlage mir vor was in welche
-context.md uebertragen werden sollte.
+Lies alle daily-Dateien dieser Woche und ziehe Erkenntnisse pro
+Projekt raus. Schlage mir vor was in welche context.md uebertragen
+werden sollte. Frage mich vor jeder Aenderung.
 ```
+
+Claude geht durch, du bestätigst, alles wird sauber konsolidiert.
+
+Anschließend:
+
+```
+Pruefe inbox.md und schlage Einsortierung der noch offenen Punkte vor.
+Wenn etwas zu alt ist (mehr als 4 Wochen) und nicht erledigt: vorschlagen
+zu loeschen.
+```
+
+Inbox bleibt gepflegt, Wiki bleibt aktuell.
+
+## Sichern (Push) - täglich oder nach Sessions
+
+Damit nichts verloren geht und du auf anderen Geräten weitermachen kannst:
+
+1. GitHub Desktop öffnen
+2. Geänderte Dateien anschauen
+3. Summary eintippen ("Tagesabschluss")
+4. **Commit to main** klicken
+5. **Push origin** klicken
+
+Dauert 30 Sekunden. Mach das mindestens einmal pro Tag, besser nach jeder größeren Session.
 
 ## Was NICHT passieren darf
 
@@ -130,7 +157,7 @@ context.md uebertragen werden sollte.
 
 inbox.md sammelt 200 ungeordnete Notizen, du schaust nie rein, der Wert ist null.
 
-**Lösung:** wöchentlich aufräumen ist Pflicht. Wenn du es nicht schaffst, ist inbox.md nicht das richtige Tool für dich - dann lieber sofort in die richtige Datei.
+**Lösung:** wöchentlich aufräumen ist Pflicht. Wenn du es nicht schaffst, ist inbox.md nicht das richtige Tool für dich - dann lieber sofort in die richtige Datei (über Claude).
 
 ### Anti-Muster 2: daily-Dateien werden Romane
 
@@ -149,12 +176,6 @@ Du legst brav alle Dateien an, fragst Claude aber nie was. Wiki ist dann nur Buc
 Du willst die "perfekte" Struktur, das "perfekte" Template. Nichts wird je live.
 
 **Lösung:** schlechtes laufendes System schlägt perfektes ungebautes System. Anfangen, anpassen.
-
-## Commit-Rhythmus
-
-- **Nach jeder Session:** add + commit + push. Als "Backup".
-- **Commit-Nachricht darf kurz sein:** "Tagesabschluss", "Meeting XYZ", "Projekt YZA Update".
-- **Wenn du GitHub Desktop nutzt:** daran gewöhnen, das Fenster offen zu lassen. Die grüne Punktzahl erinnert dich.
 
 ## Mobile Nutzung
 

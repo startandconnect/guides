@@ -23,7 +23,7 @@ Bei jedem neuen Chat fängst du bei Null an. Claude kennt deinen Kontext nicht. 
 
 Ein Arbeitstag mit Second Brain:
 
-> Montag 9:00 - `cd ~/brain && claude`
+> Montag 9:00 - Claude App öffnen, Wiki-Workspace ist aktiv.
 > "Was steht heute an?"
 > Claude liest CLAUDE.md (weiß wer du bist), scannt die aktiven Projekte (weiß was läuft), schlägt drei Prioritäten vor.
 

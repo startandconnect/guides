@@ -1,49 +1,96 @@
 ---
 title: Installation
 order: 2
-excerpt: Claude Code installieren - Mac, Linux, Windows mit WSL
+excerpt: Claude Code App installieren - Mac, Windows, Linux
 ---
 
 # Installation
 
-Claude Code braucht Node.js und ein Terminal. Der Rest ist ein Befehl.
+Du installierst die Claude Desktop App. Eine App, ein Download, ein Doppelklick.
 
 ## Voraussetzungen
 
-- Node.js (aktuelle LTS-Version)
-- Ein Terminal (Mac: Terminal.app, Linux: bash/zsh, Windows: WSL mit Ubuntu)
-- Ein Anthropic Account
+- Ein Mac, Windows-PC oder Linux-Rechner (aktuelle Version)
+- Ein Anthropic Account (kostenlos auf claude.ai erstellbar)
+- Internetverbindung
 
-TODO: Version-Anforderungen aktualisieren, Links zu Downloads.
+Mehr nicht. Kein Terminal, keine Programmiersprache, keine Vorkenntnisse.
 
 ## Mac
 
-TODO: Schritt für Schritt, inklusive Homebrew-Alternative.
+1. Öffne `claude.ai/download` in deinem Browser
+2. Klicke "Download for Mac"
+3. Öffne die heruntergeladene `.dmg` Datei
+4. Ziehe das Claude-Symbol in den Programme-Ordner
+5. Starte Claude aus dem Programme-Ordner
+6. Beim ersten Start: Login mit deinem Anthropic-Account
+
+Fertig. Die App ist installiert.
+
+## Windows
+
+1. Öffne `claude.ai/download` in deinem Browser
+2. Klicke "Download for Windows"
+3. Starte die heruntergeladene `.exe` Datei
+4. Folge dem Installer (Standard-Einstellungen sind ok)
+5. Starte Claude aus dem Startmenü
+6. Beim ersten Start: Login mit deinem Anthropic-Account
 
 ## Linux
 
-TODO: Schritt für Schritt für Ubuntu, Debian, Arch.
+Anthropic stellt offizielle Pakete bereit für die gängigen Distributionen.
 
-## Windows (mit WSL)
+1. Öffne `claude.ai/download` in deinem Browser
+2. Wähle dein Paketformat (.deb, .rpm, AppImage)
+3. Installiere mit dem Standard-Weg deiner Distribution
+4. Starte Claude
 
-TODO: WSL aktivieren, Ubuntu installieren, Claude Code im WSL installieren.
+## Erster Start
 
-## Erster Login
+Nach der Installation:
 
-Nach der Installation einmal `claude` starten. Es öffnet ein Browser-Fenster zum Login.
+1. App öffnen
+2. Mit Anthropic-Account einloggen (oder Account neu erstellen)
+3. App schlägt eine kurze Tour vor - kannst du machen, kannst du überspringen
 
-TODO: Screenshots, was bei Problemen tun.
+Du landest in einer Oberfläche die aussieht wie ein Chat - aber mit zusätzlichen Möglichkeiten links/oben.
+
+## Code-Modus aktivieren
+
+Damit Claude einen Ordner lesen und bearbeiten kann, musst du ihn verbinden. So geht das:
+
+1. In der App: links oder oben auf das **Ordner-Symbol** klicken (oder im Menü "Workspace verbinden")
+2. Den Ordner auswählen den Claude sehen soll (z.B. dein Wiki, dein Projekt)
+3. Berechtigung bestätigen
+
+Ab jetzt arbeitet Claude mit diesem Ordner. Dateien lesen, schreiben, neue anlegen - alles geht.
+
+Du kannst mehrere Ordner verbinden und zwischen ihnen wechseln.
 
 ## Update
 
-Claude Code updated sich nicht automatisch. Alle paar Wochen:
+Die App updated sich meistens automatisch. Wenn nicht: einfach die neueste Version von `claude.ai/download` runterladen und drüber installieren.
 
-```bash
-npm install -g @anthropic-ai/claude-code
-```
+## Login-Probleme
 
-TODO: Befehl aktuell halten, Release-Notes verlinken.
+### "Konto nicht gefunden"
 
-:::tip[Häufige Probleme]
-Wenn `claude` nicht gefunden wird, ist meist der PATH nicht gesetzt. Siehe Troubleshooting-Abschnitt.
+Du hast vermutlich noch keinen Account. Geh auf claude.ai, registriere dich, dann nochmal in der App einloggen.
+
+### "Falsches Passwort"
+
+Passwort zurücksetzen über claude.ai. Die App erkennt das neue Passwort sofort.
+
+### "Subscription benötigt"
+
+Du brauchst entweder ein Pro-Abo (für intensivere Nutzung) oder kannst die Free-Variante mit Limits nutzen. Mehr dazu unter [[kosten|Kosten im Griff halten]].
+
+## Für Profis: Terminal-Variante
+
+Es gibt Claude Code auch als reines Terminal-Tool für Entwickler. Das ist mächtiger und integriert besser mit Entwicklungs-Workflows, braucht aber Kommandozeile-Wissen. Für 95 Prozent der Anwendungsfälle reicht die App.
+
+Falls du dich rantraust: `npm install -g @anthropic-ai/claude-code` installiert die CLI-Version. Dokumentation auf docs.anthropic.com.
+
+:::tip[Häufiges Problem]
+Wenn die App nicht startet (Mac): Rechtsklick auf das App-Symbol → "Öffnen". Mac fragt einmalig nach Bestätigung weil die App aus dem Internet kommt.
 :::

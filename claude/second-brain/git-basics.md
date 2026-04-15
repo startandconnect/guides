@@ -1,12 +1,12 @@
 ---
 title: Git Grundlagen
 order: 3
-excerpt: Das Minimum an Git das du für dein Wiki brauchst - ohne unnötige Tiefe
+excerpt: Das Minimum an Git das du für dein Wiki brauchst - mit GitHub Desktop, kein Terminal nötig
 ---
 
 # Git Grundlagen
 
-Dieser Abschnitt richtet sich an alle die mit Git noch nie gearbeitet haben. Du lernst hier nicht Git für Entwickler, sondern genau die 20 Prozent die du für dein Wiki brauchst.
+Dieser Abschnitt richtet sich an alle die mit Git noch nie gearbeitet haben. Du lernst hier nicht Git für Entwickler, sondern genau die 20 Prozent die du für dein Wiki brauchst - und zwar ohne Kommandozeile.
 
 ## Was ist Git in drei Sätzen
 
@@ -14,24 +14,16 @@ Git speichert Versionen deiner Dateien. Du kannst jederzeit zu einem älteren St
 
 Für dein Wiki heißt das: nichts geht verloren, alles ist nachvollziehbar, Backup ist automatisch.
 
-## Zwei Wege: App oder Terminal
+## Du brauchst: GitHub Desktop
 
-Du musst dich für einen Weg entscheiden. Beide Wege funktionieren, du kannst jederzeit wechseln.
-
-### Weg A: GitHub Desktop (empfohlen für Einsteiger)
-
-Eine grafische App. Du klickst auf Buttons, Git macht den Rest.
+GitHub Desktop ist eine grafische App. Du klickst auf Buttons, Git macht den Rest.
 
 - Download: github.com/desktop
 - Mac, Windows, Linux
 - Funktioniert auch ohne Terminal-Erfahrung
-- Reicht für 95 Prozent aller Wiki-Aufgaben
+- Reicht für 100 Prozent aller Wiki-Aufgaben
 
-### Weg B: Terminal
-
-Direkter, mächtiger, schneller wenn man es kann. Wenn du Claude Code sowieso im Terminal nutzt, wirst du das früher oder später wollen.
-
-Beide Wege können parallel existieren. Claude Code selbst nutzt Terminal-Git.
+Das ist alles was du brauchst. Kein Terminal, keine Kommandozeile, keine Programmiersprache.
 
 ## Die Begriffe die du kennen musst
 
@@ -43,98 +35,126 @@ Beide Wege können parallel existieren. Claude Code selbst nutzt Terminal-Git.
 
 Das reicht. Alles andere lernst du später wenn du es brauchst.
 
-## Die 5 Befehle (Terminal-Version)
+## Erstes Mal: GitHub Desktop einrichten
 
-```bash
-# Einmalig: das Template clonen
-git clone https://github.com/startandconnect/sac-brain-template mein-brain
-cd mein-brain
-```
+1. GitHub Desktop installieren (github.com/desktop)
+2. App öffnen
+3. Mit deinem GitHub-Konto einloggen (oder Konto neu erstellen wenn noch nicht vorhanden)
+4. Im Setup-Dialog: dein Name und E-Mail (wird in deinen Commits gezeigt)
 
-`git clone <url> <ordner>` lädt das Template runter und legt es in einen lokalen Ordner. Du brauchst das nur einmal pro Repo.
+Fertig. Die App ist einsatzbereit.
 
-```bash
-# Was hat sich geändert?
-git status
-```
+## Repo runterladen (Clone)
 
-`git status` zeigt dir welche Dateien neu oder geändert sind. Sicher und unschädlich - du kannst es so oft ausführen wie du willst.
+Wenn du z.B. das Template clonen willst:
 
-```bash
-# Neue oder geänderte Dateien vormerken
-git add .
-```
+1. GitHub Desktop öffnen
+2. **File → Clone Repository** anklicken
+3. Tab "URL" wählen
+4. Repo-URL eingeben (z.B. `https://github.com/startandconnect/sac-brain-template`)
+5. Lokalen Ordner wählen (z.B. `~/Documents/`)
+6. **Clone** klicken
 
-`git add .` markiert alle Änderungen für den nächsten Commit. Der Punkt heißt "alles im aktuellen Ordner". Statt `.` kannst du auch konkrete Dateinamen angeben.
+Der Repo-Inhalt liegt jetzt auf deinem Rechner.
 
-```bash
-# Commit mit Nachricht
-git commit -m "Projekt XYZ angelegt"
-```
+## Tägliche Nutzung: Änderungen sichern
 
-`git commit` packt die markierten Änderungen in einen Versionsstand. Die Nachricht in `-m "..."` beschreibt was du gemacht hast - dein zukünftiges Ich wird sich freuen.
+Du hast Dateien in deinem Wiki geändert (mit Claude App, mit deinem Editor, egal). Jetzt willst du das sichern.
 
-```bash
-# Auf GitHub hochladen
-git push
-```
+1. GitHub Desktop öffnen (falls nicht schon offen)
+2. Im "Changes"-Tab siehst du alle geänderten Dateien
+3. Im Feld "Summary" kurz beschreiben was sich geändert hat (z.B. "Tagesnotiz angelegt", "Projekt XYZ aktualisiert")
+4. **"Commit to main"** klicken (unten links)
+5. **"Push origin"** klicken (oben rechts)
 
-`git push` schiebt deine Commits zu GitHub. Damit ist dein Stand gesichert und auf anderen Geräten verfügbar.
+Fertig. Sechs Klicks, deine Änderungen sind auf GitHub gesichert.
 
-## GitHub Desktop Workflow (die gleichen Schritte)
+## Was wenn ich was kaputtgemacht habe
 
-1. **File → Clone Repository** → Template-URL eingeben → lokalen Ordner wählen → Clone klicken
-2. Im Wiki Dateien ändern (mit Claude Code oder deinem Editor)
-3. GitHub Desktop wechselt automatisch in den "Changes"-Tab und zeigt was sich geändert hat
-4. Im Feld "Summary" eine kurze Beschreibung tippen (z.B. "Tagesnotiz angelegt")
-5. **"Commit to main"** klicken (unten links)
-6. **"Push origin"** klicken (oben rechts) - Änderungen sind jetzt auf GitHub
+### Versehentlich gelöscht oder kaputt geschrieben (noch nicht committet)
 
-Fertig. Diese sechs Schritte deckst du täglich ab.
+In GitHub Desktop:
+
+1. Rechtsklick auf die Datei in der Changes-Liste
+2. **"Discard changes"** wählen
+3. Bestätigen
+
+Datei ist wieder im Stand vom letzten Commit.
+
+### Schon committet, möchte zurück
+
+Im Menü: **History → letzten Commit auswählen → Rechtsklick → "Revert this commit"**.
+
+GitHub Desktop macht den Commit rückgängig (durch einen neuen Commit, nichts geht verloren).
+
+## Wenn du an mehreren Geräten arbeitest
+
+Beispiel: morgens am Desktop, nachmittags am Laptop.
+
+**Vor der Arbeit am neuen Gerät:**
+
+1. GitHub Desktop öffnen
+2. **"Fetch origin"** klicken (oben)
+3. Wenn Updates da sind: **"Pull origin"** klicken
+
+Damit hast du die neuesten Änderungen vom anderen Gerät.
+
+**Nach der Arbeit:**
+
+Wie beschrieben commiten und pushen.
+
+**Goldene Regel:** immer pullen bevor du anfängst, immer pushen wenn du fertig bist. Dann gibt es nie Konflikte.
 
 ## Was du NICHT brauchst
 
 - **Branches:** dein Wiki ist kein Softwareprojekt. Alles passiert auf `main`.
-- **Pull Requests:** die brauchst du nur wenn mehrere Leute am selben Repo arbeiten.
-- **Merge Conflicts:** entstehen nur wenn du parallel an verschiedenen Geräten arbeitest - erstmal einfach nicht machen.
-- **Rebase, Cherry-Pick, Stash:** vergiss dass es sie gibt bis du sie brauchst (meist: nie).
+- **Pull Requests:** brauchst du nur wenn mehrere Leute am selben Repo arbeiten.
+- **Merge Conflicts:** entstehen nur wenn du parallel an verschiedenen Geräten arbeitest, ohne vorher zu pullen. Bei der Goldenen Regel oben: kommen sie nicht vor.
+- **Rebase, Cherry-Pick, Stash:** vergiss dass es sie gibt bis du sie brauchst.
 
-## Typische Probleme
+## Typische Probleme und Lösungen
 
-### "Your branch is ahead of origin/main by X commits"
+### "Failed to push some refs"
 
-Du hast committet aber nicht gepusht. Einfach `git push` oder "Push origin" in GitHub Desktop. Kein Drama.
+Auf GitHub gibt es Änderungen die du noch nicht hast. Erst **"Pull origin"** klicken, dann nochmal pushen.
 
-### "Your branch is behind origin/main"
+### "Authentication failed"
 
-Auf GitHub gibt es Änderungen die du noch nicht hast. `git pull` oder "Pull origin". Passiert wenn du an mehreren Geräten arbeitest.
+GitHub-Login ist abgelaufen. **GitHub Desktop → Preferences → Accounts** und neu einloggen.
 
-### "Your branch and origin/main have diverged"
+### "There are conflicting changes"
 
-Du hast lokal commits, auf GitHub gibt es auch neue commits, die zueinander passen müssen. `git pull --rebase` löst das in 90 Prozent der Fälle. In GitHub Desktop: "Pull" klicken, App fragt dich was sie tun soll.
+Du hast lokal geändert, gleichzeitig wurde auf GitHub auch geändert. GitHub Desktop fragt dich was du tun willst.
 
-### Ich habe was versehentlich gelöscht
+In den meisten Fällen reicht: **"Open in editor"** klicken, die markierten Stellen anschauen, die richtige Version wählen, speichern, in GitHub Desktop committen.
 
-Solange du nicht committet hast: `git checkout -- Dateiname` holt es zurück. In GitHub Desktop: Rechtsklick auf die Datei → "Discard changes". Falls du schon committet hast: `git revert HEAD` macht den letzten Commit rückgängig (ohne Datenverlust).
+Wenn du nicht weißt was zu tun ist: Claude App fragen. Beschreibe das Problem, Claude führt dich durch die Lösung.
 
-### "Permission denied (publickey)"
+### "Ich sehe Änderungen die ich nicht gemacht habe"
 
-Dein GitHub-Zugang ist nicht eingerichtet. Lösung: GitHub Desktop installieren und einmalig damit einloggen, dann nutzt auch das Terminal die Credentials. Oder SSH-Key bei GitHub hinterlegen (offizielle Anleitung im GitHub-Help).
-
-### Mein Push wird abgewiesen
-
-Meist weil jemand (oder du an einem anderen Gerät) etwas anderes gepusht hat. Erst `git pull` oder `git pull --rebase`, dann nochmal `git push`.
+Wenn du an mehreren Geräten arbeitest oder Auto-Sync aktiv ist (siehe [[advanced|Advanced]]): kommt vor. Pullen, Änderungen prüfen, weitermachen.
 
 ## Sicherheits-Basics
 
-- **Niemals API Keys oder Passwörter committen.** Falls passiert: Key sofort rotieren, History bereinigen.
-- **`.gitignore` nutzen.** Datei im Repo-Root die festlegt was Git ignorieren soll. Im Template ist eine vorbereitete Version drin.
+- **Niemals API Keys oder Passwörter committen.** Falls passiert: Key sofort rotieren.
 - **Repo auf Private setzen.** Wikis sind persönlich, niemand soll sie sehen.
+- **Vor jedem Commit kurz prüfen** was sich geändert hat (siehst du in GitHub Desktop)
 
-## Weiterführend
+## Für Profis: Terminal-Befehle
 
-Wenn du tiefer einsteigen willst: die offizielle Git-Doku (git-scm.com) ist solide. Für Claude-Code-Nutzung reicht aber was hier steht.
+Falls du irgendwann doch das Terminal nutzen willst: die gleichen Aktionen funktionieren auch dort.
+
+```bash
+git clone <url>            # Repo runterladen
+git status                  # was hat sich geändert
+git add .                   # Änderungen vormerken
+git commit -m "Nachricht"   # committen
+git push                    # auf GitHub hochladen
+git pull                    # Änderungen runterladen
+```
+
+Aber: kein Druck. GitHub Desktop reicht für alles was du im Wiki brauchst.
 
 :::tip[Ehrlich]
-Git ist initial verwirrend. Nach einer Woche täglicher Nutzung geht es automatisch. Nicht von schlechten ersten Tagen abschrecken lassen.
+Git ist initial verwirrend. Nach einer Woche täglicher Nutzung mit GitHub Desktop geht es automatisch. Nicht von schlechten ersten Tagen abschrecken lassen.
 :::

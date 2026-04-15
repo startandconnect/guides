@@ -10,30 +10,37 @@ Claude ist kein einzelnes Tool, sondern ein Modell das an vielen Stellen auftauc
 
 ## Web und Desktop-App
 
-**claude.ai** im Browser oder als Desktop-App (Mac, Windows). Kostenlos mit Limits, bezahlt ohne. Der einfachste Einstieg.
+**claude.ai** im Browser oder als Desktop-App (Mac, Windows, Linux). Kostenlos mit Limits, bezahlt ohne. Der einfachste Einstieg.
 
-TODO: Preismodell aktuell, was man kostenlos bekommt, was ein Abo bringt.
+**Free:** begrenzte Anzahl Nachrichten pro Tag, Einstiegsmodell.
+**Pro:** Pauschale pro Monat, deutlich mehr Limits, Zugriff auf bessere Modelle.
+**Max:** noch höhere Limits, sinnvoll bei intensiver Nutzung.
 
-## Claude Code (CLI)
+Aktuelle Preise auf claude.ai/upgrade.
 
-Ein Terminal-Tool das auf deinem Rechner läuft, Dateien liest, Code schreibt und Befehle ausführt. Der größte Hebel für alle die technisch arbeiten.
+## Claude Code (App)
 
-TODO: Kurzer Teaser, Link zum Claude Code Kapitel.
+Die Claude Desktop App im Code-Modus. Du verbindest einen Ordner auf deinem Rechner, Claude liest und schreibt darin Dateien, führt Aufgaben aus.
+
+Kein Terminal nötig, kein Coding-Wissen. Einfach App installieren, Workspace verbinden, loslegen. Der größte Hebel für alle die regelmäßig mit Notizen, Wikis oder Projekten arbeiten.
+
+Details: [[../claude-code/was-ist-claude-code|Was ist Claude Code]].
 
 ## API und SDKs
 
-Für Entwickler. Direkter Zugriff auf die Modelle um eigene Apps zu bauen.
-
-TODO: Wann API statt App, Sprachen (Python, TypeScript, andere).
+Für Entwickler. Direkter Zugriff auf die Modelle um eigene Apps zu bauen. Nur relevant wenn du selbst Software programmierst.
 
 ## Dritt-Integrationen
 
-- Cursor (Code-Editor)
-- Raycast (Mac Launcher)
-- Notion, Slack, weitere
-- In n8n als LLM-Node
+Claude steckt mittlerweile in vielen anderen Tools drin:
 
-TODO: Kurze Liste der wichtigsten Integrationen.
+- **Cursor** und **Windsurf** (Code-Editoren mit eingebautem Claude)
+- **Raycast** (Mac Launcher mit Claude-Integration)
+- **Notion** und **Slack** (Claude als KI-Assistent in der App)
+- **In n8n** als LLM-Node für Workflow-Automatisierung
+- Diverse Mobile-Apps
+
+Wenn du ein Tool nutzt das eine Claude-Integration anbietet: meistens lohnt sich das Aktivieren.
 
 :::tip[Praxis]
 Die meisten starten mit dem Web-Chat. Sobald du merkst, dass du Claude täglich nutzt, ist der Sprung zu Claude Code der größte Sprung.

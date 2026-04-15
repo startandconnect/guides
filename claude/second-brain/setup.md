@@ -1,168 +1,134 @@
 ---
 title: Setup in 30 Minuten
 order: 4
-excerpt: Von Null zum fertigen Second Brain - zwei Wege, klarer Pfad
+excerpt: Von Null zum fertigen Second Brain - mit Claude App und GitHub Desktop
 ---
 
 # Setup in 30 Minuten
 
-Zwei Wege zum gleichen Ergebnis. Wähle den der zu dir passt.
+Du brauchst zwei Apps: die Claude App und GitHub Desktop. Beide kostenlos, beide grafisch, kein Terminal.
 
 ## Voraussetzungen
 
 - Du hast ein GitHub-Konto (kostenlos auf github.com)
-- Du hast entweder **GitHub Desktop** installiert ODER **Claude Code** installiert
-- Du hast einen Editor für Markdown (kann auch Claude Code selbst sein)
+- Du hast die **Claude App** installiert (siehe [[../claude-code/installation|Installation]])
+- Du hast **GitHub Desktop** installiert (download.github.com)
 
 Wenn Git ein Fremdwort ist: zuerst [[git-basics|Git Grundlagen]] lesen.
 
-## Weg A: Mit Claude Code
+## Schritt 1: Template auf GitHub kopieren
 
-Wenn Claude Code installiert ist, ist das der schnellste Weg:
-
-```bash
-cd ~/Documents
-claude
-```
-
-Dann in Claude Code:
-
-> Lege mir ein Second Brain in diesem Ordner an. Nutze die SAC Brain Template Struktur als Basis. Frag mich nach: meinem Namen, meiner Rolle, dem Ordnernamen, ob ich ein erstes Beispielprojekt willst.
-
-Claude Code stellt dir die Fragen, legt die Struktur an und committet sie. Anschließend pushst du das Repo zu GitHub (siehe Schritt 6 weiter unten).
-
-Alternativ wenn der Skill `/init-brain` existiert: einfach diesen aufrufen. Der erledigt alle Schritte in einem.
-
-## Weg B: Mit GitHub Template
-
-### Schritt 1: Template kopieren
-
-1. Öffne `github.com/startandconnect/sac-brain-template`
+1. Öffne `github.com/startandconnect/sac-brain-template` in deinem Browser
 2. Klicke **"Use this template"** oben rechts (grüner Button)
-3. Wähle einen Namen für dein Repo (z.B. `mein-brain`, `ben-wiki`)
+3. Wähle einen Namen für dein Repo (z.B. `mein-brain`, `vorname-wiki`)
 4. Setze es auf **Private** (dein Wiki soll niemand sehen)
 5. Klicke **"Create repository"**
 
 Du hast jetzt ein eigenes Repo mit der Grundstruktur. GitHub leitet dich auf das neue Repo weiter.
 
-### Schritt 2: Lokal clonen
+## Schritt 2: Repo mit GitHub Desktop runterladen
 
-**Mit GitHub Desktop:**
-- File → Clone Repository → dein neues Repo auswählen → Ordner wählen → Clone
+1. GitHub Desktop öffnen
+2. **File → Clone Repository** anklicken
+3. In der Liste dein neues Repo auswählen (oder URL einfügen)
+4. Lokalen Ordner wählen (z.B. `~/Documents/mein-brain`)
+5. **Clone** klicken
 
-**Mit Terminal:**
+Der Ordner ist jetzt auf deinem Rechner.
 
-```bash
-cd ~/Documents
-git clone https://github.com/DEIN-NAME/mein-brain.git
-cd mein-brain
+## Schritt 3: Ordner in der Claude App verbinden
+
+1. Claude App öffnen
+2. Auf **Workspace verbinden** klicken (oder das Ordner-Symbol)
+3. Den eben erstellten Wiki-Ordner auswählen
+4. Berechtigung bestätigen
+
+Claude kann jetzt Dateien in deinem Wiki lesen und schreiben.
+
+## Schritt 4: CLAUDE.md anpassen
+
+In der Claude App fragen:
+
+```
+Oeffne CLAUDE.md im Workspace und zeige mir den aktuellen Inhalt.
 ```
 
-### Schritt 3: CLAUDE.md anpassen
+Claude zeigt dir die Vorlage. Dann:
 
-Öffne `CLAUDE.md` mit deinem Editor (oder direkt mit Claude Code: `claude` im Ordner starten und sagen "öffne CLAUDE.md zur Bearbeitung").
-
-Im Template steht eine Vorlage mit Platzhaltern:
-
-```markdown
-# Wer ich bin
-
-[NAME], [ROLLE]. Ich arbeite an [HAUPTPROJEKT].
-
-# Was dieses Wiki ist
-
-Mein persönliches Second Brain.
-
-# Sprache und Stil
-
-- Deutsch, außer technische Begriffe
-- Echte Umlaute verwenden
-- Du-Form, kein "Sie"
-
-# Regeln
-
-- Erledigte Aufgaben sofort als [x] markieren
-- Keine API Keys oder Kundendaten in Dateien
+```
+Pass die CLAUDE.md an meine Situation an. Stell mir Fragen die du
+brauchst (Name, Rolle, was ich mache, Sprache, Stil-Praeferenzen)
+und ueberschreib dann die Datei.
 ```
 
-Ersetze die Platzhalter durch echte Informationen. Das ist die wichtigste Datei - je klarer sie ist, desto besser die Antworten von Claude.
+Claude führt dich durch die Fragen und passt die Datei an.
 
-Details: [[claude-md-anleitung|CLAUDE.md richtig schreiben]].
-
-### Schritt 4: Erstes Projekt anlegen
+## Schritt 5: Erstes Projekt anlegen
 
 Wähle ein echtes Projekt. Keine Übungsaufgabe.
 
-Lege einen Ordner an:
+In der Claude App:
 
-```bash
-mkdir -p projects/dein-projekt
+```
+Lege ein neues Projekt an: projects/[PROJEKTNAME]/context.md.
+Nutze die Vorlage aus dem Template als Basis.
+
+Frag mich nach: kurze Beschreibung, Status, Hauptziel, drei
+ersten Aufgaben.
 ```
 
-Erstelle `projects/dein-projekt/context.md` und nutze die context.md aus dem Beispielprojekt im Template als Vorlage. Fülle echte Informationen ein:
+Claude legt den Ordner und die Datei an, fragt dich die Details, fertigt die context.md.
 
-- Worum geht es in einem Satz
-- Aktueller Stand
-- Drei nächste Aufgaben
-- Eine Entscheidung die du letzte Woche getroffen hast
+## Schritt 6: Testen ob es funktioniert
 
-### Schritt 5: Claude Code starten und testen
+In der Claude App:
 
-Im Wiki-Ordner:
-
-```bash
-claude
+```
+Schau dir meine CLAUDE.md und das Projekt in projects/[PROJEKTNAME]/
+an. Was sind die naechsten 3 Aufgaben fuer mich?
 ```
 
-Stelle die erste Frage mit Kontext:
+Wenn die Antwort spezifisch und brauchbar ist: dein Second Brain funktioniert.
 
-> Schau dir meine CLAUDE.md und das Projekt in projects/dein-projekt/ an. Was sind die nächsten 3 Aufgaben für mich?
+Wenn die Antwort generisch ist: deine CLAUDE.md oder context.md ist zu vage. Ergänze konkrete Informationen, frag nochmal.
 
-Wenn die Antwort spezifisch und brauchbar ist: dein Second Brain funktioniert. Wenn die Antwort generisch ist: deine CLAUDE.md oder context.md ist zu vage. Iteriere.
-
-### Schritt 6: Committen und pushen
+## Schritt 7: Erste Sicherung mit GitHub Desktop
 
 Damit dein Setup gesichert ist:
 
-**Mit GitHub Desktop:**
-
 1. Wechsle zu GitHub Desktop
-2. Du siehst die geänderten Dateien im Changes-Tab
-3. Im Summary-Feld eintippen: "Initial Setup"
-4. **"Commit to main"** klicken
-5. **"Push origin"** klicken
+2. Du siehst die geänderten Dateien im "Changes"-Tab
+3. Im Summary-Feld eingeben: "Initial Setup"
+4. **"Commit to main"** klicken (unten links)
+5. **"Push origin"** klicken (oben rechts) - Änderungen sind jetzt auf GitHub gesichert
 
-**Mit Terminal:**
-
-```bash
-git add .
-git commit -m "Initial setup"
-git push
-```
-
-Fertig. Dein Second Brain ist live.
+Fertig. Dein Second Brain ist live und gesichert.
 
 ## Was jetzt
 
 Du hast ein laufendes Second Brain. Jetzt geht es um Routine und Pflege.
 
 - [[taegliche-nutzung|Tägliche Nutzung]] - wie du es im Alltag einsetzt
-- [[claude-md-anleitung|CLAUDE.md richtig schreiben]] - für bessere Antworten
-- [[template-erklaert|Template erklärt]] - was drin ist und warum
+- [[claude-md-anleitung|CLAUDE.md richtig schreiben]] - für noch bessere Antworten
+- [[template-erklaert|Template erklärt]] - was im Template steckt und wie du anpasst
 
 ## Häufige Stolpersteine
 
 ### "Claude Code findet meine CLAUDE.md nicht"
 
-Stelle sicher dass du Claude Code im richtigen Ordner startest (`cd mein-brain` davor). Claude liest CLAUDE.md aus dem aktuellen Verzeichnis.
+Stell sicher dass der richtige Workspace verbunden ist. In der App: oben den Workspace prüfen. Wenn nötig: anderen Workspace auswählen oder neu verbinden.
 
-### "Mein Push wird abgewiesen mit Auth-Fehler"
+### "GitHub Desktop fragt nach Login"
 
-GitHub-Login fehlt. Einmalig GitHub Desktop einrichten und einloggen, dann läuft auch das Terminal.
+Beim ersten Start einmalig mit deinem GitHub-Konto einloggen. Danach merkt sich GitHub Desktop die Credentials.
+
+### "Push wird abgewiesen"
+
+Meist GitHub-Login-Problem. Im Menü "GitHub Desktop → Preferences → Accounts" prüfen ob du eingeloggt bist.
 
 ### "Ich habe die Beispieldateien aus dem Template versehentlich gelöscht"
 
-Kein Problem - sie sind nur als Referenz gedacht. Wenn du sie zurückwillst: `git checkout HEAD~1 -- projects/beispiel-projekt/` (in der Annahme dass du noch keinen Commit gemacht hast).
+Kein Problem. In GitHub Desktop: Rechtsklick auf die gelöschte Datei → "Discard changes". Datei ist wieder da.
 
 ### "Soll ich das alles jetzt schon nutzen?"
 
