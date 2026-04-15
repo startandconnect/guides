@@ -15,7 +15,7 @@ Dieser Guide bringt dich von Null zu produktiv. Kein Marketingmaterial, keine Gr
 - **Grundlagen** - was Claude ist, welche Modelle es gibt, wann du welches nimmst
 - **Claude im Alltag** - wie du mit dem Web-Chat produktiv wirst
 - **Claude Code** - der größte Teil, weil hier die meiste Hebelwirkung steckt
-- **Für Developer** - API und SDKs im Überblick
+- **Second Brain** - dein persönliches Wiki als Kontext für Claude
 - **Fallstricke und Ausblick** - was oft schiefgeht und warum
 
 ## Für wen dieser Guide ist
