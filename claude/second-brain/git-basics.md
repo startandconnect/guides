@@ -50,7 +50,7 @@ Wenn du z.B. das Template clonen willst:
 1. GitHub Desktop öffnen
 2. **File → Clone Repository** anklicken
 3. Tab "URL" wählen
-4. Repo-URL eingeben (z.B. `https://github.com/startandconnect/sac-brain-template`)
+4. Repo-URL eingeben (deines eigenen Wiki-Repos auf GitHub)
 5. Lokalen Ordner wählen (z.B. `~/Documents/`)
 6. **Clone** klicken
 

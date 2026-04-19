@@ -68,15 +68,15 @@ Entscheidungen leben hier.
 - Erledigte Aufgaben sofort als [x] markieren
 - Nach jeder Arbeitssession: betroffene context.md updaten
 - Niemals API Keys oder Kundendaten in Dateien
-- Bei wichtigen Entscheidungen: in decisions.md eintragen
+- Bei wichtigen Entscheidungen: in DECISIONS.md eintragen
 
 # Struktur
 
 - projects/ - aktive Projekte, eines pro Ordner mit context.md
-- daily/ - Tagesnotizen (YYYY-MM-DD.md)
+- sessions/ - Tagesnotizen (YYYY-MM-DD.md)
 - reference/ - Nachschlagewerk (APIs, Prozesse)
 - meetings/ - Meeting-Notes (YYYY-MM-DD-thema.md)
-- inbox.md - Quick Capture, später einsortieren
+- INBOX.md - Quick Capture, später einsortieren
 ```
 
 Das sind 30 Zeilen. Mehr brauchst du am Anfang nicht.
@@ -116,7 +116,7 @@ Keine Dashes (- oder -), nur normale Bindestriche.
 2. Aufgaben immer als Checkboxen ([- ] und [x])
 3. Erledigte Aufgaben sofort abhaken, nicht auf Aufforderung warten
 4. Session-Log: eine Datei pro Tag in sessions/, nie überschreiben
-5. Nach jeder Session: context.md, decisions.md, CHANGELOG.md updaten
+5. Nach jeder Session: context.md, DECISIONS.md, CHANGELOG.md updaten
 
 # Tools
 

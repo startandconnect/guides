@@ -13,8 +13,8 @@ Ein Second Brain das du nicht nutzt ist wertlos. Ein Second Brain das du täglic
 Jeden Arbeitstag, am Anfang:
 
 1. Claude App öffnen, Wiki-Workspace aktiv
-2. `inbox.md` durchgehen oder Claude fragen "Was steht in meiner Inbox, schlage Einsortierung vor"
-3. Tagesfile anlegen lassen: "Lege daily/[heutiges Datum].md an mit der Vorlage"
+2. `INBOX.md` durchgehen oder Claude fragen "Was steht in meiner Inbox, schlage Einsortierung vor"
+3. Tagesfile anlegen lassen: "Lege sessions/[heutiges Datum].md an mit der Vorlage"
 4. Claude fragen: "Was sollte ich heute priorisieren?"
 5. Drei Top-Aufgaben in das Tagesfile übernehmen lassen
 
@@ -53,15 +53,15 @@ Das ist ein produktiver Start. 5 Minuten Investment, Kopf ist sortiert.
 ## Während der Arbeit
 
 - **Alles was länger als 5 Minuten Aufmerksamkeit braucht** landet in seiner Projekt-context.md
-- **Alles was schnell raus muss** kommt in `inbox.md` (einsortieren später)
-- **Entscheidungen** bekommen einen Eintrag in der `decisions.md` (Datum + Warum)
+- **Alles was schnell raus muss** kommt in `INBOX.md` (einsortieren später)
+- **Entscheidungen** bekommen einen Eintrag in der `DECISIONS.md` (Datum + Warum)
 - **Meetings** landen in `meetings/[Datum]-[thema].md`
 
 Du musst die Dateien nicht selbst öffnen oder bearbeiten. Sag Claude was passieren soll:
 
 > Trag in projects/nexus/context.md unter Offene Themen ein: Webhook timeout debuggen, Priority hoch.
 
-> Schreib einen kurzen Eintrag in decisions.md von heute: Wir nehmen Stripe statt Lemon Squeezy. Begruendung: bessere DACH-Abdeckung.
+> Schreib einen kurzen Eintrag in DECISIONS.md von heute: Wir nehmen Stripe statt Lemon Squeezy. Begruendung: bessere DACH-Abdeckung.
 
 > Lege meetings/[heutiges Datum]-kunde-x.md an, Vorlage anwenden.
 
@@ -71,7 +71,7 @@ Du musst die Dateien nicht selbst öffnen oder bearbeiten. Sag Claude was passie
 09:15 - Stripe-Webhook-Bug. Claude fragen: "Trage in projects/nexus/context.md den Bug ein und schau dir webhook-handler.ts an."
 10:30 - Bug gefixt. Claude fragen: "Aktualisiere context.md - Bug behoben, deployed auf dev."
 10:45 - Mail vom Kunden mit neuer Anforderung. Claude: "Trag das in projects/kunde-x/context.md unter Offene Themen ein."
-11:00 - Idee für YouTube-Video während Kaffeekochen. Selbst kurz in `inbox.md` notieren oder per App: "Notiere in inbox.md: Idee für Video XYZ - Aufhänger ist..."
+11:00 - Idee für YouTube-Video während Kaffeekochen. Selbst kurz in `INBOX.md` notieren oder per App: "Notiere in INBOX.md: Idee für Video XYZ - Aufhänger ist..."
 11:15 - Open Campus Konzept weiter. Direkt in der App das Dokument bearbeiten lassen.
 
 Wichtig: Wiki-Pflege ist nicht "extra Arbeit" - es ist die Arbeit. Du dokumentierst während du arbeitest.
@@ -106,7 +106,7 @@ einen Entwurf. Ton: freundlich, professionell, knapp.
 ### Zusammenfassung am Abend
 
 ```
-Fasse die Aenderungen in daily/heute und in den Projekt-contexts
+Fasse die Aenderungen in sessions/heute und in den Projekt-contexts
 zum Tagesende zusammen. Was wurde erledigt, was steht noch offen.
 ```
 
@@ -122,7 +122,7 @@ Erwaehnungen und fasse zusammen was wir bisher dazu wissen.
 Einmal pro Woche, 15 Minuten in der Claude App:
 
 ```
-Lies alle daily-Dateien dieser Woche und ziehe Erkenntnisse pro
+Lies alle sessions-Dateien dieser Woche und ziehe Erkenntnisse pro
 Projekt raus. Schlage mir vor was in welche context.md uebertragen
 werden sollte. Frage mich vor jeder Aenderung.
 ```
@@ -132,7 +132,7 @@ Claude geht durch, du bestätigst, alles wird sauber konsolidiert.
 Anschließend:
 
 ```
-Pruefe inbox.md und schlage Einsortierung der noch offenen Punkte vor.
+Pruefe INBOX.md und schlage Einsortierung der noch offenen Punkte vor.
 Wenn etwas zu alt ist (mehr als 4 Wochen) und nicht erledigt: vorschlagen
 zu loeschen.
 ```
@@ -153,13 +153,13 @@ Dauert 30 Sekunden. Mach das mindestens einmal pro Tag, besser nach jeder größ
 
 ## Was NICHT passieren darf
 
-### Anti-Muster 1: inbox.md wird Datenfriedhof
+### Anti-Muster 1: INBOX.md wird Datenfriedhof
 
-inbox.md sammelt 200 ungeordnete Notizen, du schaust nie rein, der Wert ist null.
+Die INBOX.md sammelt 200 ungeordnete Notizen, du schaust nie rein, der Wert ist null.
 
-**Lösung:** wöchentlich aufräumen ist Pflicht. Wenn du es nicht schaffst, ist inbox.md nicht das richtige Tool für dich - dann lieber sofort in die richtige Datei (über Claude).
+**Lösung:** wöchentlich aufräumen ist Pflicht. Wenn du es nicht schaffst, ist INBOX.md nicht das richtige Tool für dich - dann lieber sofort in die richtige Datei (über Claude).
 
-### Anti-Muster 2: daily-Dateien werden Romane
+### Anti-Muster 2: sessions-Dateien werden Romane
 
 Du schreibst täglich eine Seite Tagebuch, das frisst Zeit, niemand liest es.
 
@@ -181,12 +181,12 @@ Du willst die "perfekte" Struktur, das "perfekte" Template. Nichts wird je live.
 
 Wenn du unterwegs bist und eine Idee hast:
 
-- **Schnellste Option:** GitHub Web-UI - inbox.md direkt im Browser editieren und commiten
+- **Schnellste Option:** GitHub Web-UI - INBOX.md direkt im Browser editieren und commiten
 - **Mit App:** Obsidian Mobile mit Git-Plugin (Android, iOS) für vollständigen Lese- und Schreibzugriff
 - **iOS spezifisch:** Working Copy App + 1Writer als Editor, beide kostenpflichtig aber gut
 - **Simpelste Option:** Notiz im Handy, später manuell übertragen
 
-Mein Tipp: nicht zu viel Energie in Mobile-Workflows stecken. Die meiste Arbeit am Wiki passiert eh am Rechner. Mobile reicht für Quick Capture in inbox.md.
+Mein Tipp: nicht zu viel Energie in Mobile-Workflows stecken. Die meiste Arbeit am Wiki passiert eh am Rechner. Mobile reicht für Quick Capture in INBOX.md.
 
 ## Der 30-Tage-Test
 

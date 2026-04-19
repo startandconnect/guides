@@ -49,9 +49,9 @@ In der Claude App unter Einstellungen einen Skill anlegen:
 ```
 Fuehre folgende Schritte aus:
 
-1. Pruefe ob daily/[heutiges Datum].md schon existiert.
+1. Pruefe ob sessions/[heutiges Datum].md schon existiert.
    - Wenn ja: oeffne sie, zeige aktuellen Inhalt.
-   - Wenn nein: lege sie an mit dem Template aus daily/_template.md
+   - Wenn nein: lege sie an mit dem Template aus sessions/_template.md
 
 2. Lies CLAUDE.md und scanne projects/*/context.md.
 
@@ -60,7 +60,7 @@ Fuehre folgende Schritte aus:
    - Offene kritische Themen
    - Drei Prioritaeten fuer heute basierend auf Status und Deadlines
 
-4. Frage mich ob ich die drei Prios in die heutige daily-Datei
+4. Frage mich ob ich die drei Prios in die heutige sessions-Datei
    uebernehmen will. Wenn ja: schreibe sie rein.
 ```
 
@@ -97,7 +97,7 @@ Konsolidiert die Woche.
 - Anweisung:
 
 ```
-1. Lies alle daily-Dateien dieser Woche (Montag bis Freitag).
+1. Lies alle sessions-Dateien dieser Woche (Montag bis Freitag).
 
 2. Pro betroffenes Projekt:
    - Welche Aufgaben wurden erledigt
@@ -108,7 +108,7 @@ Konsolidiert die Woche.
 
 4. Nach meinem OK: trage es ein, hake erledigte Todos ab.
 
-5. Pruefe inbox.md und schlage Einsortierung vor.
+5. Pruefe INBOX.md und schlage Einsortierung vor.
 ```
 
 Mehr zu Skills im Detail: [[../claude-code/skills-hooks-subagents|Skills, Hooks und Subagents]].
@@ -128,13 +128,13 @@ Wenn du parallel Notion nutzt (z.B. für Team-Wissen während Wiki dein persönl
 
 Für Morning Routine mit Terminen:
 
-> Hole heutige Kalender-Termine. Lege daily/[heutiges Datum].md an
+> Hole heutige Kalender-Termine. Lege sessions/[heutiges Datum].md an
 > mit den Terminen plus drei Prioritaeten aus dem Wiki.
 
 ### Email-Drafts mit Wiki-Kontext
 
 > Schau in projects/kunde-x/context.md was wir besprochen haben und
-> in den letzten daily-Dateien was sich getan hat.
+> in den letzten sessions-Dateien was sich getan hat.
 >
 > Schreibe einen Status-Update als E-Mail an Max Mustermann.
 > Tonalitaet: freundlich, professionell, konkret. Keine Floskeln.
@@ -149,7 +149,7 @@ Inhalte aus reference/ oder projects/ als Quellmaterial für Blog-Posts nutzen.
 Konkreter Workflow in der Claude App:
 
 > Ich will einen Blogartikel schreiben zum Thema [THEMA].
-> Schau in reference/ und in den letzten 2 Wochen daily/ ob ich
+> Schau in reference/ und in den letzten 2 Wochen sessions/ ob ich
 > dazu Material habe.
 >
 > Wenn ja: mach daraus einen Artikel-Entwurf in unserem Stil.
@@ -190,7 +190,7 @@ Für ernsthafte Mobile-Nutzung:
 
 ### Allgemein
 
-GitHub Web-UI funktioniert auch auf dem Handy gut für Quick-Edits an `inbox.md`. Reicht für die meisten Mobile-Use-Cases.
+GitHub Web-UI funktioniert auch auf dem Handy gut für Quick-Edits an `INBOX.md`. Reicht für die meisten Mobile-Use-Cases.
 
 ## Was du dir nicht antun solltest
 

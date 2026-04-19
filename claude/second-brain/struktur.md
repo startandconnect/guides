@@ -14,24 +14,36 @@ Ein gutes Second Brain hat wenige Ordner und klare Regeln. Lieber flach und stre
 mein-brain/
 ├── CLAUDE.md          ← Einstieg für Claude Code
 ├── README.md          ← Einstieg für Menschen (inkl. dich selbst in 6 Monaten)
-├── inbox.md           ← Quick Capture: alles was schnell rein muss
-├── daily/             ← Tagesnotizen (YYYY-MM-DD.md)
+├── SETUP.md           ← Onboarding-Anleitung für Claude (einmalig)
+├── RUNBOOK.md         ← Erklärung Runbook-System
+├── INBOX.md           ← Quick Capture: alles was schnell rein muss
+├── DECISIONS.md       ← wichtige Entscheidungen mit Datum und Begründung
+├── CHANGELOG.md       ← strukturelle Änderungen am Wiki selbst
+├── planning/          ← Zeithorizonte
+│   ├── TODAY.md
+│   ├── WEEK.md
+│   ├── MONTH.md
+│   └── YEAR.md
+├── sessions/          ← Tages-Logs (YYYY-MM-DD.md)
 │   ├── 2026-04-15.md
 │   └── 2026-04-16.md
-├── projects/          ← Deine Projekte, einer pro Ordner
+├── projects/          ← Deine Projekte / Aufgaben / Arbeiten
 │   ├── projekt-eins/
-│   │   ├── context.md
-│   │   └── decisions.md
+│   │   └── context.md
 │   └── projekt-zwei/
 │       └── context.md
-├── reference/         ← Nachschlagewerk (APIs, Prozesse, Listen)
+├── reference/         ← Nachschlagewerk (APIs, Prozesse, Zusammenfassungen)
 │   ├── stripe-api.md
-│   └── deploy-prozess.md
-└── meetings/          ← Meeting-Notizen (YYYY-MM-DD-thema.md)
-    └── 2026-04-14-kickoff-kunde-x.md
+│   └── zitierweise-apa.md
+├── meetings/          ← Meeting-Notizen (YYYY-MM-DD-thema.md)
+│   └── 2026-04-14-kickoff-kunde-x.md
+├── runbooks/          ← Anleitungen für wiederkehrende Abläufe
+│   ├── tagesstart.md
+│   └── wochenrueckblick.md
+└── private/           ← Persönliches, wird bei Git-Nutzung nicht committet
 ```
 
-Das ist alles. Wenn du anfängst, brauchst du weniger als die Hälfte.
+Das ist der volle Rahmen. Beim Einrichten reicht weniger als die Hälfte - Claude räumt beim Onboarding auf was du nicht brauchst.
 
 ## Die Regeln
 
@@ -60,7 +72,7 @@ Begründung: konsistent, kein Encoding-Chaos, einheitlich sortierbar.
 
 ### 4. Dateinamen auf Englisch, Inhalt auf Deutsch
 
-Dateinamen wie `tagesnotiz-fuer-april.md` sind unübersichtlich. `daily-notes-april.md` (oder einfach `daily/2026-04-15.md`) ist klar. Inhalt darin ruhig auf Deutsch - das liest Claude problemlos.
+Dateinamen wie `tagesnotiz-fuer-april.md` sind unübersichtlich. `daily-notes-april.md` (oder einfach `sessions/2026-04-15.md`) ist klar. Inhalt darin ruhig auf Deutsch - das liest Claude problemlos.
 
 ### 5. Echter Inhalt, keine Platzhalter
 
@@ -172,7 +184,7 @@ Schlecht: `docs/`, `notes/`, `misc/`, `stuff/`
 
 Gut: `reference/` (klares Was), `meetings/` (klares Was), `projects/` (klares Was)
 
-Wenn du keinen klaren Namen findest, gehört der Inhalt vermutlich in einen bestehenden Ordner oder in `inbox.md`.
+Wenn du keinen klaren Namen findest, gehört der Inhalt vermutlich in einen bestehenden Ordner oder in `INBOX.md`.
 
 ### Daten aus Produktivsystemen kopieren
 
