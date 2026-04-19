@@ -18,7 +18,7 @@ Jeden Arbeitstag, am Anfang:
 4. Claude fragen: "Was sollte ich heute priorisieren?"
 5. Drei Top-Aufgaben in das Tagesfile übernehmen lassen
 
-### Beispiel-Prompt für Morning-Check
+**Beispiel-Prompt für Morning-Check**
 
 ```
 Lies CLAUDE.md, scanne die context.md aller aktiven Projekte unter
@@ -28,7 +28,7 @@ Prioritaeten fuer heute.
 Beruecksichtige Deadlines aus den context-Dateien.
 ```
 
-### Typische Antwort
+**Typische Antwort**
 
 ```
 Aktive Projekte (3):
@@ -65,7 +65,7 @@ Du musst die Dateien nicht selbst öffnen oder bearbeiten. Sag Claude was passie
 
 > Lege meetings/[heutiges Datum]-kunde-x.md an, Vorlage anwenden.
 
-### Beispiel: ein Vormittag
+**Beispiel: ein Vormittag**
 
 09:00 - Morning-Check, Tagesfile angelegt, drei Prios festgelegt.
 09:15 - Stripe-Webhook-Bug. Claude fragen: "Trage in projects/nexus/context.md den Bug ein und schau dir webhook-handler.ts an."
@@ -80,14 +80,14 @@ Wichtig: Wiki-Pflege ist nicht "extra Arbeit" - es ist die Arbeit. Du dokumentie
 
 Muster die funktionieren:
 
-### Briefing am Morgen
+**Briefing am Morgen**
 
 ```
 Lies meine context.md aller aktiven Projekte und gib mir einen
 Lagebericht. Sortiere nach Dringlichkeit. Ich habe heute 6 Stunden Zeit.
 ```
 
-### Problem-Besprechung
+**Problem-Besprechung**
 
 ```
 Das Projekt XYZ haengt an Thema ABC. Was ist das Problem aus meiner
@@ -95,7 +95,7 @@ context.md ersichtlich? Liste mir drei moegliche Wege vor mit Pro
 und Contra.
 ```
 
-### Schreibhilfe mit Kontext
+**Schreibhilfe mit Kontext**
 
 ```
 Ich muss eine Mail an Kunde Z schreiben. Schau in
@@ -103,14 +103,14 @@ projects/kunde-z/context.md was wir besprochen haben und schreibe
 einen Entwurf. Ton: freundlich, professionell, knapp.
 ```
 
-### Zusammenfassung am Abend
+**Zusammenfassung am Abend**
 
 ```
 Fasse die Aenderungen in sessions/heute und in den Projekt-contexts
 zum Tagesende zusammen. Was wurde erledigt, was steht noch offen.
 ```
 
-### Recherche mit Memory
+**Recherche mit Memory**
 
 ```
 Wir hatten schon mal das Thema X. Suche im Wiki nach allen
@@ -153,25 +153,25 @@ Dauert 30 Sekunden. Mach das mindestens einmal pro Tag, besser nach jeder größ
 
 ## Was NICHT passieren darf
 
-### Anti-Muster 1: INBOX.md wird Datenfriedhof
+**Anti-Muster 1: INBOX.md wird Datenfriedhof**
 
 Die INBOX.md sammelt 200 ungeordnete Notizen, du schaust nie rein, der Wert ist null.
 
 **Lösung:** wöchentlich aufräumen ist Pflicht. Wenn du es nicht schaffst, ist INBOX.md nicht das richtige Tool für dich - dann lieber sofort in die richtige Datei (über Claude).
 
-### Anti-Muster 2: sessions-Dateien werden Romane
+**Anti-Muster 2: sessions-Dateien werden Romane**
 
 Du schreibst täglich eine Seite Tagebuch, das frisst Zeit, niemand liest es.
 
 **Lösung:** 5 bis 10 Stichpunkte reichen. Was lief, was steht an, was war neu. Maximal 10 Minuten pro Tag.
 
-### Anti-Muster 3: Du pflegst aber nutzt nicht
+**Anti-Muster 3: Du pflegst aber nutzt nicht**
 
 Du legst brav alle Dateien an, fragst Claude aber nie was. Wiki ist dann nur Buchhaltung.
 
 **Lösung:** mindestens einmal pro Tag eine echte Frage an Claude mit Wiki-Kontext. Sonst sparst du dir das Pflegen.
 
-### Anti-Muster 4: Perfektionismus
+**Anti-Muster 4: Perfektionismus**
 
 Du willst die "perfekte" Struktur, das "perfekte" Template. Nichts wird je live.
 

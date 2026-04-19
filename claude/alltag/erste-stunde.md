@@ -14,7 +14,7 @@ Voraussetzung: du hast einen Account auf claude.ai (kostenlose Variante reicht).
 
 Nimm eine echte Frage aus deinem Alltag. Stelle sie einmal sehr knapp, einmal mit Kontext und einmal mit Beispiel. Vergleiche die Antworten.
 
-### Beispiel
+**Beispiel**
 
 Du willst eine Antwort-Mail an einen Kunden schreiben der ein Angebot abgelehnt hat.
 
@@ -33,7 +33,7 @@ Vergleich der drei Antworten: die erste ist generisch, die dritte trifft deinen 
 
 Statt eine lange Frage zu schreiben, bitte Claude: "Ich will X bauen. Stell mir die Fragen, die du brauchst bevor du mir antwortest."
 
-### Beispiel
+**Beispiel**
 
 > Ich plane einen Online-Kurs für Yogalehrerinnen. Stell mir die Fragen die du brauchst, damit du mir ein gutes Konzept ausarbeiten kannst. Stell sie einzeln, nicht alle auf einmal.
 
@@ -48,7 +48,7 @@ Das funktioniert oft besser als ein langer Initial-Prompt. Du musst nicht alles 
 
 Lade eine echte Datei hoch (PDF, Word, Markdown). Lass zusammenfassen, vergleichen, umformulieren.
 
-### Typische Aufgaben
+**Typische Aufgaben**
 
 - "Fasse dieses 30-Seiten-PDF in 10 Stichpunkten zusammen."
 - "Was sind die Risiken in diesem Vertrag aus Sicht des Auftragnehmers?"
@@ -68,7 +68,7 @@ Die erste Antwort ist selten die beste. Frag nach. Übungspfad:
 2. Kritisch prüfen: was passt, was nicht
 3. Konkrete Folgeanweisung geben
 
-### Produktive Folgeanweisungen
+**Produktive Folgeanweisungen**
 
 - "Mach das kürzer."
 - "Schreib es weniger formell."
@@ -78,7 +78,7 @@ Die erste Antwort ist selten die beste. Frag nach. Übungspfad:
 - "Beispiel A passt nicht. Nutze stattdessen ein Beispiel aus dem Bereich B."
 - "Schreib das Ganze in drei Versionen: kurz, mittel, lang."
 
-### Was nicht hilft
+**Was nicht hilft**
 
 - "Mach es besser." (was ist besser?)
 - "Das ist nicht gut." (was genau, in welche Richtung?)

@@ -12,7 +12,7 @@ KI ist ein Werkzeug, nicht die Lösung. Diese Seite ist Pflichtlektüre.
 
 Steuer-Berechnungen, Buchhaltung, kritische Zahlen. Nimm Code, nicht KI. KI rät gelegentlich falsch, auch bei einfachen Rechnungen.
 
-### Konkrete Beispiele wo das passiert
+**Konkrete Beispiele wo das passiert**
 
 - **Mehrwertsteuer-Berechnung in Rechnungen.** Ergebnis muss exakt stimmen. Nimm Buchhaltungssoftware, nicht Claude.
 - **Zinsen über mehrere Jahre.** Eine Komma-Stelle Fehler bedeutet Hunderte Euro. Excel oder Code, nicht Claude.
@@ -25,7 +25,7 @@ Steuer-Berechnungen, Buchhaltung, kritische Zahlen. Nimm Code, nicht KI. KI rät
 
 Einfacher Suchen-Ersetzen, simple Regex, bekannte Tastaturkombination. Schneller selbst gemacht als KI-Antwort abgewartet.
 
-### Vergleich an Beispielen
+**Vergleich an Beispielen**
 
 | Aufgabe | Mensch | Claude |
 |---|---|---|
@@ -42,14 +42,14 @@ Faustregel: wenn du die Aufgabe selbst in unter 30 Sekunden machen würdest, mac
 
 Gesundheitsdaten, hochsensible Personendaten, Anwaltskanzlei-Akten. Auch bei EU-Hosting ist Zero-Send oft besser. Frag dich: wenn morgen ein Datenleck beim Anbieter wäre - wie schlimm?
 
-### Rechtliche Einordnung
+**Rechtliche Einordnung**
 
 - **Anthropic ist US-Unternehmen.** Daten gehen in die USA. DSGVO-Konformität ist möglich (AVV mit Anthropic), erfordert aber sauberes Setup.
 - **Hochsensible Daten (Gesundheit, Finanzen, Strafregister):** brauchen oft besondere Schutzmaßnahmen die Standard-Cloud-KI nicht bietet.
 - **Berufsgeheimnisse (Ärzte, Anwälte, Steuerberater):** strenge Regeln, im Zweifel nicht in fremde KI-Systeme.
 - **DSGVO Art. 9 (besondere Kategorien personenbezogener Daten):** vor Verarbeitung in KI-Systemen Rechtsberatung holen.
 
-### Alternativen für sensible Anwendungsfälle
+**Alternativen für sensible Anwendungsfälle**
 
 - **Lokale Modelle:** Llama, Mistral, Qwen. Laufen auf eigenem Rechner, Daten verlassen nie deine Kontrolle. Performance schlechter als Claude, aber für viele Aufgaben ausreichend.
 - **EU-gehostete Anbieter:** Aleph Alpha, Mistral mit EU-Hosting. Datenschutz-rechtlich einfacher.
@@ -61,7 +61,7 @@ Gesundheitsdaten, hochsensible Personendaten, Anwaltskanzlei-Akten. Auch bei EU-
 
 Strategische Entscheidungen, Personalfragen, ethische Abwägungen. KI kann Strukturierung helfen, aber die Entscheidung muss von dir kommen.
 
-### Beispiele für "KI hilft bei der Struktur, aber die Antwort kommt von dir"
+**Beispiele für "KI hilft bei der Struktur, aber die Antwort kommt von dir"**
 
 - **Soll ich einen Mitarbeiter entlassen?** KI kann Abwägungspunkte sortieren. Die Entscheidung musst du treffen, nach deinem Wertesystem.
 - **Welches Geschäftsmodell soll ich verfolgen?** KI kann Optionen analysieren. Die Entscheidung hängt von dir ab, deinem Risikoprofil, deinen Werten.
@@ -74,13 +74,13 @@ Strategische Entscheidungen, Personalfragen, ethische Abwägungen. KI kann Struk
 
 Wenn du nicht weißt was du willst, kann KI es auch nicht wissen. Erst denken, dann prompten.
 
-### Warum das so oft passiert
+**Warum das so oft passiert**
 
 - **Du fühlst Unbehagen** und willst eine Antwort. Schneller als das Unbehagen zu verstehen.
 - **Du hast einen Termindruck** und glaubst KI würde das Denken abkürzen.
 - **Du bist mental erschöpft** und delegierst aus Schwäche statt aus Stärke.
 
-### Typische Anzeichen dass du noch nicht so weit bist zu fragen
+**Typische Anzeichen dass du noch nicht so weit bist zu fragen**
 
 - Du kannst nicht in einem Satz formulieren was du willst
 - Du würdest die KI-Antwort nicht erkennen können wenn sie da wäre

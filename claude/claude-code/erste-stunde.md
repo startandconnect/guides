@@ -27,7 +27,7 @@ Wenn das funktioniert, ist alles richtig eingerichtet. Falls Claude sagt "Ich se
 
 Wähle etwas echtes aber kleines. Beispiele:
 
-### Beispiel A: Wochenplan aufbauen
+**Beispiel A: Wochenplan aufbauen**
 
 In der App fragen:
 
@@ -41,7 +41,7 @@ In der App fragen:
 
 Claude legt die Datei an, du siehst sie im Ordner und kannst sie öffnen.
 
-### Beispiel B: Notizen zusammenfassen
+**Beispiel B: Notizen zusammenfassen**
 
 Lege manuell eine Datei `notes.md` an mit ein paar Stichpunkten zu einem Thema.
 
@@ -52,7 +52,7 @@ In der App fragen:
 
 Claude liest, fasst zusammen, legt die neue Datei an.
 
-### Beispiel C: Dokument umstrukturieren
+**Beispiel C: Dokument umstrukturieren**
 
 Hast du eine alte Notiz oder Doku die unübersichtlich ist?
 
@@ -73,7 +73,7 @@ Die erste Antwort ist selten final. Üb dich in kurzen Folgeanweisungen:
 
 Iteration ist normal. Das ist kein Zeichen dass etwas nicht funktioniert - das ist der Prozess.
 
-### Was wenn die Antwort komplett daneben ist
+**Was wenn die Antwort komplett daneben ist**
 
 Drei Möglichkeiten:
 

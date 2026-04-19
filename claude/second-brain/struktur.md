@@ -55,7 +55,7 @@ Die erste Datei. Hier steht was Claude wissen muss. Ohne CLAUDE.md fragst du Cla
 
 Jeder Projekt-Ordner hat eine context.md mit Status, Zielen, offenen Punkten. Diese Datei ist der Einstieg fürs Projekt - für dich und für Claude.
 
-```markdown
+```
 # Projekt XYZ
 **Status:** Aktiv
 ## Was ist das
@@ -82,7 +82,7 @@ Lieber 3 Zeilen mit echter Information als 3 Seiten "wird noch ergänzt". Wenn d
 
 ### Eigenes Projekt / Produkt
 
-```markdown
+```
 # Mein Produkt
 
 **Status:** In Entwicklung
@@ -115,7 +115,7 @@ SaaS für X. Zielgruppe Y. Differenzierung Z.
 
 ### Kundenprojekt
 
-```markdown
+```
 # Kunde XYZ - Website-Relaunch
 
 **Status:** Aktiv
@@ -141,7 +141,7 @@ SaaS für X. Zielgruppe Y. Differenzierung Z.
 
 ### Lernprojekt
 
-```markdown
+```
 # Rust lernen
 
 **Status:** Aktiv

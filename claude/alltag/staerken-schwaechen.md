@@ -10,7 +10,7 @@ Wer Claude realistisch einschätzt, bekommt bessere Ergebnisse. Hype und Panik h
 
 ## Wo Claude stark ist
 
-### Strukturieren von Gedanken
+**Strukturieren von Gedanken**
 
 Du hast einen Haufen roher Notizen, eine wirre Idee, ein Argument das du nicht greifen kannst.
 
@@ -18,25 +18,25 @@ Du hast einen Haufen roher Notizen, eine wirre Idee, ein Argument das du nicht g
 
 Claude erstellt Cluster, identifiziert die Kernfragen, gibt dir was zum Weiterdenken.
 
-### Programmieren
+**Programmieren**
 
 Boilerplate, Refactoring, Bugs erklären, Tests schreiben.
 
 **Beispiel:** "Hier ist eine Funktion in Python die manchmal abstürzt. Hier ist die Fehlermeldung. Was übersehe ich?" Claude erklärt das Problem in einfachen Worten und schlägt einen Fix vor.
 
-### Übersetzen und Umformulieren
+**Übersetzen und Umformulieren**
 
 Zwischen Sprachen, zwischen Formalitätsstufen, zwischen Zielgruppen.
 
 **Beispiel:** "Übersetze diese Mail ins Englische, behalte den freundlich-direkten Ton." Oder: "Schreib diesen formellen Text als WhatsApp-Nachricht für einen guten Freund um."
 
-### Dokumente verstehen
+**Dokumente verstehen**
 
 Lange PDFs zusammenfassen, Unterschiede zwischen Versionen, wichtige Stellen finden.
 
 **Beispiel:** Ein 80-seitiger Vertrag. "Was sind die Risiken für mich als Auftragnehmer? Welche Klauseln sollte ich verhandeln?" Claude liest, analysiert, antwortet konkret.
 
-### Brainstormen
+**Brainstormen**
 
 20 Ideen in einer Minute, danach filtern.
 
@@ -44,7 +44,7 @@ Lange PDFs zusammenfassen, Unterschiede zwischen Versionen, wichtige Stellen fin
 
 ## Wo Claude schwach ist
 
-### Exakte Zahlen
+**Exakte Zahlen**
 
 Rechnet, aber nicht immer richtig. Auch bei einfachen Aufgaben.
 
@@ -52,7 +52,7 @@ Rechnet, aber nicht immer richtig. Auch bei einfachen Aufgaben.
 
 **Gegenmaßnahme:** für kritische Berechnungen "Schreib mir ein Python-Snippet das das ausrechnet" - Code rechnet immer richtig.
 
-### Aktuelle Ereignisse
+**Aktuelle Ereignisse**
 
 Wissensstand ist meist Monate alt. Was letzte Woche passiert ist, weiß Claude oft nicht.
 
@@ -60,7 +60,7 @@ Wissensstand ist meist Monate alt. Was letzte Woche passiert ist, weiß Claude o
 
 **Gegenmaßnahme:** Connectors zu Web-Suche oder spezifischen Quellen aktivieren, dann kann Claude live recherchieren.
 
-### Persönliche Daten über Personen
+**Persönliche Daten über Personen**
 
 Vermischt Quellen, erfindet Details. Bei prominenten Personen relativ sicher, bei weniger bekannten oft Halluzinationen.
 
@@ -68,7 +68,7 @@ Vermischt Quellen, erfindet Details. Bei prominenten Personen relativ sicher, be
 
 **Gegenmaßnahme:** echte Quellen (LinkedIn, persönliche Website) nutzen.
 
-### "Nein" sagen bei schlechten Ideen
+**"Nein" sagen bei schlechten Ideen**
 
 Ist oft zu höflich. Wenn du eine schlechte Idee hast und Claude um Feedback bittest, kommt eher Beschönigung als ehrliche Kritik.
 
@@ -76,7 +76,7 @@ Ist oft zu höflich. Wenn du eine schlechte Idee hast und Claude um Feedback bit
 
 **Gegenmaßnahme:** explizit fragen: "Spiel Devil's Advocate. Was sind die drei stärksten Argumente gegen meine Idee?"
 
-### Konsistenz über lange Chats
+**Konsistenz über lange Chats**
 
 Vergisst frühe Details, widerspricht sich. Bei sehr langen Chats kommt es vor dass Claude sich an Definitionen vom Anfang nicht mehr erinnert.
 
@@ -88,7 +88,7 @@ Vergisst frühe Details, widerspricht sich. Bei sehr langen Chats kommt es vor d
 
 Claude ist kein Orakel, sondern ein sehr schneller, sehr belesener Praktikant. Behandle die Antworten so.
 
-### Was diese Metapher konkret heißt
+**Was diese Metapher konkret heißt**
 
 | Praktikant | Claude |
 |---|---|
@@ -100,7 +100,7 @@ Claude ist kein Orakel, sondern ein sehr schneller, sehr belesener Praktikant. B
 | Ist manchmal genial | wie ein Praktikant |
 | Wird besser je klarer dein Briefing | wie ein Praktikant |
 
-### Vergleich mit anderen Rollen
+**Vergleich mit anderen Rollen**
 
 Claude ist NICHT:
 

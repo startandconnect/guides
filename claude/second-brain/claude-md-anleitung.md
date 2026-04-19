@@ -45,7 +45,7 @@ So vermeidest du Wiederholung. Globale Sachen einmal in den App-Einstellungen, l
 
 ## Aufbau einer guten CLAUDE.md - kurzes Beispiel
 
-```markdown
+```
 # Wer ich bin
 
 Ben Scheurer, Gründer von Start & Connect (SaaS-Agentur).
@@ -85,7 +85,7 @@ Das sind 30 Zeilen. Mehr brauchst du am Anfang nicht.
 
 Wenn dein Wiki komplexer wird (mehrere Produkte, Kunden, Workflows):
 
-```markdown
+```
 # Wer ich bin
 
 Ben Scheurer, Gründer von Start & Connect.

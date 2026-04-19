@@ -73,15 +73,15 @@ Die App updated sich meistens automatisch. Wenn nicht: einfach die neueste Versi
 
 ## Login-Probleme
 
-### "Konto nicht gefunden"
+**"Konto nicht gefunden"**
 
 Du hast vermutlich noch keinen Account. Geh auf claude.ai, registriere dich, dann nochmal in der App einloggen.
 
-### "Falsches Passwort"
+**"Falsches Passwort"**
 
 Passwort zurücksetzen über claude.ai. Die App erkennt das neue Passwort sofort.
 
-### "Subscription benötigt"
+**"Subscription benötigt"**
 
 Du brauchst entweder ein Pro-Abo (für intensivere Nutzung) oder kannst die Free-Variante mit Limits nutzen. Mehr dazu unter [[kosten|Kosten im Griff halten]].
 

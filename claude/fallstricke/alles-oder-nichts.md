@@ -10,43 +10,43 @@ Die größte Beobachtung nach einem Jahr intensiver Claude-Code-Nutzung: Mensche
 
 ## Warum die meisten scheitern
 
-### 1. Sie erwarten dass Claude Code Gedanken liest
+**1. Sie erwarten dass Claude Code Gedanken liest**
 
 Erste Erfahrung: jemand öffnet die App, gibt einen vagen Ein-Satz-Prompt, bekommt eine generische Antwort, denkt "die Hype ist überbewertet", schließt die App.
 
 Was fehlt: das Verständnis dass Claude Code wie ein neuer Mitarbeiter ist - du musst erklären was du willst, in welchem Kontext, mit welchen Erwartungen.
 
-### 2. Sie geben zu wenig Kontext
+**2. Sie geben zu wenig Kontext**
 
 "Schreib mir eine Mail" funktioniert nicht. "Schreib mir eine Mail an Max, der mein Angebot abgelehnt hat, freundlich aber Tür offen lassend, in meinem Stil (siehe inbox/letzte-mails.md)" funktioniert.
 
 Der Unterschied sind 30 Sekunden mehr Tipparbeit - und ein dramatisch besseres Ergebnis. Anfänger sparen die 30 Sekunden, beschweren sich dann über Stunden Nacharbeit.
 
-### 3. Sie akzeptieren die erste Antwort, auch wenn sie schlecht ist
+**3. Sie akzeptieren die erste Antwort, auch wenn sie schlecht ist**
 
 Erste Antwort ist selten optimal. Profis iterieren ("kürzer machen", "anderer Tonfall", "Punkt X stimmt nicht"). Anfänger nehmen entweder die schlechte Antwort und schreiben sie selbst um, oder sie geben auf.
 
-### 4. Sie probieren es nicht oft genug
+**4. Sie probieren es nicht oft genug**
 
 Eine Woche probieren reicht nicht. Claude Code wirklich zu beherrschen braucht 4 Wochen tägliche Nutzung mit echten Aufgaben. Wer nach 3 Tagen entscheidet "klappt nicht" hat den Lernprozess noch gar nicht angefangen.
 
 ## Warum andere Erfolg haben
 
-### 1. Sie haben einen sauberen Arbeitsplatz
+**1. Sie haben einen sauberen Arbeitsplatz**
 
 Wiki, CLAUDE.md, gepflegte context.md pro Projekt. Wenn sie Claude eine Frage stellen, weiß Claude wer sie sind, woran sie arbeiten, welche Regeln gelten.
 
 **Beobachtung:** Erfahrene Nutzer verbringen am Anfang einer Session 30 Sekunden damit, den Kontext klar zu machen. Das spart 10 Minuten Nacharbeit.
 
-### 2. Sie zerlegen große Aufgaben in kleine Schritte
+**2. Sie zerlegen große Aufgaben in kleine Schritte**
 
 Statt "Bau mir eine ganze Landingpage": "Skizziere mir die Sektionen die wir brauchen", dann nach Bestätigung "Bau die Hero-Sektion", dann "Bau die Pricing-Tabelle". So bleibt jede Stufe prüfbar.
 
-### 3. Sie iterieren schnell und brechen früh ab wenn es nicht funktioniert
+**3. Sie iterieren schnell und brechen früh ab wenn es nicht funktioniert**
 
 Wenn nach zwei Iterationen die Richtung nicht stimmt: Chat resetten, neu briefen, anders aufsetzen. Profis hängen nicht an einem schlechten Versuch fest.
 
-### 4. Sie haben realistische Erwartungen
+**4. Sie haben realistische Erwartungen**
 
 Claude ist ein Werkzeug. Es macht manche Dinge unglaublich gut, andere nicht. Profis kennen die Grenzen und arbeiten drumherum.
 
@@ -72,7 +72,7 @@ Nutzt Claude für Recherche, Strukturierung, Erstentwürfe. Nie für finale Text
 
 ## Wie du in die zweite Gruppe kommst
 
-### Konkreter 30-Tage-Plan
+**Konkreter 30-Tage-Plan**
 
 **Woche 1: Setup**
 - Tag 1-2: Claude App installieren, ersten Workspace verbinden
@@ -94,7 +94,7 @@ Nutzt Claude für Recherche, Strukturierung, Erstentwürfe. Nie für finale Text
 
 Nach 30 Tagen weißt du ob das System für dich funktioniert. Wenn ja: du wirst nicht mehr ohne arbeiten wollen.
 
-### Fehlschläge dokumentieren
+**Fehlschläge dokumentieren**
 
 Was nicht funktioniert: ins Wiki schreiben. Beispiel: `reference/claude-fails.md` mit "Versucht: X. Funktioniert nicht weil Y. Stattdessen: Z."
 

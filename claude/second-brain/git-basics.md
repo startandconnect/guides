@@ -70,7 +70,7 @@ Fertig. Sechs Klicks, deine Änderungen sind auf GitHub gesichert.
 
 ## Was wenn ich was kaputtgemacht habe
 
-### Versehentlich gelöscht oder kaputt geschrieben (noch nicht committet)
+**Versehentlich gelöscht oder kaputt geschrieben (noch nicht committet)**
 
 In GitHub Desktop:
 
@@ -80,7 +80,7 @@ In GitHub Desktop:
 
 Datei ist wieder im Stand vom letzten Commit.
 
-### Schon committet, möchte zurück
+**Schon committet, möchte zurück**
 
 Im Menü: **History → letzten Commit auswählen → Rechtsklick → "Revert this commit"**.
 
@@ -113,15 +113,15 @@ Wie beschrieben commiten und pushen.
 
 ## Typische Probleme und Lösungen
 
-### "Failed to push some refs"
+**"Failed to push some refs"**
 
 Auf GitHub gibt es Änderungen die du noch nicht hast. Erst **"Pull origin"** klicken, dann nochmal pushen.
 
-### "Authentication failed"
+**"Authentication failed"**
 
 GitHub-Login ist abgelaufen. **GitHub Desktop → Preferences → Accounts** und neu einloggen.
 
-### "There are conflicting changes"
+**"There are conflicting changes"**
 
 Du hast lokal geändert, gleichzeitig wurde auf GitHub auch geändert. GitHub Desktop fragt dich was du tun willst.
 
@@ -129,7 +129,7 @@ In den meisten Fällen reicht: **"Open in editor"** klicken, die markierten Stel
 
 Wenn du nicht weißt was zu tun ist: Claude App fragen. Beschreibe das Problem, Claude führt dich durch die Lösung.
 
-### "Ich sehe Änderungen die ich nicht gemacht habe"
+**"Ich sehe Änderungen die ich nicht gemacht habe"**
 
 Wenn du an mehreren Geräten arbeitest oder Auto-Sync aktiv ist (siehe [[advanced|Advanced]]): kommt vor. Pullen, Änderungen prüfen, weitermachen.
 

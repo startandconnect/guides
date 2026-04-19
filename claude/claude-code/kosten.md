@@ -10,26 +10,26 @@ Claude Code läuft über dein Anthropic-Abonnement. Die Kosten können wachsen w
 
 ## Preismodelle
 
-### Free
+**Free**
 
 - Begrenzte Nutzung pro Tag
 - Reicht zum Reinschnuppern
 - Kein dauerhaftes Arbeiten möglich
 
-### Pro
+**Pro**
 
 - Pauschale pro Monat
 - Höhere Limits
 - Reicht für Solo-Nutzer die Claude Code täglich verwenden
 - Empfohlener Einstieg
 
-### Max
+**Max**
 
 - Höhere Pauschale, größere Limits
 - Sinnvoll wenn du täglich mehrere Stunden mit Claude arbeitest
 - Auch wenn du große Workspaces hast die viele Tokens pro Frage verbrauchen
 
-### API (für Entwickler)
+**API (für Entwickler)**
 
 - Pay per Token
 - Nur relevant wenn du eigene Apps mit Claude baust, nicht für die App-Nutzung
@@ -50,26 +50,26 @@ Token-Fresser:
 
 ## Kosten reduzieren
 
-### 1. CLAUDE.md schlank halten
+**1. CLAUDE.md schlank halten**
 
 Eine 200-Zeilen-CLAUDE.md wird bei jeder Frage mitgeladen. 50 Zeilen reichen meistens. Spezifische Details in dedizierte Dateien auslagern, die nur bei Bedarf gelesen werden.
 
-### 2. Aufgaben in kleinere Schritte zerlegen
+**2. Aufgaben in kleinere Schritte zerlegen**
 
 Statt einem Mega-Chat mit 20 Iterationen: lieber neue Chats für neue Themen. Spart Tokens, hält Kontext sauber.
 
-### 3. Nur den nötigen Workspace verbinden
+**3. Nur den nötigen Workspace verbinden**
 
 Wenn du an Projekt A arbeitest, brauchst du Projekt B nicht offen. Weniger Workspace = weniger Tokens für Datei-Scanning.
 
-### 4. Konkret fragen
+**4. Konkret fragen**
 
 Schlecht: "Schau dir alle Dateien im Wiki an und sag mir was wichtig ist."
 Gut: "Schau in projects/kunde-x/context.md und sag mir die nächsten Schritte."
 
 Konkrete Pfade sparen das große Scannen.
 
-### 5. Caches nutzen
+**5. Caches nutzen**
 
 Wenn du im selben Chat mehrfach das Gleiche fragst, nutzt Claude internen Cache. Funktioniert automatisch, du musst nichts tun - aber Bewusstsein hilft: in einem Chat bleiben wenn du an einem Thema dranbist, statt jedes Mal neu starten.
 

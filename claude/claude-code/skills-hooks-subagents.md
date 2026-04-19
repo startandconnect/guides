@@ -12,7 +12,7 @@ Claude Code hat Erweiterungsmechanismen die Routine-Aufgaben automatisieren. Sie
 
 Wiederverwendbare Anweisungen für ein bestimmtes Vorgehen. Einmal definiert, einfach abrufbar.
 
-### Beispiel: Tagesstart-Skill
+**Beispiel: Tagesstart-Skill**
 
 Du machst jeden Morgen die gleichen Schritte: Wiki scannen, Prioritäten klären, Tagesfile anlegen. Statt das jeden Tag zu erklären, baust du einen Skill der das automatisch macht.
 
@@ -24,13 +24,13 @@ In der App: **Skill anlegen** (über Einstellungen oder das Skill-Menü):
 
 Ab jetzt: einmal `/tagesstart` in der App, und Claude führt alle Schritte aus.
 
-### Wann ein Skill sinnvoll ist
+**Wann ein Skill sinnvoll ist**
 
 - Du tippst denselben Prompt zum dritten Mal
 - Die Aufgabe hat klare Schritte die immer gleich sind
 - Du willst einer Routine einen Namen geben
 
-### Wann nicht
+**Wann nicht**
 
 - Einmalige Aufgaben
 - Sehr unterschiedliche Varianten des gleichen Themas
@@ -40,7 +40,7 @@ Ab jetzt: einmal `/tagesstart` in der App, und Claude führt alle Schritte aus.
 
 Automatisierungen die vor oder nach bestimmten Aktionen laufen. Hooks brauchst du seltener als Skills, aber für bestimmte Disziplin-Themen sind sie unschlagbar.
 
-### Beispiele
+**Beispiele**
 
 - Vor jedem Speichern automatisch formatieren
 - Nach jeder Session eine Erinnerung "context.md aktualisiert?"
@@ -48,7 +48,7 @@ Automatisierungen die vor oder nach bestimmten Aktionen laufen. Hooks brauchst d
 
 In der App findest du Hooks normalerweise unter "Erweiterte Einstellungen" oder ähnlich. Sie sind eher etwas für Profis.
 
-### Wann Hooks lohnen
+**Wann Hooks lohnen**
 
 - Du machst denselben Nachbereitungsschritt zum dritten Mal manuell
 - Du willst eine Disziplin durchsetzen die du sonst vergisst
@@ -57,7 +57,7 @@ In der App findest du Hooks normalerweise unter "Erweiterte Einstellungen" oder 
 
 Spezialisierte Helfer die Claude für bestimmte Aufgaben aufruft. Statt einen großen Prompt zu schreiben, sagst du Claude "ruf für diesen Teil den Code-Review-Subagent auf".
 
-### Beispiel: Code-Review-Subagent
+**Beispiel: Code-Review-Subagent**
 
 Du arbeitest an einer Datei, hast viel geändert, willst einen frischen Blick darauf.
 
@@ -65,7 +65,7 @@ In der App: "Lass den Code-Review-Subagent meine letzten Änderungen prüfen."
 
 Der Subagent öffnet einen separaten Kontext, schaut sich die Änderungen an, gibt Feedback. Vorteil: er hat keine Voreingenommenheit aus dem Hauptchat.
 
-### Wann Subagents
+**Wann Subagents**
 
 - Du willst einen unabhängigen, frischen Blick
 - Eine Aufgabe ist so groß dass sie einen eigenen Kontext braucht

@@ -22,13 +22,13 @@ Kontext ist alles, was Claude über deine Situation weiß:
 
 Gleiche Aufgabe, völlig unterschiedliche Ergebnisse.
 
-### Ohne Kontext
+**Ohne Kontext**
 
 > Schreib mir eine Stellenanzeige für einen Designer.
 
 Was du bekommst: generische Stellenanzeige. "Wir sind ein dynamisches Team das Innovationen vorantreibt", die üblichen Phrasen, vermutlich englisch durchsetzt, nichts was deine Firma von der nächsten unterscheidet.
 
-### Mit Kontext
+**Mit Kontext**
 
 > Schreib mir eine Stellenanzeige für eine Designer-Stelle.
 >
@@ -46,19 +46,19 @@ Was du bekommst: eine Anzeige die nach deiner Firma klingt, konkrete Aufgaben be
 
 ## Woher kommt der Kontext
 
-### Du schreibst ihn
+**Du schreibst ihn**
 
 Im Prompt, als erstes. Wer du bist, was du willst, was wichtig ist. Funktioniert immer, kostet aber jedes Mal Tipparbeit.
 
 **Beispiel:** Du startest jeden zweiten Chat mit einer Standard-Einleitung "Ich bin Freelance-Designerin, arbeite primär mit Startups, mein Stil ist X." Das ist ineffizient.
 
-### Du hängst ihn an
+**Du hängst ihn an**
 
 Dateien, Bilder, Screenshots. Im Web-Chat per Drag-and-Drop, in der Claude App durch den verbundenen Workspace.
 
 **Beispiel:** Du lädst eine PDF mit Style-Guide hoch. Claude liest die ganze PDF und nutzt sie als Referenz für die Antwort. Du musst nicht den Stil im Prompt beschreiben.
 
-### Du machst ihn permanent
+**Du machst ihn permanent**
 
 In der Web-Variante: Projects mit dauerhaft hinterlegten Anweisungen.
 In der Claude App: CLAUDE.md im Workspace + globale Anweisungen in den App-Einstellungen.
@@ -69,19 +69,19 @@ Der dritte Weg ist am wertvollsten - permanenter Kontext ist der größte einzel
 
 ## Anti-Muster
 
-### Einzeilige Prompts ohne Hintergrund
+**Einzeilige Prompts ohne Hintergrund**
 
 **Schlecht:** "Schreib mir eine Mail."
 **Besser:** "Schreib mir eine Mail an Max (Kunde, hat Angebot abgelehnt) mit Tonfall freundlich-professionell, kurz halten, Tür offen lassen für später."
 
-### Zu höflich
+**Zu höflich**
 
 **Schlecht:** "Könntest du vielleicht, wenn es nicht zu viel Mühe macht, eventuell überlegen ob du mir bei einer kleinen Sache helfen könntest?"
 **Besser:** "Hilf mir bei X."
 
 Höflichkeit gegenüber KI bringt nichts und kostet Tokens. Sei direkt, das ist effizient und Claude reagiert nicht beleidigt.
 
-### Über-spezifische Beispiele
+**Über-spezifische Beispiele**
 
 Wenn du zu stark ein konkretes Beispiel vorgibst, kopiert Claude es statt zu verstehen.
 
@@ -91,14 +91,14 @@ Wenn du zu stark ein konkretes Beispiel vorgibst, kopiert Claude es statt zu ver
 
 Mehrere Beispiele zeigen ein Muster, ein einzelnes wird kopiert.
 
-### Zu vage Anweisungen
+**Zu vage Anweisungen**
 
 **Schlecht:** "Mach es kreativ."
 **Besser:** "Mach es überraschender. Bring eine ungewöhnliche Perspektive rein, z.B. wie XYZ das Thema sieht."
 
 "Kreativ" ist nicht messbar. "Überraschend" ist eine Richtung, "Perspektive XYZ" ist konkret.
 
-### Mehrere Themen in einem Prompt
+**Mehrere Themen in einem Prompt**
 
 **Schlecht:** "Schreib mir eine Mail an Max, dann eine Stellenanzeige für einen Designer und überleg auch noch ob ich diese Idee verfolgen soll."
 

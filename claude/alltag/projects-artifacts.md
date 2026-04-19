@@ -12,7 +12,7 @@ Der Web-Chat (claude.ai) kann mehr als nur Fragen beantworten. Projects und Arti
 
 Ein Project ist ein Ordner für zusammengehörige Chats. Du kannst Dateien, Anweisungen und Hintergrundwissen hinterlegen, die für alle Chats in diesem Project gelten.
 
-### Schritt für Schritt: erstes Project anlegen
+**Schritt für Schritt: erstes Project anlegen**
 
 1. Auf claude.ai einloggen
 2. In der Seitenleiste links auf **Projects** klicken
@@ -23,13 +23,13 @@ Ein Project ist ein Ordner für zusammengehörige Chats. Du kannst Dateien, Anwe
 
 Ab jetzt landen alle Chats die du innerhalb des Projects führst dort und teilen sich denselben Kontext (deine hochgeladenen Dateien, deine Custom Instructions).
 
-### Wann ein neues Project sinnvoll ist
+**Wann ein neues Project sinnvoll ist**
 
 - Längere Themen über Wochen oder Monate (Buchprojekt, Firmen-Recherche, Kurs-Erstellung)
 - Wenn du immer wieder dieselbe Hintergrund-Information brauchst (Style Guide, Briefing, Domain-Wissen)
 - Wenn die Anzahl Chats zu einem Thema mehrstellig wird
 
-### Wann nicht
+**Wann nicht**
 
 - Einmalige Aufgaben (überflüssiger Overhead)
 - Wenn die Custom Instructions sich ständig ändern (Project ist dann schlechter Ort dafür)
@@ -41,7 +41,7 @@ Artifacts sind Inhalte, die Claude in einem eigenen Fenster neben dem Chat erzeu
 
 Sobald Claude was Längeres oder Strukturiertes generiert (mehr als ein paar Absätze, Code-Blöcke, Tabellen), erscheint das oft als Artifact rechts neben dem Chat.
 
-### Beispiele für Artifacts
+**Beispiele für Artifacts**
 
 - Lange Texte (Blogartikel, Konzepte)
 - Code-Snippets oder ganze Scripts
@@ -49,13 +49,13 @@ Sobald Claude was Längeres oder Strukturiertes generiert (mehr als ein paar Abs
 - Mermaid-Diagramme
 - Strukturierte Tabellen oder Listen
 
-### Wann Artifacts helfen
+**Wann Artifacts helfen**
 
 - Du willst etwas Längeres das nicht im Chat-Stream untergeht
 - Du willst iterieren ohne dass die Zwischenstufen den Chat zumüllen
 - Du willst das Ergebnis raus exportieren (Copy, Download)
 
-### Wann Artifacts stören
+**Wann Artifacts stören**
 
 - Bei kurzen Antworten ist es Overkill
 - Wenn du eigentlich nur eine Frage hast und keine Datei
@@ -67,30 +67,30 @@ Du kannst in den App-Einstellungen oft konfigurieren wann Artifacts auftauchen s
 
 Beispiel: du arbeitest an einem Workshop-Konzept.
 
-### Schritt 1: Project anlegen
+**Schritt 1: Project anlegen**
 
 Project: "Workshop Vibe Coding für Uni Kiel"
 Custom Instructions: "Ich plane einen 8h-Workshop für 14 Teams an der Uni Kiel. Zielgruppe: Forschende und Studierende ohne Programmiererfahrung. Ziel: am Ende des Tages haben alle einen funktionierenden Prototyp. Tonalität: konkret, hands-on, nicht akademisch."
 
 Dateien hochladen: Briefing-PDF von der Uni, Beispiel-Workshops anderer Anbieter, deine Notizen.
 
-### Schritt 2: Strukturieren
+**Schritt 2: Strukturieren**
 
 Im Project ein neuer Chat: "Schlag mir eine Tagesstruktur vor: 8 Stunden, 1h Mittagspause. Welche Blöcke, in welcher Reihenfolge, mit welchem Ziel pro Block?"
 
 Claude generiert die Struktur als Artifact - Tabelle mit Uhrzeit, Block-Titel, Ziel, Format.
 
-### Schritt 3: Vertiefen
+**Schritt 3: Vertiefen**
 
 Pro Block ein eigener Chat (immer noch im selben Project): "Block 3 ist 'Erste Prototyp-Iteration'. Wie würde der konkret ablaufen? Was brauchen die Teams, was machen sie selbst, was machen wir gemeinsam?"
 
 Die Tagesstruktur ist als Datei im Project verfügbar - Claude kann sich darauf beziehen.
 
-### Schritt 4: Material erstellen
+**Schritt 4: Material erstellen**
 
 Nochmal neuer Chat: "Wir brauchen ein Handout für die Teilnehmer. Eine Seite, A4. Was muss drauf?" Claude generiert als Artifact, du iterierst, exportierst.
 
-### Schritt 5: Wochen später wieder reinkommen
+**Schritt 5: Wochen später wieder reinkommen**
 
 In zwei Wochen sind die Detailfragen wieder relevant. Du öffnest das Project, der ganze Kontext ist da. Kein Neustart, kein Briefing.
 

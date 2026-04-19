@@ -117,21 +117,21 @@ Mehr zu Skills im Detail: [[../claude-code/skills-hooks-subagents|Skills, Hooks 
 
 Wenn dein Second Brain mit anderen Tools spricht, sparst du dir noch mehr manuelle Arbeit.
 
-### Notion-Connector
+**Notion-Connector**
 
 Wenn du parallel Notion nutzt (z.B. für Team-Wissen während Wiki dein persönliches Brain ist):
 
 > Suche in meinem Notion nach Notizen zum Thema X und ergaenze die
 > wichtigsten Erkenntnisse in reference/x.md im Wiki.
 
-### Kalender-Connector
+**Kalender-Connector**
 
 Für Morning Routine mit Terminen:
 
 > Hole heutige Kalender-Termine. Lege sessions/[heutiges Datum].md an
 > mit den Terminen plus drei Prioritaeten aus dem Wiki.
 
-### Email-Drafts mit Wiki-Kontext
+**Email-Drafts mit Wiki-Kontext**
 
 > Schau in projects/kunde-x/context.md was wir besprochen haben und
 > in den letzten sessions-Dateien was sich getan hat.
@@ -175,20 +175,20 @@ Für Teams ab 3 Personen würde ich ein dediziertes Wiki-Tool (Outline, BookStac
 
 Für ernsthafte Mobile-Nutzung:
 
-### iOS
+**iOS**
 
 - **Working Copy** (kostenpflichtig, aber sehr gut) als Git-Client
 - **1Writer** oder **iA Writer** als Markdown-Editor
 - Beide sind in Working Copy integrierbar
 - Dadurch: lesen, schreiben, committen, pushen auf dem iPhone/iPad
 
-### Android
+**Android**
 
 - **Markor** (kostenlos) als Editor mit Git-Support
 - Oder **Obsidian Mobile** mit Git-Plugin
 - Funktioniert ähnlich gut wie Desktop
 
-### Allgemein
+**Allgemein**
 
 GitHub Web-UI funktioniert auch auf dem Handy gut für Quick-Edits an `INBOX.md`. Reicht für die meisten Mobile-Use-Cases.
 

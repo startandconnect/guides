@@ -20,7 +20,7 @@ Diese Dinge gehören nicht in deinen Wiki-Ordner und nicht in die Claude App.
 
 ## Wie du sensible Daten fernhältst
 
-### 1. Eigener Ordner für Geheimes
+**1. Eigener Ordner für Geheimes**
 
 Geheimnisse leben außerhalb deines Wiki-Workspaces. Beispiel:
 
@@ -29,7 +29,7 @@ Geheimnisse leben außerhalb deines Wiki-Workspaces. Beispiel:
 
 API Keys, Passwörter etc. landen in dem zweiten Ordner. Claude sieht ihn nie.
 
-### 2. .gitignore nutzen
+**2. .gitignore nutzen**
 
 Dein Wiki ist meist ein Git-Repo. In der `.gitignore` (Datei im Wiki-Hauptordner) listest du was nie committet werden soll:
 
@@ -44,19 +44,19 @@ private/
 
 So landen sensible Dateien nicht versehentlich auf GitHub.
 
-### 3. Vor jedem Commit prüfen
+**3. Vor jedem Commit prüfen**
 
 GitHub Desktop zeigt dir vor dem Commit was sich geändert hat. Drüberschauen, sicherstellen dass nichts Heikles dabei ist. Dauert 10 Sekunden, spart im Notfall viel.
 
 ## Was tun wenn es doch passiert
 
-### API Key versehentlich rein
+**API Key versehentlich rein**
 
 1. **Sofort den Key rotieren** beim entsprechenden Service (Stripe, OpenAI, etc.). Der alte Key ist ab sofort wertlos für Angreifer.
 2. Wenn schon committet: aus der Datei entfernen, neu committen.
 3. Wenn schon gepusht und Repo war public: zusätzlich Repo-History bereinigen (Tools wie `git-filter-repo`). Bei privaten Repos meist unnötig wenn der Key rotiert ist.
 
-### Kundendaten versehentlich rein
+**Kundendaten versehentlich rein**
 
 1. Datei bereinigen
 2. Bei sensiblen Daten (DSGVO-relevant): prüfen ob Meldepflicht besteht
@@ -64,18 +64,18 @@ GitHub Desktop zeigt dir vor dem Commit was sich geändert hat. Drüberschauen, 
 
 ## Werkzeugseitige Absicherung
 
-### Berechtigungen in der App
+**Berechtigungen in der App**
 
 Claude fragt vor wichtigen Aktionen nach Bestätigung. Das ist nicht zum Wegklicken - schau hin was Claude tun will.
 
 **Schlecht:** Auf "Alle Aktionen erlauben" klicken.
 **Gut:** Bei jeder Datei-Änderung kurz prüfen, dann bestätigen.
 
-### Workspace-Auswahl bewusst
+**Workspace-Auswahl bewusst**
 
 Du kannst mehrere Workspaces verbinden. Verbinde nur das was Claude wirklich sehen muss. Wenn du an einem privaten Wiki arbeitest, brauchst du nicht zusätzlich den Kunden-Ordner verbunden.
 
-### Connectors mit Vorsicht
+**Connectors mit Vorsicht**
 
 Jeder Connector (Notion, GitHub, Slack) bekommt nur die Berechtigungen die du ihm gibst. Faustregel:
 
@@ -83,7 +83,7 @@ Jeder Connector (Notion, GitHub, Slack) bekommt nur die Berechtigungen die du ih
 - Schreiben nur wenn nötig
 - Keine "alle Repos" wenn ein einzelnes reicht
 
-### Versionierung als Sicherheitsnetz
+**Versionierung als Sicherheitsnetz**
 
 Wenn dein Wiki ein Git-Repo ist, kannst du jederzeit zu einem älteren Stand zurück. Vor kritischen Aktionen committen, dann hat man immer einen Rollback-Punkt.
 
@@ -91,7 +91,7 @@ Wenn dein Wiki ein Git-Repo ist, kannst du jederzeit zu einem älteren Stand zur
 
 Claude Code ist wie ein Praktikant mit Root-Zugriff auf einen Teil deines Computers. Gib ihm nicht das, was du einem Praktikanten auch nicht geben würdest.
 
-### Konkrete Beispiele
+**Konkrete Beispiele**
 
 | Situation | Praktikant würdest du... | Claude Code |
 |---|---|---|
