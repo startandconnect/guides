@@ -1,233 +1,138 @@
 ---
 title: Das Template erklärt
 order: 7
-excerpt: Was steckt im sac-brain-template, warum so und wie du es an dich anpasst
+excerpt: Was steckt im Second Brain Template, warum so und wie du es an dich anpasst
 ---
 
 # Das Template erklärt
 
-Das Template unter `github.com/startandconnect/sac-brain-template` ist kein starrer Rahmen, sondern ein durchdachter Startpunkt. Hier erfährst du was drin ist und warum.
+Das Second Brain Template ist kein starrer Rahmen, sondern ein durchdachter Startpunkt. Es funktioniert für Studierende, Angestellte und Selbstständige - beim Setup passt Claude die Struktur an deinen Typ an.
 
-## Was du bekommst
+:::tip[Template jetzt laden]
+[Second Brain Template herunterladen (ZIP, 30 KB)](https://startandconnect.com/api/media-library/files/cmo6dm9fg00ax4bmwgf9r83t1/second-brain-template.zip)
+:::
 
-Nach dem Clone hast du folgende Struktur:
+## Was drin ist
+
+Nach dem Entpacken hast du folgende Struktur:
 
 ```
-sac-brain-template/
-├── CLAUDE.md                ← vorausgefuellt mit Platzhaltern, du passt an
-├── README.md                ← fuer Menschen
-├── inbox.md                 ← leer, zum Quick Capture
-├── daily/
-│   ├── _template.md         ← Vorlage fuer Tagesnotizen
-│   └── README.md            ← erklaert das Daily-System
+second-brain-template/
+├── CLAUDE.md                ← vorausgefüllt mit Platzhaltern, Claude füllt beim Onboarding
+├── README.md                ← für Menschen
+├── SETUP.md                 ← Onboarding-Anleitung für Claude
+├── RUNBOOK.md               ← erklärt wie Runbooks funktionieren
+├── HAUSAUFGABE.md           ← für Kursteilnehmer - kann gelöscht werden
+├── INBOX.md                 ← Quick Capture
+├── DECISIONS.md             ← wichtige Entscheidungen
+├── CHANGELOG.md             ← strukturelle Änderungen
+├── planning/
+│   ├── TODAY.md             ← Tagesplanung
+│   ├── WEEK.md              ← Wochenfokus
+│   ├── MONTH.md             ← Monatsziele
+│   └── YEAR.md              ← Jahresziele
 ├── projects/
-│   ├── _template/           ← Kopiervorlage fuer neue Projekte
-│   │   └── context.md
-│   └── beispiel-projekt/    ← Referenz wie context.md aussieht
-│       └── context.md
+│   ├── _template/           ← Kopiervorlage für neue Projekte
+│   ├── beispiel-selbststaendig/   ← Beispiel für Solopreneure
+│   ├── beispiel-angestellt/       ← Beispiel für Angestellte
+│   └── beispiel-student/          ← Beispiel für Studierende
 ├── reference/
-│   ├── _template.md         ← Vorlage fuer Referenzseiten
-│   └── example-api.md       ← Beispiel einer API-Referenz
+│   ├── _template.md         ← Vorlage für Referenzseiten
+│   └── beispiel-referenz.md ← Beispiel einer Referenz
+├── sessions/
+│   └── _template.md         ← Vorlage für Tages-Session-Logs
 ├── meetings/
-│   ├── _template.md         ← Vorlage fuer Meeting-Notes
-│   └── README.md            ← Wann und wie Meetings dokumentieren
-├── decisions.md             ← Firmenweite/wikiweite Entscheidungen
-├── CHANGELOG.md             ← was hat sich im Wiki geaendert
-└── .gitignore               ← vorbereitet fuer sensible Dateien
+│   └── _template.md         ← Vorlage für Meeting-Notes
+├── runbooks/
+│   ├── tagesstart.md
+│   ├── neues-projekt.md
+│   ├── wochenrueckblick.md
+│   └── session-pflege.md
+├── private/
+│   └── _placeholder.md      ← Ordner für private Dateien
+└── .gitignore               ← für optionale spätere Git-Nutzung
 ```
 
 ## Warum diese Dateien
 
-### CLAUDE.md
+### Root-Level Meta-Dateien (CAPS)
 
-Muss da sein, sonst hat Claude keinen Kontext. Vorausgefüllt als Template mit Platzhaltern - du ersetzt sie durch deine echten Informationen. Details: [[claude-md-anleitung|CLAUDE.md richtig schreiben]].
+**CLAUDE.md** - muss da sein, sonst hat Claude keinen Kontext. Vorausgefüllt als Template mit Platzhaltern - Claude ersetzt sie beim Onboarding mit deinen echten Daten.
 
-### README.md
+**README.md** - für Menschen die dein Repo sehen. Auch für dich in 6 Monaten. Erklärt wofür das Wiki ist.
 
-Für Menschen die dein Repo sehen. Auch für dich in 6 Monaten wenn du dich fragst "wofür war das nochmal". Erklärt:
+**SETUP.md** - Anleitung für Claude wie dein Wiki eingerichtet wird. Du sagst Claude: *"Lies SETUP.md und führe das Onboarding durch."*, und Claude übernimmt.
 
-- Wofür ist dieses Wiki
-- Wie ist es strukturiert
-- Wie pflegt man es
-- Wo fängt man an wenn man sich verloren fühlt
+**RUNBOOK.md** - erklärt das Runbook-System. Runbooks sind Anleitungen für wiederkehrende Abläufe.
 
-### inbox.md
+**HAUSAUFGABE.md** - relevant wenn du Teilnehmer eines Kurses bist. Als Freebie-Nutzer kannst du sie löschen.
 
-Leer, für schnelle Ideen. Eine einzige Datei statt vielen kleinen. Wöchentlich einsortieren. Format: stichpunktartig, Datum optional.
+**INBOX.md** - Quick Capture. Alles was schnell rein muss, bevor es vergessen wird. Wöchentlich einsortieren.
 
-### daily/_template.md und daily/README.md
+**DECISIONS.md** - wichtige Entscheidungen mit Datum und Begründung. Wenn du in 6 Monaten wissen willst warum du X entschieden hast.
 
-Pro Tag eine Datei. Template gibt die Struktur vor: was lief, was steht an, was habe ich gelernt. README erklärt das System.
+**CHANGELOG.md** - nur strukturelle Änderungen am Wiki selbst. Nicht jede Mini-Änderung.
 
-```markdown
-# 2026-04-15
+### Ordner
 
-## Heute
+**planning/** - vier Zeithorizonte. TODAY für heute, WEEK für die Woche, MONTH für den Monat, YEAR für das Jahr.
 
-- [ ] Aufgabe 1
-- [ ] Aufgabe 2
+**projects/** - deine aktiven Projekte. Einer pro Ordner, mit eigener `context.md` als Einstiegspunkt. Template-Ordner `_template/` als Kopiervorlage. Drei Beispielprojekte (selbstständig, angestellt, student) - Claude behält beim Onboarding nur das passende.
 
-## Erledigt
+**reference/** - Nachschlagewerk. APIs, Prozesse, Rezepte, Zusammenfassungen. Dinge die du nachschlägst und selten änderst.
 
-## Notizen
+**sessions/** - Tages-Logs im Format `YYYY-MM-DD.md`. Was ist heute passiert, was hast du gelernt, was bleibt offen.
 
-## Gelernt
-```
+**meetings/** - Meeting-Notizen. Teilnehmer, Themen, Entscheidungen, Action Items.
 
-### projects/_template/
+**runbooks/** - Anleitungen für wiederkehrende Abläufe. Vier mitgelieferte: Tagesstart, neues Projekt, Wochenrückblick, Session-Pflege.
 
-Eine Vorlage zum Kopieren wenn du ein neues Projekt anlegst. Inklusive vorgefertigter context.md mit allen Standardabschnitten.
+**private/** - Privates. Die `.gitignore` sorgt dafür dass der Inhalt nicht committet wird, wenn du später Git nutzt.
 
-### projects/beispiel-projekt/
+## Beispielprojekte anpassen
 
-Zeigt wie ein gepflegtes Projekt aussieht. Lösche es wenn du magst - oder benutze es als Referenz.
+Nach dem Claude-Onboarding ist nur ein Beispielprojekt übrig - passend zu deinem Typ:
 
-### reference/
+- **Selbstständige:** `projects/beispiel-selbststaendig/` - Newsletter-Automatisierung als Beispiel
+- **Angestellte:** `projects/beispiel-angestellt/` - Onboarding-Doku Q2
+- **Studierende:** `projects/beispiel-student/` - Hausarbeit Social Media
 
-Für Dinge die du nachschlägst. APIs, Prozesse, Listen. Nicht Tagesaktuelles.
-
-Eine `example-api.md` zeigt wie eine API-Referenz aussehen kann (Auth, Base URL, Endpoints, Beispiele).
-
-### meetings/
-
-Meeting-Notizen mit Template. Schema: Datum, Teilnehmer, Themen, Entscheidungen, offene Punkte. README erklärt wann ein Meeting wirklich dokumentiert werden sollte (Spoiler: nicht jedes).
-
-### decisions.md
-
-Wichtige Entscheidungen die wikiweit gelten. Format:
-
-```markdown
-## YYYY-MM-DD - Titel der Entscheidung
-**Was:** kurz
-**Warum:** Begruendung
-**Alternativen die verworfen wurden:** kurz
-```
-
-### CHANGELOG.md
-
-Was sich im Wiki strukturell geändert hat. Hilft beim Onboarding und wenn du dich nach Monaten fragst "wann habe ich diese Konvention eingeführt".
-
-### .gitignore
-
-Verhindert dass du versehentlich sensible Dateien commitest. Standardmäßig ausgeschlossen:
-
-```
-.env
-.env.*
-*.key
-*.pem
-secrets.md
-private/
-```
-
-Wenn du eine Datei mit Geheimnissen brauchst, lege sie unter `private/` ab und sie wird automatisch ignoriert.
+Du kannst das behaltene Beispiel entweder als Referenz nutzen, anpassen zu einem echten Projekt oder komplett löschen.
 
 ## Wie du es anpasst
 
 Das Template ist kein Gesetz. Typische Anpassungen:
 
-### 1. CLAUDE.md personalisieren (Pflicht)
+### 1. CLAUDE.md personalisieren (Pflicht, macht Claude für dich)
 
-Machst du in den ersten 15 Minuten. Platzhalter raus, deine echten Informationen rein.
+Platzhalter raus, deine echten Informationen rein. Erfolgt automatisch beim Onboarding.
 
-### 2. Beispiel-Projekt löschen
+### 2. Beispielprojekt löschen
 
-Wenn du keinen Platzhalter willst, sag in der Claude App:
-
-> Loesche den Ordner projects/beispiel-projekt komplett.
-
-Claude löscht ihn, du committest die Änderung in GitHub Desktop.
+Sag in der Claude App: *"Lösche den Ordner projects/beispiel-xyz komplett."*
 
 ### 3. Ordner umbenennen
 
-`projects/` heißen für manche lieber `kunden/` oder `baustellen/`. Mach was zu dir passt:
-
-> Benenne den Ordner projects/ in kunden/ um. Pass die CLAUDE.md
-> entsprechend an.
-
-Claude macht beides in einem Schritt.
+`projects/` heissen für manche lieber `kunden/`, `arbeiten/` oder `hausarbeiten/`. Sag in der Claude App: *"Benenne den Ordner projects/ in [neuer Name]/ um und passe die CLAUDE.md entsprechend an."*
 
 ### 4. Eigene Ordner hinzufügen
 
-Brauchst du einen `content/` Ordner für Blog/YouTube? Einen `finanzen/` Ordner? Einfach anlegen, in CLAUDE.md erwähnen.
+Brauchst du einen `content/`, `finanzen/`, oder `lernen/` Ordner? Einfach anlegen und in der CLAUDE.md erwähnen.
 
 ### 5. Ordner löschen die du nicht nutzt
 
-Wenn du keine Meetings hast: `git rm -r meetings/`. Wenn du keine Tagesnotizen pflegen willst: `git rm -r daily/`. Was du nicht nutzt, soll dich nicht erinnern.
-
-## Vorher / Nachher: ein konkretes Beispiel
-
-### Vorher (frisch geclont)
-
-```
-mein-brain/
-├── CLAUDE.md (Platzhalter)
-├── README.md
-├── inbox.md (leer)
-├── daily/_template.md
-├── projects/_template/
-├── projects/beispiel-projekt/
-├── reference/example-api.md
-├── meetings/_template.md
-├── decisions.md
-└── CHANGELOG.md
-```
-
-### Nachher (nach 30 Minuten Setup von Maria, Freelance-Designerin)
-
-```
-maria-brain/
-├── CLAUDE.md (Maria, Designerin, drei aktive Kunden)
-├── README.md (angepasst)
-├── inbox.md (leer)
-├── kunden/                          ← projects umbenannt
-│   ├── _template/
-│   ├── studio-mueller/context.md
-│   ├── bakery-frankfurt/context.md
-│   └── startup-xyz/context.md
-├── reference/
-│   ├── tarife.md                   ← eigene Stundensaetze
-│   ├── farben-theorie.md
-│   └── example-api.md (geloescht spaeter)
-├── ideen.md                        ← neuer Ordner fuer Design-Ideen
-└── decisions.md
-```
-
-Maria hat: projects in kunden umbenannt, Meetings entfernt (sie hat selten welche), daily-Ordner entfernt (sie schreibt kein Daily), reference erweitert mit ihrem Stoff.
-
-Das Template ist jetzt ihr System.
-
-## Template-Updates pullen
-
-Wenn wir das Template updaten (neue Best Practices, neue Beispiele), kannst du die Änderungen zu dir ziehen.
-
-Der einfachste Weg: in der Claude App fragen.
-
-> Schau ins Template-Repo unter github.com/startandconnect/sac-brain-template.
-> Welche Dateien wurden seit meinem letzten Update geaendert?
-> Schlage mir vor was ich uebernehmen sollte und was nicht (weil ich
-> es bewusst angepasst habe).
-
-Claude vergleicht, schlägt vor, du entscheidest, Claude wendet an.
-
-Anschließend in GitHub Desktop committen und pushen.
-
-### Wenn du es manuell machen willst
-
-GitHub Desktop kann das Template auch als zweites "Remote" einbinden. In den Repository-Einstellungen ("Repository Settings → Remotes") ein zusätzliches Remote namens "template" mit der Template-URL hinzufügen. Dann kannst du Updates fetchen und mergen.
-
-Bei Konflikten: Claude App fragen "Löse die Merge-Konflikte in Datei X. Behalte meine Anpassungen wo möglich, übernimm Template-Änderungen wo neutral."
+Was du nicht nutzt, soll dich nicht erinnern. Ordner die dir nicht passen: weg damit.
 
 ## Was du nicht ändern solltest
 
 - **Die Idee einer CLAUDE.md.** Wenn du die streichst, fehlt Claude der Kontext.
+- **Root-Level Meta-Dateien in CAPS.** Konvention damit Claude sie findet.
 - **Markdown als Format.** Alles andere funktioniert schlechter mit Claude Code.
 - **context.md pro Projekt.** Einheitliche Einstiegsdatei ist Gold wert.
 
 ## Weiter
 
-Wenn dein Template angepasst ist und das Grundgerüst steht:
-
-- [[claude-md-anleitung|CLAUDE.md richtig schreiben]] - aus dem Platzhalter etwas Brauchbares machen
-- [[taegliche-nutzung|Tägliche Nutzung]] - Routinen einführen
+- [[setup|Setup-Anleitung]] - der komplette Einrichtungsprozess
+- [[claude-md-anleitung|CLAUDE.md richtig schreiben]] - wie du die zentrale Datei optimierst
+- [[taegliche-nutzung|Tägliche Nutzung]] - Routinen die funktionieren
 - [[advanced|Advanced]] - wenn die Basis läuft

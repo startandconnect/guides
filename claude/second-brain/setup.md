@@ -1,108 +1,80 @@
 ---
-title: Setup in 30 Minuten
+title: Setup in 10 Minuten
 order: 4
-excerpt: Von Null zum fertigen Second Brain - mit Claude App und GitHub Desktop
+excerpt: Von Null zum fertigen Second Brain - ZIP herunterladen, entpacken, mit Claude einrichten
 ---
 
-# Setup in 30 Minuten
+# Setup in 10 Minuten
 
-Du brauchst zwei Apps: die Claude App und GitHub Desktop. Beide kostenlos, beide grafisch.
+Du brauchst eine App: die Claude Desktop App. Optional plus Obsidian als grafischer Editor. Kein Git, kein Terminal.
 
 ## Voraussetzungen
 
-- Du hast ein GitHub-Konto (kostenlos auf github.com)
-- Du hast die **Claude App** installiert (siehe [[../claude-code/installation|Installation]])
-- Du hast **GitHub Desktop** installiert (download.github.com)
+- Du hast die **Claude Desktop App** installiert (claude.ai/download, siehe [[../claude-code/installation|Installation]])
+- Optional: **Obsidian** als Editor (obsidian.md)
 
-Wenn Git ein Fremdwort ist: zuerst [[git-basics|Git Grundlagen]] lesen.
+## Der schnellste Weg: Template herunterladen
 
-## Schritt 1: Template auf GitHub kopieren
+Das Second Brain Template ist eine fertige Ordnerstruktur mit allen wichtigen Dateien. Du packst sie aus, verbindest sie mit Claude und das Wiki ist einsatzbereit.
 
-1. Öffne `github.com/startandconnect/sac-brain-template` in deinem Browser
-2. Klicke **"Use this template"** oben rechts (grüner Button)
-3. Wähle einen Namen für dein Repo (z.B. `mein-brain`, `vorname-wiki`)
-4. Setze es auf **Private** (dein Wiki soll niemand sehen)
-5. Klicke **"Create repository"**
+:::tip[Template jetzt laden]
+[Second Brain Template herunterladen (ZIP, 30 KB)](https://startandconnect.com/api/media-library/files/cmo6dm9fg00ax4bmwgf9r83t1/second-brain-template.zip)
+:::
 
-Du hast jetzt ein eigenes Repo mit der Grundstruktur. GitHub leitet dich auf das neue Repo weiter.
+### Schritt 1: ZIP entpacken
 
-## Schritt 2: Repo mit GitHub Desktop runterladen
+1. Lade die ZIP-Datei herunter
+2. Entpacke sie an einen festen Platz auf deinem Rechner (z.B. `~/Documents/mein-brain`)
+3. Den Ordner-Namen kannst du frei wählen - "mein-brain", "vorname-wiki", was immer du willst
 
-1. GitHub Desktop öffnen
-2. **File → Clone Repository** anklicken
-3. In der Liste dein neues Repo auswählen (oder URL einfügen)
-4. Lokalen Ordner wählen (z.B. `~/Documents/mein-brain`)
-5. **Clone** klicken
-
-Der Ordner ist jetzt auf deinem Rechner.
-
-## Schritt 3: Ordner in der Claude App verbinden
+### Schritt 2: Ordner in der Claude App verbinden
 
 1. Claude App öffnen
 2. Auf **Workspace verbinden** klicken (oder das Ordner-Symbol)
-3. Den eben erstellten Wiki-Ordner auswählen
+3. Den eben entpackten Ordner auswählen
 4. Berechtigung bestätigen
 
 Claude kann jetzt Dateien in deinem Wiki lesen und schreiben.
 
-## Schritt 4: CLAUDE.md anpassen
+### Schritt 3: Optional - Obsidian als Editor öffnen
+
+Wenn du visuell in deinem Wiki herumklicken willst:
+
+1. Obsidian öffnen
+2. "Open folder as vault" wählen
+3. Gleichen Ordner wie in der Claude App auswählen
+
+Ab jetzt kannst du zwischen Claude App (Chat + Datei-Bearbeitung) und Obsidian (grafischer Editor) wechseln - beide lesen und schreiben die gleichen Dateien.
+
+### Schritt 4: Onboarding mit Claude durchlaufen
+
+Das Template enthält eine `SETUP.md` Datei. Die ist die Anleitung für Claude, wie dein Wiki an dich angepasst wird.
 
 In der Claude App fragen:
 
 ```
-Oeffne CLAUDE.md im Workspace und zeige mir den aktuellen Inhalt.
+Lies SETUP.md und führe das Onboarding durch.
 ```
 
-Claude zeigt dir die Vorlage. Dann:
+Claude fragt dich ein paar Dinge:
+
+- Welcher Typ bist du: Studierende, Angestellte oder Selbstständig?
+- Wie heisst du, was machst du?
+- Deutsch oder Englisch, Du oder Sie?
+- Willst du ein erstes Projekt anlegen?
+
+Claude füllt dann die `CLAUDE.md` aus, löscht die nicht passenden Beispielprojekte und fragt ob du direkt ein echtes Projekt anlegen willst.
+
+### Schritt 5: Testen
+
+In der Claude App fragen:
 
 ```
-Pass die CLAUDE.md an meine Situation an. Stell mir Fragen die du
-brauchst (Name, Rolle, was ich mache, Sprache, Stil-Praeferenzen)
-und ueberschreib dann die Datei.
+Schau dir meine CLAUDE.md und meine Projekte an. Was sind die nächsten
+drei Aufgaben für mich?
 ```
 
-Claude führt dich durch die Fragen und passt die Datei an.
-
-## Schritt 5: Erstes Projekt anlegen
-
-Wähle ein echtes Projekt. Keine Übungsaufgabe.
-
-In der Claude App:
-
-```
-Lege ein neues Projekt an: projects/[PROJEKTNAME]/context.md.
-Nutze die Vorlage aus dem Template als Basis.
-
-Frag mich nach: kurze Beschreibung, Status, Hauptziel, drei
-ersten Aufgaben.
-```
-
-Claude legt den Ordner und die Datei an, fragt dich die Details, fertigt die context.md.
-
-## Schritt 6: Testen ob es funktioniert
-
-In der Claude App:
-
-```
-Schau dir meine CLAUDE.md und das Projekt in projects/[PROJEKTNAME]/
-an. Was sind die naechsten 3 Aufgaben fuer mich?
-```
-
-Wenn die Antwort spezifisch und brauchbar ist: dein Second Brain funktioniert.
-
-Wenn die Antwort generisch ist: deine CLAUDE.md oder context.md ist zu vage. Ergänze konkrete Informationen, frag nochmal.
-
-## Schritt 7: Erste Sicherung mit GitHub Desktop
-
-Damit dein Setup gesichert ist:
-
-1. Wechsle zu GitHub Desktop
-2. Du siehst die geänderten Dateien im "Changes"-Tab
-3. Im Summary-Feld eingeben: "Initial Setup"
-4. **"Commit to main"** klicken (unten links)
-5. **"Push origin"** klicken (oben rechts) - Änderungen sind jetzt auf GitHub gesichert
-
-Fertig. Dein Second Brain ist live und gesichert.
+Wenn die Antwort spezifisch und brauchbar ist: dein Second Brain funktioniert. Wenn die Antwort generisch ist: deine CLAUDE.md oder context.md ist zu vage. Mehr Infos reinschreiben und nochmal fragen.
 
 ## Was jetzt
 
@@ -112,23 +84,23 @@ Du hast ein laufendes Second Brain. Jetzt geht es um Routine und Pflege.
 - [[claude-md-anleitung|CLAUDE.md richtig schreiben]] - für noch bessere Antworten
 - [[template-erklaert|Template erklärt]] - was im Template steckt und wie du anpasst
 
+## Optional später: Git und Sync
+
+Wenn du dein Wiki auf mehreren Geräten nutzen oder sichern willst, kannst du es zu einem Git-Repo machen. Details in [[git-basics|Git Grundlagen]]. Kein Muss - dein Wiki funktioniert auch rein lokal.
+
 ## Häufige Stolpersteine
 
 ### "Claude Code findet meine CLAUDE.md nicht"
 
 Stell sicher dass der richtige Workspace verbunden ist. In der App: oben den Workspace prüfen. Wenn nötig: anderen Workspace auswählen oder neu verbinden.
 
-### "GitHub Desktop fragt nach Login"
+### "Das Onboarding startet nicht"
 
-Beim ersten Start einmalig mit deinem GitHub-Konto einloggen. Danach merkt sich GitHub Desktop die Credentials.
+Prüfe ob die Datei `SETUP.md` tatsächlich im Workspace liegt und die `CLAUDE.md` noch Platzhalter in eckigen Klammern enthält (z.B. `[DEIN NAME]`). Nur dann startet Claude das Onboarding.
 
-### "Push wird abgewiesen"
+### "Ich habe die Beispieldateien versehentlich gelöscht"
 
-Meist GitHub-Login-Problem. Im Menü "GitHub Desktop → Preferences → Accounts" prüfen ob du eingeloggt bist.
-
-### "Ich habe die Beispieldateien aus dem Template versehentlich gelöscht"
-
-Kein Problem. In GitHub Desktop: Rechtsklick auf die gelöschte Datei → "Discard changes". Datei ist wieder da.
+Kein Problem. Lade die ZIP nochmal runter und kopiere die fehlenden Dateien. Oder bitte Claude: *"Lies das Template nochmal aus der ZIP und füge die fehlenden Strukturen wieder ein."*
 
 ### "Soll ich das alles jetzt schon nutzen?"
 
