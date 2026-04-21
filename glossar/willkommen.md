@@ -1,25 +1,26 @@
 ---
 title: Willkommen
 order: 1
-excerpt: Begriffe aus der SAC und Nexus Welt verstaendlich erklaert
+excerpt: Ein Nachschlagewerk fuer Begriffe aus der SAC- und Nexus-Welt
 ---
 
 # Glossar
 
-Hier findest du die wichtigsten Begriffe rund um SaaS-Business, Nexus und die Start-und-Connect-Welt - auf den Punkt erklaert, ohne Marketing-Bla.
+Hier findest du die wichtigsten Begriffe rund um SaaS-Business, Nexus und die Start-und-Connect-Welt - auf den Punkt erklaert, ohne Marketing-Bla. Jeder Begriff hat seine eigene Seite, du kannst direkt verlinken und darauf Bezug nehmen.
 
-## Aufbau
+## Die sechs Bereiche
 
-Das Glossar ist in fuenf Bereiche gegliedert:
+- **Grundlagen** - Was ist SaaS, KI, Cloud. Basis-Vokabular fuer Einsteiger.
+- **Business und SaaS** - Kennzahlen fuer Online-Business. MRR, Churn, LTV, CAC und Co.
+- **Technik und API** - Schnittstellen, Protokolle, Sicherheit. Was ein Webhook ist, wie OAuth funktioniert, was MCP bedeutet.
+- **Nexus Plattform** - Begriffe aus der Nexus-Welt. Instance, Plugin, Scope, Delivery Action.
+- **Zahlungen und Abos** - Stripe, Subscription, Rechnungen, Refunds, Steuer.
+- **Recht und DSGVO** - Impressum, Datenschutz, AGB, Opt-In, AV-Vertrag.
 
-- **Business und SaaS** - Kennzahlen und Geschaeftsmodelle (MRR, Churn, LTV, CAC...)
-- **Technik und API** - Integrationen und Schnittstellen (API, Webhook, MCP, OAuth...)
-- **Nexus Plattform** - Plattform-spezifische Begriffe (Plugin, Instance, Scope, Delivery-Action...)
-- **Zahlungen und Abos** - Stripe, Subscription, Invoice, Coupon, Refund...
-- **Recht und DSGVO** - Double-Opt-In, AV-Vertrag, Impressum, AGB
+## So liest du das Glossar
 
-Nutze die Sidebar links oder die Suche oben rechts um gezielt einen Begriff nachzuschlagen.
+Jede Kategorie hat eine Uebersicht und einzelne Begriffs-Seiten. In der Sidebar links kannst du direkt ein Kapitel aufklappen. Die Suche oben rechts findet Volltext.
 
 ## Fehlt was?
 
-Schick uns eine Mail an [support@startandconnect.com](mailto:support@startandconnect.com) - wir ergaenzen das Glossar laufend.
+Schick eine Mail an [support@startandconnect.com](mailto:support@startandconnect.com) - wir ergaenzen das Glossar laufend.
