@@ -67,7 +67,11 @@ Richte drei automatische E-Mails ein:
 - Kurze Erinnerung mit den wichtigsten Details
 - Direkter Link zum Beitreten (bei Online-Events)
 
-Gehe zu **Automatisierung > Delivery Actions** und erstelle für jede E-Mail eine eigene Action.
+Oeffne dein Event-Produkt und wechsle zum Bereich **After-Sales**. Erstelle dort fuer jede E-Mail eine eigene Action mit Trigger **Bei Kauf** plus ggf. einem Wait-Schritt.
+
+::: tip[Tipp]
+Fuer komplexere Verlaeufe (z.B. mehrere Erinnerungen, Variablen aus dem Event-Trigger, externe Webhook-Integration) baue stattdessen eine **Sequence** unter **Automations > Sequences** und enrolle Teilnehmer per `ENROLL_IN_SEQUENCE`-Action.
+:::
 
 ## Schritt 6: Teilnehmer verwalten
 

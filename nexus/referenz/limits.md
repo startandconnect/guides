@@ -100,6 +100,10 @@ Das tatsächliche E-Mail-Limit hängt von deinem SMTP-Provider und deinem Tarif 
 | `settings:read` | Einstellungen lesen |
 | `settings:write` | Einstellungen bearbeiten |
 
+::: info[Hinweis]
+Fuer das Automations- und Credential-System gelten zusaetzliche Scopes (Rules verwalten, Sequences anlegen, Credentials anlegen oder testen). Die Verwaltung dieser Bereiche ist im Standard an `settings:write` gekoppelt. Eine vollstaendige Scope-Liste findest du in der interaktiven API-Dokumentation unter `/api/docs`.
+:::
+
 ## Rollen
 
 | Bereich | Limit | Details |

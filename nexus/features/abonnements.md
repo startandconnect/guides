@@ -73,7 +73,7 @@ Nexus synchronisiert alle Abo-Daten in Echtzeit mit Stripe:
 
 Du kannst ein Abo jederzeit kündigen - entweder sofort oder zum Ende der aktuellen Periode. Auch deine Kunden können über das Kundenportal selbst kündigen.
 
-Bei Kündigung werden die konfigurierten Delivery Actions für den Trigger "Bei Kündigung" ausgeführt (z.B. Abschiedsmail senden, Instanz deprovisionieren).
+Bei Kündigung werden die konfigurierten Delivery Actions am Produkt für den Trigger **Bei Kündigung** ausgeführt (z.B. Abschiedsmail senden, Instanz deprovisionieren). Zusaetzlich feuern die Automation-Trigger `SUBSCRIPTION_CANCELED` und `ACCESS_REVOKED`, sodass du im [Automations-System](./automatisierung.md) eigene Rules darauf bauen kannst (z.B. Win-Back-Sequenz starten).
 
 ## Rechnungs- und Zahlungshistorie
 

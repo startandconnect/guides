@@ -51,19 +51,24 @@ Du kannst direkt zu bestimmten Bereichen navigieren, indem du die URL anpasst:
 
 | Bereich | URL-Pfad |
 |---|---|
-| Dashboard | `/admin` |
-| Produkte | `/admin/products` |
-| Bestellungen | `/admin/orders` |
-| Kunden | `/admin/customers` |
-| Events | `/admin/events` |
-| Blog | `/admin/blog` |
-| Newsletter | `/admin/newsletter` |
-| Nachrichten | `/admin/messages` |
-| Analytics | `/admin/analytics` |
-| Einstellungen | `/admin/settings` |
-| E-Mail Templates | `/admin/emails` |
-| Plugins | `/admin/plugins` |
-| Team | `/admin/team` |
+| Dashboard | `/manage` |
+| Produkte | `/manage/products` |
+| Bestellungen | `/manage/orders` |
+| Kunden | `/manage/customers` |
+| Events | `/manage/events` |
+| Blog | `/manage/blog` |
+| Newsletter | `/manage/newsletter` |
+| Nachrichten | `/manage/messages` |
+| Analytics | `/manage/analytics` |
+| Automations | `/manage/automations` |
+| Automation-Rules | `/manage/automations/rules` |
+| Sequences | `/manage/automations/sequences` |
+| Automation-Monitor | `/manage/automations/monitor` |
+| E-Mail Templates | `/manage/emails` |
+| Plugins | `/manage/plugins` |
+| Team | `/manage/team` |
+| Einstellungen | `/settings` |
+| Credentials | `/settings/automations/credentials` |
 
 :::tip[Tipp]
 Lege dir Lesezeichen für die Bereiche an, die du am häufigsten nutzt. So sparst du dir mehrere Klicks in der Navigation.

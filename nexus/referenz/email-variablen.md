@@ -19,7 +19,7 @@ Variablen werden mit **einfachen geschweiften Klammern** und Punkt-Notation gesc
 ```
 
 :::warning[Wichtig]
-Verwende **einfache** Klammern `{variable}`, nicht doppelte `{{variable}}`. Doppelte Klammern sind fuer interne Systemzwecke reserviert.
+In **E-Mail Templates** verwendest du **einfache** Klammern `{variable}`. Im **Automations-System** (Action-Felder, HTTP_REQUEST-Body) sind dagegen **doppelte** Klammern Standard, z.B. `{{userId}}` oder `{{trigger.order.total}}`. Beide Syntaxen sind kontextabhaengig und nicht austauschbar. Siehe [Automationen](../features/automatisierung.md) fuer Variablen im Automations-Kontext.
 :::
 
 Im Template-Editor werden verfuegbare Variablen automatisch vorgeschlagen. Du kannst sie per Klick einfuegen.

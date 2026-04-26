@@ -43,14 +43,18 @@ Lade deine Kursmaterialien in die Mediathek hoch:
 
 Nach dem Kauf soll der Kunde automatisch seine Zugangsdaten erhalten:
 
-1. Gehe zu **Automatisierung > Delivery Actions**
-2. Erstelle eine neue Action mit dem Trigger "Nach Kauf"
+1. Oeffne dein Produkt und wechsle zum Bereich **After-Sales**
+2. Erstelle eine neue Action mit dem Trigger **Bei Kauf**
 3. Wähle als Aktion **E-Mail senden**
 4. Erstelle ein E-Mail Template mit:
    - Begrüßung und Danke
    - Link zum Kundenportal
    - Zugangsdaten (falls externer Kursbereich)
    - Kontakt für Fragen
+
+::: tip[Tipp]
+Wenn du ueber-Produkt-greifende Workflows brauchst (z.B. CRM-Tagging, externe Webhooks, mehrstufige Mail-Sequenzen), nutze stattdessen das Automations-System unter **Automations** in der Sidebar. Siehe [Automationen](../features/automatisierung.md).
+:::
 
 ## Schritt 5: Erfolgsseite konfigurieren
 
@@ -82,7 +86,7 @@ Wenn du deinen Kursteilnehmern eine Community bieten willst:
 
 1. Aktiviere das **Circle Plugin** unter **Plugins**
 2. Verbinde deinen Circle-Space
-3. Konfiguriere eine Delivery Action, die neue Käufer automatisch zur Community einlädt
+3. Konfiguriere unter **Produkt > After-Sales** eine Delivery Action, die neue Käufer automatisch zur Community einlädt
 4. Kunden erhalten nach dem Kauf eine Einladung per E-Mail
 
 ## Schritt 8: Newsletter-Anmeldung nach Kauf (Optional)
@@ -90,9 +94,9 @@ Wenn du deinen Kursteilnehmern eine Community bieten willst:
 Halte den Kontakt zu deinen Kunden:
 
 1. Aktiviere das **Newsletter Plugin**
-2. Erstelle eine Delivery Action mit dem Trigger "Nach Kauf"
-3. Wähle als Aktion **Zum Newsletter hinzufügen**
-4. Optional: Weise den Käufer einem bestimmten Segment zu (z.B. "Kurs-Teilnehmer")
+2. Gehe zu **Automations > Rules** und erstelle eine neue Rule
+3. Trigger: `ORDER_PAID`
+4. Action: `ADD_TO_LIST` mit deinem Newsletter-Segment (z.B. "Kurs-Teilnehmer")
 
 :::warning[Wichtig]
 Informiere in deiner Datenschutzerklärung darüber, dass Käufer zum Newsletter hinzugefügt werden. Alternativ kannst du die Anmeldung als Opt-In im Checkout anbieten.
@@ -105,7 +109,7 @@ Informiere in deiner Datenschutzerklärung darüber, dass Käufer zum Newsletter
 | Produkt anlegen | Produkte > Neues Produkt |
 | Preis setzen | Produkt > Preise |
 | Downloads | Mediathek + Produkt > Downloads |
-| Automatische E-Mail | Automatisierung > Delivery Actions |
+| Automatische E-Mail | Produkt > After-Sales (oder Automations) |
 | Kundenportal | Einstellungen > Portal |
 | Community | Plugins > Circle |
 | Newsletter | Plugins > Newsletter |

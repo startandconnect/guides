@@ -56,13 +56,20 @@ Bei `PAST_DUE` versucht Stripe automatisch, die Zahlung erneut einzuziehen (bis 
 
 ## Lead-Status
 
+Lead-Status sind unter **Einstellungen > Kommunikation > CRM** konfigurierbar. Standard-Werte:
+
 | Status | Beschreibung | Typischer Anwendungsfall |
 |---|---|---|
 | `LEAD` | Neuer Kontakt | Jemand hat sich für den Newsletter angemeldet oder ein Formular ausgefüllt |
+| `SUBSCRIBER` | Abonnent | Hat Newsletter-DOI bestaetigt oder ist in einer Sequence enrolled |
 | `PROSPECT` | Interessent | Der Kontakt hat Interesse gezeigt (z.B. Produktseite besucht, Anfrage gestellt) |
 | `CUSTOMER` | Kunde | Der Kontakt hat mindestens eine Bestellung abgeschlossen |
-| `VIP` | VIP-Kunde | Manuell zugewiesener Status für besonders wichtige Kunden |
+| `VIP` | VIP-Kunde | Manuell oder via Automation zugewiesen |
 | `INACTIVE` | Inaktiv | Der Kontakt war längere Zeit nicht aktiv oder hat sich abgemeldet |
+
+::: tip[Tipp]
+Du kannst eigene Status-Werte hinzufuegen oder bestehende umbenennen. In Automations-Conditions verwendest du den jeweiligen Status-Slug, z.B. `customer.leadStatus equals "VIP"`.
+:::
 
 ## Nachrichten-Status
 
